@@ -4,7 +4,8 @@ public enum RegularExpression {
 	
 	
 	
-	EMAIL("^(.+)@(\\S+)$");
+	EMAIL("^(.+)@(\\S+)$"), 
+	PASSWORD("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d).{8,}$");
 	
 	private String value;
 
