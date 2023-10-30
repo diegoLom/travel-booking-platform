@@ -19,7 +19,7 @@ public class UserTest {
 	
 	@BeforeAll
 	private static void setup() {
-		user = new User();
+		user = User.builder().build();
 	}
 	
 	

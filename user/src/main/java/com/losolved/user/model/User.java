@@ -16,6 +16,7 @@ import com.losolved.user.exceptions.PasswordInvalidException;
 import com.losolved.user.patterns.RegularExpression;
 import com.losolved.user.patterns.ValidationPattern;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,6 +24,7 @@ import lombok.Setter;
 @Entity
 //Generates getters/setter for all fields , constructor, equals and toString for non-transient fields 
 @Data
+@Builder
 @Table(name = "users")
 
 public class User {
