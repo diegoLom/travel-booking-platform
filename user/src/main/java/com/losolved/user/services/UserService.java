@@ -1,14 +1,15 @@
 package com.losolved.user.services;
 
+import com.losolved.user.exceptions.DuplicateUserNameException;
 import com.losolved.user.model.User;
 import com.losolved.user.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class UserService implements IUserService{
 
     private UserRepository userRepository;
@@ -25,22 +26,39 @@ public class UserService implements IUserService{
 
     @Override
     public List<User> get() {
-        return null;
+        return (List<User>) userRepository.findAll();
     }
 
     @Override
     public void unRengister(User user) {
-
+        userRepository.delete(user);
     }
 
     @Override
-    public User register(User user) {
-        return null;
+    public User register(User user)  {
+
+        if(existUserWithSameName(user)){
+            throw new DuplicateUserNameException();
+        }else{
+           return userRepository.save(user);
+        }
+
+    }
+
+    private boolean existUserWithSameName(User user) {
+        Optional<User> oUser = userRepository.findByUserName(user.getUserName());
+        return oUser.isPresent();
     }
 
     @Override
-    public User update(User user) {
-        return null;
+    public Optional<User> update(User user) {
+
+        if(userRepository.existsById(user.getUserId())){
+            return Optional.of(userRepository.save(user));
+        }else{
+            return Optional.empty();
+        }
+
     }
 
     @Override

@@ -42,6 +42,6 @@ public class UserTest {
 	
 	
 	
-
+  //model class  set / methods
 
 }

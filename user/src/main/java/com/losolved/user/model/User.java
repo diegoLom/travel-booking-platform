@@ -52,7 +52,7 @@ public class User {
     	 	throw new EmailInvalidException();
     	}
      }
-    
+     //TODO: Analyze we should add validation and set method
     public void setPassword(String password) {
     	
     	if(ValidationPattern.patternMatches(password, RegularExpression.PASSWORD.toString())){

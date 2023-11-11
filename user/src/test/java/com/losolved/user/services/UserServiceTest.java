@@ -37,7 +37,6 @@ public class UserServiceTest
 
     @Test
     public void valid(){
-
          doReturn(getMockedUser(1l)).when(userRepository).findById(1l);
          Optional<User> optionalUser = userService.getUser(1l);
 
@@ -45,21 +44,14 @@ public class UserServiceTest
              User user = optionalUser.get();
              assertEquals(user.getUserId(), 1l);
          }
-
-
     }
-
 
     public Optional<User> getMockedUser(Long userId){
         User user = User.builder().userId(userId).build();
         user.setUserId(userId);
-        user.setUserName("Diego_Delicinha");
-
-
-        return Optional.of(user);
+        user.setUserName("mosquito_traveller");
+       return Optional.of(user);
     }
-
-
 
 
 }
