@@ -16,17 +16,21 @@ import com.losolved.user.exceptions.PasswordInvalidException;
 import com.losolved.user.patterns.RegularExpression;
 import com.losolved.user.patterns.ValidationPattern;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 //Generates getters/setter for all fields , constructor, equals and toString for non-transient fields 
 @Data
-@Builder
-@Table(name = "users")
 
+@Table(name = "users")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -41,26 +45,7 @@ public class User {
     private String email;
    
     @Column(name = "password")
-    private String password; 
-
-    
-    public void setEmail(String email) {
-    	
-    	if(ValidationPattern.patternMatches(email, RegularExpression.EMAIL.toString())) {
-    		this.email = email;
-    	}else {
-    	 	throw new EmailInvalidException();
-    	}
-     }
-     //TODO: Analyze we should add validation and set method
-    public void setPassword(String password) {
-    	
-    	if(ValidationPattern.patternMatches(password, RegularExpression.PASSWORD.toString())){
-    		this.password = password;
-    	}else {
-    		throw new PasswordInvalidException();
-    	}
-    }
+    private String password;
     
     
 }

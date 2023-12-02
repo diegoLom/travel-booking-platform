@@ -1,9 +1,14 @@
 package com.losolved.user.services;
 
 
+import com.losolved.user.exceptions.EmailInvalidException;
+import com.losolved.user.exceptions.PasswordInvalidException;
 import com.losolved.user.model.User;
 import com.losolved.user.repositories.UserRepository;
+import net.bytebuddy.matcher.StringMatcher;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentMatchers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -23,7 +28,7 @@ import static org.mockito.BDDMockito.*;
  *  In this class, I implemented an example of username validation because
  *  it was the only business rule I could think of at the time. I didn't implement CRUD
  *  validations because the methods are built upon a robust and already validated
- *  JPA repository framework. It is important to align with the business rules.
+ *  JPA repository framework. It is important to align with the business rules with product owners team.
  */
 @SpringBootTest
 public class UserServiceTest2
@@ -49,23 +54,22 @@ public class UserServiceTest2
              assertEquals(user.getUserId(), 1l);
          }
     }
-        // P.O writing system rules
 
     @Test
-    public void cantRepeatUserName(){
-        User user = getMockedUser(2L).get();
-        try {
-            givenAttemptToPersitDuplicateUserName(user);
-        }catch(DuplicateUserNameException dup){
-            assertThrows(DuplicateUserNameException.class, () -> userService.register(user));
-       }
-
+    public void checkNameValidation(){
+        assertThrows(DuplicateUserNameException.class, () -> UserValidationService.validateUserName(true));
     }
 
+    @Test
+    public void checkEmailValidation(){
+        assertThrows(EmailInvalidException.class, () -> UserValidationService.validateEmail(User.builder().email(ArgumentMatchers.anyString()).build()));
+    }
 
-    public void givenAttemptToPersitDuplicateUserName(User user){
-        given(userRepository.findByUserName(user.getUserName())).willReturn(Optional.of(user));
-        userService.register(user);
+    @Test
+    public void checkPasswordValidation(){
+        User user = User.builder().password("wrong_password").build();
+        assertThrows(PasswordInvalidException.class, () ->
+        UserValidationService.validatePassword(user));
     }
 
     public static Optional<User> getMockedUser(Long userId){

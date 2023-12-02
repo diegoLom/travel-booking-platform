@@ -48,7 +48,7 @@ public class UserControllerTest {
 
         given(userService.get()).willReturn(users);
 
-        mockMvc.perform(get("/users")).andExpect(status().isOk()).
+        mockMvc.perform(get("/user")).andExpect(status().isOk()).
                 andExpect(jsonPath("$", Matchers.hasSize(3))).
                 andExpect(jsonPath("$[0].userName", Matchers.equalTo("Jhon")));
     }
@@ -75,19 +75,20 @@ public class UserControllerTest {
 
         mockMvc.perform(put("/user").contentType(MediaType.APPLICATION_JSON).characterEncoding("UTF-8")
                 .content(json).accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
-                .andExpect(jsonPath("$.userId", Matchers.equalTo(1)))
+                .andExpect(jsonPath("$.userId", Matchers.equalTo(3)))
                 .andExpect(jsonPath("$.userName", Matchers.equalTo("oriana")));
     }
 
+
+    //TODO: Adding log and api documentation for controller classes.
     @Test
     public void givenAnUpdateOfNotFoundObject() throws Exception {
         User user = User.builder().userId(3l).userName("swain").build();
-        given(userService.update(ArgumentMatchers.any())).willReturn(Optional.of(user));
+        given(userService.update(ArgumentMatchers.any())).willReturn(Optional.empty());
+        String json = mapper.writeValueAsString(user);
 
         mockMvc.perform(put("/user").contentType(MediaType.APPLICATION_JSON).characterEncoding("UTF-8")
-                .content(json).accept(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound())
-                .andExpect(jsonPath("$.userId", Matchers.equalTo(1)))
-                .andExpect(jsonPath("$.userName", Matchers.equalTo("oriana")));
+                .content(json).accept(MediaType.APPLICATION_JSON)).andExpect(status().isNotFound());
 
     }
 

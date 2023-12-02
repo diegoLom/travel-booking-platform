@@ -1,6 +1,5 @@
 package com.losolved.user.services;
 
-import com.losolved.user.exceptions.DuplicateUserNameException;
 import com.losolved.user.model.User;
 
 import java.util.List;
@@ -13,16 +12,9 @@ public interface IUserService {
 
     public void unRengister(User user);
 
-    /*
-     * TODO: Create a main class for UserValidation (UserValidationException)
-     * It's possible create a class UserValiationException
-     * Other class can inherit from that (DuplicateUserNameException / PassworInvalidException /
-     * RGInvalidException )
-     */
-
     public User register(User user);
 
-    public User update(User user);
+    public Optional<User> update(User user);
 
     public User login(String userName, String password);
 

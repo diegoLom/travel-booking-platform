@@ -11,7 +11,7 @@ public class ValidationPatternTest {
 	@Test
 	public void testSimpleREgexEmail() {
 		String emailAddress = "diegosantana@gmail.com";
-		assertTrue(ValidationPattern.patternMatches(emailAddress, RegularExpression.EMAIL.toString())); 
+		assertTrue(ValidationPattern.matches(emailAddress, RegularExpression.EMAIL.toString()));
 	}
 
 }
