@@ -22,6 +22,26 @@ public class BookingTest {
 	}
 	
 	@Test
+    public void testBookingAccommodation() {
+    	assertEquals(0, booking.getAccommodationId());
+    	
+    	final Integer accommodationId = 3;
+    	
+    	booking.setAccommodationId(accommodationId);
+    	assertEquals(accommodationId, booking.getAccommodationId() ); 
+    }
+	
+	@Test
+    public void testBookingFlight() {
+    	assertEquals(0, booking.getFlightId());
+    	
+    	final Integer flightId = 3;
+    	
+    	booking.setFlightId(flightId);
+    	assertEquals(flightId, booking.getFlightId() ); 
+    }
+	
+	@Test
     public void testBookingGuest() {
     	assertEquals(0, booking.getGuest());
     	

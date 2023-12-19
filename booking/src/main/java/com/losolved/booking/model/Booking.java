@@ -23,11 +23,11 @@ public class Booking extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "accommodation_id")
-    private Accommodation accommodation;
+    private Integer accommodationId;
 
     @ManyToOne
     @JoinColumn(name = "flight_id")
-    private Flight flight;
+    private Integer flightId;
     
     
     private Integer guest;
