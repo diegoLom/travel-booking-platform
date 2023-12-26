@@ -13,7 +13,7 @@ import lombok.Data;
 @Builder
 @Data
 @Entity
-class Accommodation extends BaseEntity {
+public class Accommodation extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
