@@ -21,7 +21,7 @@ public class AirlineTest {
 		//Default value
 		assertEquals(airline.getCompanyName(), null); 
 		
-		final String companyName =  "Rua Décima do Parque";
+		final String companyName =  "GOL";
 		airline.setCompanyName(companyName); 
 		assertEquals(airline.getCompanyName(), companyName); 
 	}
@@ -31,7 +31,7 @@ public class AirlineTest {
 		//Default value
 		assertEquals(airline.getCompanyDetails(), null); 
 		
-		final String companyDetails =  "Rua Décima do Parque";
+		final String companyDetails =  "GOL AIRLINES";
 		airline.setCompanyDetails(companyDetails); 
 		assertEquals(airline.getCompanyDetails(), companyDetails); 
 	} 

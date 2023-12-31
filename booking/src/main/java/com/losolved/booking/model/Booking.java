@@ -9,23 +9,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Builder
 @Data
 @Entity
+@NoArgsConstructor @AllArgsConstructor
 public class Booking extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn(name = "accommodation_id")
     private Integer accommodationId;
 
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn(name = "flight_id")
     private Integer flightId;
     

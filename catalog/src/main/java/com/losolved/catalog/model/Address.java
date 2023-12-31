@@ -10,9 +10,9 @@ import lombok.Data;
 @Builder
 @Data
 @Entity
-public class Address {
-
-    @Id
+public class Address extends BaseEntity  {
+ 
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
