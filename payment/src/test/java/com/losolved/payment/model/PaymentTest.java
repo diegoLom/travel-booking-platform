@@ -17,6 +17,7 @@ public class PaymentTest {
 	
 	@BeforeAll
 	private static void setup() {
+		payment = Payment.builder().build();
 		
 	}
 	

@@ -15,13 +15,13 @@ public class FlightTest {
 	private static Flight flight; 
 	
 	@BeforeAll
-	public void setup() {
+	public static void setup() {
 		flight = Flight.builder().build();
 	}
 
 	@Test
 	public void testFlightNumber() {
-		assertEquals(0, flight.getNumber());
+		assertNull(flight.getNumber());
 		final Integer number =  100;
 		flight.setNumber(number);
 		assertEquals(number, flight.getNumber());

@@ -1,0 +1,805 @@
+package com.losolved.catalog.model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class AddressTest {
+	
+	private static  Address address;
+	
+	@BeforeAll
+	public static void testup() {
+		address = Address.builder().build();
+	}
+	
+	@Test
+	public void testStreet() { 
+		//Default value
+		assertEquals(address.getStreet(), null); 
+		
+		final String street =  "Rua Décima do Parque";
+		address.setStreet(street); 
+		assertEquals(address.getStreet(), street); 
+	}
+	
+	@Test
+	public void testCity() {
+		//Default value
+		assertEquals(address.getCity(), null); 
+		final String city =  "California";
+		address.setCity(city); 
+		assertEquals(address.getCity(), city); 
+
+	}
+	
+	@Test
+	public void testState() {
+		//Default value
+		assertEquals(address.getState(), null); 
+		final String state =  "California";
+		address.setState(state); 
+		assertEquals(address.getState(), state); 
+
+	}
+	
+	@Test
+	public void testZipCode() {
+		//Default value
+		assertEquals(address.getZipCode(), null); 
+		final String zipCode =  "California";
+		address.setZipCode(zipCode); 
+		assertEquals(address.getZipCode(), zipCode); 
+		
+	}
+	
+	
+	//TODO: Adding reflection to validate the fields presents in class fit with bussiness rule 
+	
+
+}
+package com.losolved.catalog.model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.time.LocalDateTime;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class BaseEntityTest {
+	
+	private static BaseEntity baseEntity; 
+	
+	@BeforeAll
+	private static void setup() {
+		baseEntity = new BaseEntity();
+	}
+	
+	
+	@Test
+	public void createdAtValidation() {
+		final LocalDateTime now = LocalDateTime.now();
+		baseEntity.setCreatedAt(now); 
+		assertEquals(baseEntity.getCreatedAt(), now);
+	}
+	
+	@Test
+	public void createdByValidation() {
+		final String author = "Diego Santos";
+		baseEntity.setCreatedBy(author);
+		assertEquals(author, baseEntity.getCreatedBy());
+	}
+	
+	@Test
+	public void updatedAtValidation() {
+		final LocalDateTime now = LocalDateTime.now();
+		baseEntity.setUpdatedAt(now); 
+		assertEquals(baseEntity.getUpdatedAt(), now);
+	}
+	
+	@Test
+	public void updatedByValidation() {
+		final String author = "Diego Santos";
+		baseEntity.setUpdatedBy(author);
+		assertEquals(author, baseEntity.getUpdatedBy());
+	}
+	
+	
+
+}
+package com.losolved.catalog.model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class AccomadationTest {
+	
+	
+	private static Accommodation accommodation; 
+	
+	@BeforeAll
+	public void setup() {
+		accommodation = Accommodation.builder().build();
+	}
+
+	@Test
+	public void testAccomodationNumber() {
+		assertEquals(0, accommodation.getNumber());
+		final Integer number =  100;
+		accommodation.setNumber(number);
+		assertEquals(number, accommodation.getNumber());
+		
+	}
+	
+}
+package com.losolved.catalog.model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class AirlineTest {
+	
+	 private static Airline airline; 
+	 
+	@BeforeAll
+	public static void setup() {
+		airline = Airline.builder().build();
+	}
+	
+	@Test
+	public void testCompanyName() { 
+		//Default value
+		assertEquals(airline.getCompanyName(), null); 
+		
+		final String companyName =  "Rua Décima do Parque";
+		airline.setCompanyName(companyName); 
+		assertEquals(airline.getCompanyName(), companyName); 
+	}
+	
+	@Test
+	public void testCompanyDetails() { 
+		//Default value
+		assertEquals(airline.getCompanyDetails(), null); 
+		
+		final String companyDetails =  "Rua Décima do Parque";
+		airline.setCompanyDetails(companyDetails); 
+		assertEquals(airline.getCompanyDetails(), companyDetails); 
+	} 
+	 
+	 //TODO: Search if is possible to create rules to prohibit commit a new class without a class test
+	 //TODO: Add sonar plugin to the project 
+	 
+	
+
+}
+package com.losolved.catalog.model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import java.time.LocalDateTime;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class FlightTest {
+	
+	private static Flight flight; 
+	
+	@BeforeAll
+	public void setup() {
+		flight = Flight.builder().build();
+	}
+
+	@Test
+	public void testFlightNumber() {
+		assertEquals(0, flight.getNumber());
+		final Integer number =  100;
+		flight.setNumber(number);
+		assertEquals(number, flight.getNumber());
+		
+	}
+	
+	@Test
+	public void testFlightTimes() {
+		
+		assertNull(flight.getDeparture());
+		assertNull(flight.getArrival()); 
+		
+		LocalDateTime scheduledDeparture = LocalDateTime.now().plusDays(1);
+		LocalDateTime estimatedArrival = scheduledDeparture.plusDays(2);
+		defineFlightTimes(scheduledDeparture, estimatedArrival);
+		
+		assertEquals(flight.getDeparture(), scheduledDeparture);
+		assertEquals(flight.getArrival(), estimatedArrival);
+		
+	}
+
+	
+	public void defineFlightTimes(LocalDateTime departureTime, LocalDateTime arrivalTime) {
+		flight.setDeparture(departureTime);
+		flight.setArrival(arrivalTime);
+		
+	}
+}
+package com.losolved.catalog.model;
+
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+@Entity
+public class Route {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long routeId;
+
+    @Embedded
+    private Address departureAddress;
+
+    @Embedded
+    private Address arrivalAddress;
+    
+}package com.losolved.catalog.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+@Entity
+public class Address {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String street;
+    private String city;
+    private String state;
+    private String zipCode;
+
+    // Constructors, getters, setters
+}package com.losolved.catalog.model;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@MappedSuperclass
+public class BaseEntity {
+	
+	@Column(updatable = false)
+	private LocalDateTime createdAt;
+	
+	@Column(updatable = false)
+	private String createdBy;
+	
+	@Column(insertable  = false)
+	private LocalDateTime updatedAt;
+	
+	@Column(insertable  = false)
+	private String updatedBy;
+	
+}
+package com.losolved.catalog.model;
+
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import lombok.Builder;
+import lombok.Data;
+@Builder
+@Data
+@Entity
+public class Accommodation extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+  
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
+
+    private Integer number;
+
+    //TODO: Adding Other accommodation-related attributes, methods
+
+    
+}
+package com.losolved.catalog.model;
+
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+@Entity
+public class Flight extends BaseEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private Integer number;
+	
+	private LocalDateTime departure; 
+	
+	private LocalDateTime arrival; 
+	
+
+}
+package com.losolved.catalog.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+@Entity
+public class Airline {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long airlineId;
+
+    private String companyName;
+    private String companyDetails;
+
+    // Constructors, getters, and setters
+
+    // Implement constructors, getters, and setters for Airline
+}
+package com.losolved.user.model;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.regex.Pattern;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentMatchers;
+import org.springframework.boot.test.context.SpringBootTest;
+import com.losolved.user.exceptions.EmailInvalidException;
+import com.losolved.user.exceptions.PasswordInvalidException;
+import com.losolved.user.patterns.RegularExpression;
+import com.losolved.user.patterns.ValidationPattern;
+
+
+/**
+Now, it's widely recognized that certain classes, such as simple models,
+ may not require dedicated test classes. This is particularly true in the case of the
+ User class in question, as it lascks significant functionality.
+ just having set and get methods that are generally created by IDE. Another example is JPARepository class.
+ */
+@SpringBootTest
+//Each class should have a test Class 
+public class UserTest {
+	
+	private static User user;
+	
+	@BeforeAll
+	private static void setup() {
+		user = User.builder().build();
+	}
+	
+	
+	@Test
+	public void request() {
+		assertEquals("diego", "diego");
+		
+	}
+	//Write the test before the class implementation 
+	
+	@Test
+	public void userWithInvalidEmail() {
+		user.setEmail("wrong_email");
+		Assertions.assertFalse(ValidationPattern.matches(user.getEmail(), RegularExpression.EMAIL.toString()), 
+				"Invalid email was informed ");
+	}
+	
+	@Test
+	public void userWithInvalidPassword() {
+		user.setPassword("wrong_password");
+		Assertions.assertFalse(ValidationPattern.matches(user.getPassword(), RegularExpression.PASSWORD.toString()), 
+				"Invalid password was informed");
+	}
+	
+	
+	
+  //model class  set / methods
+
+}
+package com.losolved.user.model;
+
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.losolved.user.exceptions.EmailInvalidException;
+import com.losolved.user.exceptions.PasswordInvalidException;
+import com.losolved.user.patterns.RegularExpression;
+import com.losolved.user.patterns.ValidationPattern;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+//Generates getters/setter for all fields , constructor, equals and toString for non-transient fields 
+@Data
+
+@Table(name = "users")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Long userId;
+
+    @Column(name = "username", unique = true)
+    private String userName;
+
+    @Column(name = "email", unique = true)
+    private String email;
+   
+    @Column(name = "password")
+    private String password;
+    
+    
+}
+package com.losolved.payment.model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
+import java.time.LocalDateTime;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class PaymentTest {
+	
+	
+	private static Payment payment;
+	
+	@BeforeAll
+	private static void setup() {
+		
+	}
+	
+	@Test
+	private void paymentMethodTest() {
+		assertNull(payment.getMethod());
+		
+		String method = "Credit Card";
+		payment.setMethod(method);
+		assertEquals(payment.getMethod(),  method);
+	}
+	
+	@Test	
+	private void paymentProcessingDateTest() {
+		assertNull(payment.getProcessingDate());
+		
+		LocalDateTime processingDate = LocalDateTime.now();
+		payment.setProcessingDate	(processingDate);
+		assertEquals(payment.getProcessingDate(),  processingDate);
+	}
+	
+	@Test	
+	private void paymentStatusTest() {
+		assertNull(payment.getStatus());
+		
+		String status = "PENDING";
+		payment.setStatus(status);
+		assertEquals(payment.getStatus(),  status);
+	}
+	
+	@Test
+	private void paymentBookingIdTest() {
+		assertEquals(0, payment.getBookingId());
+		
+		Long bookingId = Long.valueOf(8);
+		payment.setBookingId(bookingId);
+		assertEquals(payment.getBookingId(),  bookingId);
+	}
+	
+	
+	
+	
+	
+
+}
+package com.losolved.payment.model;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+@Entity
+public class Payment {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long paymentId; 
+		
+	@ManyToOne
+	@JoinColumn(name = "booking_id")
+	private Long bookingId;
+	
+	private String method;
+	
+	private String status;
+	
+	private LocalDateTime processingDate;
+
+}
+package com.losolved.booking.model;
+
+
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.time.LocalDateTime;
+import java.util.Date;
+
+@SpringBootTest
+public class BookingTest {
+	
+	private static Booking booking; 
+	
+	@BeforeAll
+	private static void setup() {
+		booking = Booking.builder().build();
+	}
+	
+	@Test
+    public void testBookingAccommodation() {
+    	assertEquals(0, booking.getAccommodationId());
+    	
+    	final Integer accommodationId = 3;
+    	
+    	booking.setAccommodationId(accommodationId);
+    	assertEquals(accommodationId, booking.getAccommodationId() ); 
+    }
+	
+	@Test
+    public void testBookingFlight() {
+    	assertEquals(0, booking.getFlightId());
+    	
+    	final Integer flightId = 3;
+    	
+    	booking.setFlightId(flightId);
+    	assertEquals(flightId, booking.getFlightId() ); 
+    }
+	
+	@Test
+    public void testBookingGuest() {
+    	assertEquals(0, booking.getGuest());
+    	
+    	final Integer guestNumber = 3;
+    	
+    	booking.setGuest(guestNumber);
+    	assertEquals(guestNumber, booking.getGuest() ); 
+    }
+
+    @Test
+    public void testBookingDate() {
+        // Test default value
+        assertEquals(null, booking.getBookingDate());
+
+        // Test setter and getter
+        LocalDateTime bookingDate = LocalDateTime.now();
+        booking.setBookingDate(bookingDate);
+        assertEquals(bookingDate, booking.getBookingDate());
+    }
+
+    @Test
+    public void testTotalAmount() {
+        // Test default value
+        assertEquals(0.0, booking.getTotalAmount());
+
+        // Test setter and getter
+        double totalAmount = 100.00;
+        booking.setTotalAmount(totalAmount);
+        assertEquals(totalAmount, booking.getTotalAmount());
+    }
+}
+package com.losolved.booking.model;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.time.LocalDateTime;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class BaseEntityTest {
+	
+	private static Booking booking; 
+	
+	@BeforeAll
+	private static void setup() {
+		booking = Booking.builder().build();
+	}
+	
+	
+	@Test
+	public void createdAtValidation() {
+		final LocalDateTime now = LocalDateTime.now();
+		booking.setCreatedAt(now); 
+		assertEquals(booking.getCreatedAt(), now);
+	}
+	
+	@Test
+	public void createdByValidation() {
+		final String author = "Diego Santos";
+		booking.setCreatedBy(author);
+		assertEquals(author, booking.getCreatedBy());
+	}
+	
+	@Test
+	public void updatedAtValidation() {
+		final LocalDateTime now = LocalDateTime.now();
+		booking.setUpdatedAt(now); 
+		assertEquals(booking.getUpdatedAt(), now);
+	}
+	
+	@Test
+	public void updatedByValidation() {
+		final String author = "Diego Santos";
+		booking.setUpdatedBy(author);
+		assertEquals(author, booking.getUpdatedBy());
+	}
+	
+	
+
+}
+package com.losolved.booking.model;
+
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
+@Entity
+public class Booking extends BaseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "accommodation_id")
+    private Integer accommodationId;
+
+    @ManyToOne
+    @JoinColumn(name = "flight_id")
+    private Integer flightId;
+    
+    
+    private Integer guest;
+    
+    private LocalDateTime bookingDate;
+    
+    private double totalAmount;
+
+    // Other attributes, constructors, and methods
+
+    // Getters and setters
+}package com.losolved.booking.model;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Data;
+
+@Data
+@MappedSuperclass
+public class BaseEntity {
+	
+	@Column(updatable = false)
+	private LocalDateTime createdAt;
+	
+	@Column(updatable = false)
+	private String createdBy;
+	
+	@Column(insertable  = false)
+	private LocalDateTime updatedAt;
+	
+	@Column(insertable  = false)
+	private String updatedBy;
+	
+}

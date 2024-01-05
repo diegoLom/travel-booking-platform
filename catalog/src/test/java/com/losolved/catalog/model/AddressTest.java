@@ -12,7 +12,7 @@ public class AddressTest {
 	private static  Address address;
 	
 	@BeforeAll
-	public static void testup() {
+	public static void setup() {
 		address = Address.builder().build();
 	}
 	
