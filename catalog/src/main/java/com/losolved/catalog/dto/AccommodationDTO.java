@@ -1,17 +1,20 @@
 package com.losolved.catalog.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@NoArgsConstructor @AllArgsConstructor
 public class AccommodationDTO {
 
 	private Integer number;
-	private String street;
-	private String city;
-    private String state;
-    private String zipCode;
+	private String addressStreet;
+	private String addressCity;
+    private String addressState;
+    private String addressZipCode;
 
 
 }

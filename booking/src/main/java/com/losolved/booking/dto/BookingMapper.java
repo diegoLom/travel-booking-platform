@@ -11,11 +11,11 @@ import com.losolved.booking.model.Booking;
 import lombok.Builder;
 
 
-@Service
+@Component
 public class BookingMapper {
 	
-	@Autowired //TODO: See why the dependency wasn't injected.
-	private ModelMapper mapper = new ModelMapper();;
+	 //TODO: See why the dependency wasn't injected.
+	private ModelMapper mapper = new ModelMapper();
 
 	public Booking convertDTOToEntity(BookingDTO bookingDTO) {
 		mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT); // 

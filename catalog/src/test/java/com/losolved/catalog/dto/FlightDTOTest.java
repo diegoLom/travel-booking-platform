@@ -14,6 +14,10 @@ public class FlightDTOTest {
 	
 	private static FlightDTO flightDTO ; 
 	
+	@BeforeAll
+	private static void setup() {
+		flightDTO = FlightDTO.builder().build();
+	}
 
 	@Test
 	public void testFlightNumber() {
@@ -49,40 +53,40 @@ public class FlightDTOTest {
 	@Test
 	public void testStreetArrival() { 
 		//Default value
-		assertEquals(flightDTO.getStreetArrival(), null); 
+		assertEquals(flightDTO.getRouteArrivalStreet(), null); 
 		
 		final String street =  "Rua Décima do Parque";
-		flightDTO.setStreetArrival(street); 
-		assertEquals(flightDTO.getStreetArrival(), street); 
+		flightDTO.setRouteArrivalStreet(street); 
+		assertEquals(flightDTO.getRouteArrivalStreet(), street); 
 	}
 	
 	@Test
 	public void testCityArrival() {
 		//Default value
-		assertEquals(flightDTO.getCityArrival(), null); 
+		assertEquals(flightDTO.getRouteArrivalCity(), null); 
 		final String city =  "California";
-		flightDTO.setCityArrival(city); 
-		assertEquals(flightDTO.getCityArrival(), city); 
+		flightDTO.setRouteArrivalCity(city); 
+		assertEquals(flightDTO.getRouteArrivalCity(), city); 
 
 	}
 	
 	@Test
 	public void testStateArrival() {
 		//Default value
-		assertEquals(flightDTO.getStateArrival(), null); 
+		assertEquals(flightDTO.getRouteArrivalState(), null); 
 		final String state =  "California";
-		flightDTO.setStateArrival(state); 
-		assertEquals(flightDTO.getStateArrival(), state); 
+		flightDTO.setRouteArrivalState(state); 
+		assertEquals(flightDTO.getRouteArrivalState(), state); 
 
 	}
 	
 	@Test
 	public void testZipCodeArrival() {
 		//Default value
-		assertEquals(flightDTO.getZipCodeArrival(), null); 
+		assertEquals(flightDTO.getRouteArrivalZipCode(), null); 
 		final String zipCode =  "California";
-		flightDTO.setZipCodeArrival(zipCode); 
-		assertEquals(flightDTO.getZipCodeArrival(), zipCode); 
+		flightDTO.setRouteArrivalZipCode(zipCode); 
+		assertEquals(flightDTO.getRouteArrivalZipCode(), zipCode); 
 		
 	}
 	
@@ -90,61 +94,61 @@ public class FlightDTOTest {
 	@Test
 	public void testStreetDeparture() { 
 		//Default value
-		assertEquals(flightDTO.getStreetDeparture(), null); 
+		assertEquals(flightDTO.getRouteDepartureStreet(), null); 
 		
 		final String street =  "Rua Décima do Parque";
-		flightDTO.setStreetDeparture(street); 
-		assertEquals(flightDTO.getStreetDeparture(), street); 
+		flightDTO.setRouteDepartureStreet(street); 
+		assertEquals(flightDTO.getRouteDepartureStreet(), street); 
 	}
 	
 	@Test
 	public void testCityDeparture() {
 		//Default value
-		assertEquals(flightDTO.getCityDeparture(), null); 
+		assertEquals(flightDTO.getRouteDepartureCity(), null); 
 		final String city =  "San Diego";
-		flightDTO.setCityDeparture(city); 
-		assertEquals(flightDTO.getCityDeparture(), city); 
+		flightDTO.setRouteDepartureCity(city); 
+		assertEquals(flightDTO.getRouteDepartureCity(), city); 
 
 	}
 	
 	@Test
 	public void testStateDeparture() {
 		//Default value
-		assertEquals(flightDTO.getStateDeparture(), null); 
+		assertEquals(flightDTO.getRouteDepartureState(), null); 
 		final String state =  "California";
-		flightDTO.setStateDeparture(state); 
-		assertEquals(flightDTO.getStateDeparture(), state); 
+		flightDTO.setRouteDepartureState(state); 
+		assertEquals(flightDTO.getRouteDepartureState(), state); 
 
 	}
 	
 	@Test
 	public void testZipCodeDeparture() {
 		//Default value
-		assertEquals(flightDTO.getZipCodeDeparture(), null); 
+		assertEquals(flightDTO.getRouteDepartureZipCode(), null); 
 		final String zipCode =  "42803233";
-		flightDTO.setZipCodeDeparture(zipCode); 
-		assertEquals(flightDTO.getZipCodeDeparture(), zipCode); 
+		flightDTO.setRouteDepartureZipCode(zipCode); 
+		assertEquals(flightDTO.getRouteDepartureZipCode(), zipCode); 
 		
 	}
 	
 	@Test
 	public void testCompanyName() { 
 		//Default value
-		assertEquals(flightDTO.getCompanyName(), null); 
+		assertEquals(flightDTO.getAirlineCompanyName(), null); 
 		
 		final String companyName =  "GOL";
-		flightDTO.setCompanyName(companyName); 
-		assertEquals(flightDTO.getCompanyName(), companyName); 
+		flightDTO.setAirlineCompanyName(companyName); 
+		assertEquals(flightDTO.getAirlineCompanyName(), companyName); 
 	}
 	
 	@Test
 	public void testCompanyDetails() { 
 		//Default value
-		assertEquals(flightDTO.getCompanyDetails(), null); 
+		assertEquals(flightDTO.getAirlineCompanyDetails(), null); 
 		
 		final String companyDetails =  "GOL Airlines";
-		flightDTO.setCompanyDetails(companyDetails); 
-		assertEquals(flightDTO.getCompanyDetails(), companyDetails); 
+		flightDTO.setAirlineCompanyDetails(companyDetails); 
+		assertEquals(flightDTO.getAirlineCompanyDetails(), companyDetails); 
 	} 
 	
 	

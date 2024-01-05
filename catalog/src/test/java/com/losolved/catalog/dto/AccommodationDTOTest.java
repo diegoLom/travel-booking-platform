@@ -14,7 +14,7 @@ public class AccommodationDTOTest {
 	
 	
 	@BeforeAll
-	private static void setup() {
+	private static void setAddressup() {
 		accommodation = AccommodationDTO.builder().build();
 	}
 	
@@ -30,40 +30,40 @@ public class AccommodationDTOTest {
 	@Test
 	public void testStreet() { 
 		//Default value
-		assertEquals(accommodation.getStreet(), null); 
+		assertEquals(accommodation.getAddressStreet(), null); 
 		
 		final String street =  "Rua Décima do Parque";
-		accommodation.setStreet(street); 
-		assertEquals(accommodation.getStreet(), street); 
+		accommodation.setAddressStreet(street); 
+		assertEquals(accommodation.getAddressStreet(), street); 
 	}
 	
 	@Test
 	public void testCity() {
 		//Default value
-		assertEquals(accommodation.getCity(), null); 
+		assertEquals(accommodation.getAddressCity(), null); 
 		final String city =  "California";
-		accommodation.setCity(city); 
-		assertEquals(accommodation.getCity(), city); 
+		accommodation.setAddressCity(city); 
+		assertEquals(accommodation.getAddressCity(), city); 
 
 	}
 	
 	@Test
 	public void testState() {
 		//Default value
-		assertEquals(accommodation.getState(), null); 
+		assertEquals(accommodation.getAddressState(), null); 
 		final String state =  "California";
-		accommodation.setState(state); 
-		assertEquals(accommodation.getState(), state); 
+		accommodation.setAddressState(state); 
+		assertEquals(accommodation.getAddressState(), state); 
 
 	}
 	
 	@Test
 	public void testZipCode() {
 		//Default value
-		assertEquals(accommodation.getZipCode(), null); 
+		assertEquals(accommodation.getAddressZipCode(), null); 
 		final String zipCode =  "California";
-		accommodation.setZipCode(zipCode); 
-		assertEquals(accommodation.getZipCode(), zipCode); 
+		accommodation.setAddressZipCode(zipCode); 
+		assertEquals(accommodation.getAddressZipCode(), zipCode); 
 		
 	}
 
