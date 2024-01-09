@@ -16,6 +16,7 @@ public class AccommodationDTOTest {
 	@BeforeAll
 	private static void setAddressup() {
 		accommodation = AccommodationDTO.builder().build();
+		
 	}
 	
 	@Test
@@ -24,14 +25,12 @@ public class AccommodationDTOTest {
 		final Integer number =  100;
 		accommodation.setNumber(number);
 		assertEquals(number, accommodation.getNumber());
-		
 	}
 	
 	@Test
 	public void testStreet() { 
 		//Default value
 		assertEquals(accommodation.getAddressStreet(), null); 
-		
 		final String street =  "Rua Décima do Parque";
 		accommodation.setAddressStreet(street); 
 		assertEquals(accommodation.getAddressStreet(), street); 

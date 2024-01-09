@@ -1,4 +1,4 @@
-package repositories;
+package com.losolved.booking.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 

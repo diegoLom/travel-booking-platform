@@ -1,4 +1,4 @@
-package com.losolved.booking.model;
+package com.losolved.payment.model;
 
 import java.time.LocalDateTime;
 
