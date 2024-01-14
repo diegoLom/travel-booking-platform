@@ -1,6 +1,7 @@
 package com.losolved.booking.dto;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.time.LocalDateTime;
 
@@ -21,7 +22,7 @@ public class BookingDTOTest {
 	
 	@Test
     public void testBookingAccommodation() {
-    	assertEquals(0, bookingDTO.getAccommodationId());
+    	assertNull(bookingDTO.getAccommodationId());
     	
     	final Integer accommodationId = 3;
 		bookingDTO.setAccommodationId(accommodationId);
@@ -30,7 +31,7 @@ public class BookingDTOTest {
 	
 	@Test
     public void testBookingFlight() {
-    	assertEquals(0, bookingDTO.getFlightId());
+    	assertNull(bookingDTO.getFlightId());
     	
     	final Integer flightId = 3;
     	bookingDTO.setFlightId(flightId);
@@ -39,7 +40,7 @@ public class BookingDTOTest {
 	
 	@Test
     public void testBookingGuest() {
-    	assertEquals(0, bookingDTO.getGuest());
+    	assertNull(bookingDTO.getGuest());
     	
     	final Integer guestNumber = 3;
     	
