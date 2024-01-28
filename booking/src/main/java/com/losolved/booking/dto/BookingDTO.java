@@ -9,14 +9,15 @@ import lombok.NoArgsConstructor;
 
 @Builder
 @Data
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class BookingDTO {
 	
+	  private Long id;
 	private Integer accommodationId;
 	private Integer flightId;
 	private Integer guest;
 	private LocalDateTime bookingDate;
 	private double totalAmount;
-	    
 
 }
