@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor
 public class FlightDTO {
 	
+	private Long flightId;
 	private Integer number;
 	private LocalDateTime departure; 
 	private LocalDateTime arrival;

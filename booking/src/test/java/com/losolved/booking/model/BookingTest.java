@@ -73,4 +73,15 @@ public class BookingTest {
         booking.setTotalAmount(totalAmount);
         assertEquals(totalAmount, booking.getTotalAmount());
     }
+    
+    @Test
+    public void testBookingDate_End() {
+    //TODO: Look at date modeling 
+    	  assertEquals(null, booking.getBookingEndDate());
+
+          // Test setter and getter
+          LocalDateTime bookingDate = LocalDateTime.now();
+          booking.setBookingEndDate(bookingDate);
+          assertEquals(bookingDate, booking.getBookingEndDate());
+    }
 }

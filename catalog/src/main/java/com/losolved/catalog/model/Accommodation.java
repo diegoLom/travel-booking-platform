@@ -27,9 +27,13 @@ public class Accommodation extends BaseEntity {
 	private Address address;
 	
 	private Integer number;
+	
+	private Double price; 
+	
+	private String detail;
 
 	
 
-	// TODO: Adding Other accommodation-related attributes, methods
+	// TODO: Adding Other accommodation-related attributes, methods 
 
 }

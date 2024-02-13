@@ -37,6 +37,8 @@ public class Booking extends BaseEntity {
     
     private LocalDateTime bookingDate;
     
+    private LocalDateTime bookingEndDate;
+    
     private double totalAmount;
 
     // Other attributes, constructors, and methods
