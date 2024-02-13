@@ -8,7 +8,11 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doThrow;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -34,6 +38,7 @@ import com.losolved.catalog.errorhandling.NoSuchFlightException;
 @SpringBootTest
 public class FlightServiceTest {
 	
+	
 	private FlightService flightService;
 	
 	@MockBean
@@ -48,9 +53,9 @@ public class FlightServiceTest {
 	
 	@Test
 	public void testArragenment() {
-		Flight flight = getMockedFlight();
+		Flight flight = MockedCatalog.getMockedFlight();
 	
-		 given(flightRepository.save(ArgumentMatchers.any())).willReturn(getMockedFlight());
+		 given(flightRepository.save(ArgumentMatchers.any())).willReturn(MockedCatalog.getMockedFlight());
 		 
 		 FlightDTO flightDTO = flightService.getFlightMapper().convertEntityToDTO(flight);
 		 ResponseDTO responseDTO = flightService.arrange(flightDTO);
@@ -60,8 +65,8 @@ public class FlightServiceTest {
 	}
 	
 	@Test
-	public void testFailureReviewBook() {
-		Flight flight = getMockedFlight();
+	public void testFailureUpdateFlight() {
+		Flight flight = MockedCatalog.getMockedFlight();
 		flight.setId(1l);
 		given(flightRepository.save(flight)).willThrow(OptimisticLockingFailureException.class);
 		
@@ -75,8 +80,8 @@ public class FlightServiceTest {
 
 	
 	@Test
-	public void testSuccessReviewBook() {
-		Flight flight = getMockedFlight();
+	public void testSuccessUpdateFlight() {
+		Flight flight = MockedCatalog.getMockedFlight();
 		flight.setId(1l);
 		given(flightRepository.save(ArgumentMatchers.any())).willReturn(flight);
 		
@@ -97,8 +102,8 @@ public class FlightServiceTest {
 	}
 	
 	@Test
-	public void testSuccessRetrieveBook() {
-		Flight flightReturn = getMockedFlight();
+	public void testSuccessRetrieveFlight() {
+		Flight flightReturn = MockedCatalog.getMockedFlight();
 		given(flightRepository.findById(ArgumentMatchers.anyLong())).willReturn(Optional.of(flightReturn));
 	
 		Flight flight = flightService.getFlight(ArgumentMatchers.anyLong());
@@ -106,42 +111,41 @@ public class FlightServiceTest {
 		assertEquals(flight.getArrival(), flightReturn.getArrival());
 	}
 	
+	@Test
+	public void testRetrieveByDepartureBetweenAndRoute() {
+		
+		List<Flight> allFlights = MockedCatalog.getMockedFlights();
+		
+	 
+		Flight flightReturn = MockedCatalog.getMockedFlight();
+		given(flightRepository.findById(ArgumentMatchers.anyLong())).willReturn(Optional.of(flightReturn));
+	
+		
+		flightRepository.findByDepartureBetweenAndRoute(null, null, null); 
+		
+		
+		Flight flight = flightService.getFlight(ArgumentMatchers.anyLong());
+		assertEquals(flight.getDeparture(), flightReturn.getDeparture());
+		assertEquals(flight.getArrival(), flightReturn.getArrival());
+	}
+	
 	
 	@Test
-	public void testFailureUnBook() {
+	public void testFailureCancel() {
 		doThrow(OptimisticLockingFailureException.class).when(flightRepository).delete(ArgumentMatchers.any());
 		assertThrows(NoSuchFlightException.class, () -> flightService.cancel(FlightDTO.builder().flightId(3l).build()));
 	}
+	//TODO: Search how to do a search by  o m
 
 	
 	@Test
-	public void testSuccessUnBook() {
-		Flight flight = getMockedFlight();
+	public void testSuccessCancel() {
+		Flight flight = MockedCatalog.getMockedFlight();
 		flight.setId(1l);
 		FlightDTO flightDTO = flightService.getFlightMapper().convertEntityToDTO(flight);
 		ResponseDTO responseDTO = flightService.cancel(flightDTO);
 		
 		Mockito.verify(flightRepository).delete(flight);  //TODO: Look closely 
-	}
-	
-	
-	//TODO: Search how to do a search by other microservice 
-	public Flight getMockedFlight() {
-		LocalDateTime departure = LocalDateTime.now().plusDays(5);
-		LocalDateTime arrival = LocalDateTime.now().plusDays(8);
-
-		Address addressDeparture = Address.builder().city("Camaçari").state("Bahia").street("Rua Décima do Parque")
-				.zipCode("42802323").build();
-		Address addressArrival = Address.builder().city("Salvador").state("Bahia").street("Rio Vermelho")
-				.zipCode("428234323").build();
-
-		Route route = Route.builder().arrival(addressArrival).departure(addressDeparture).build();
-		Airline airline = Airline.builder().companyDetails("LINHAS AERES").companyName("GOL").build();
-
-		Flight flight = Flight.builder().number(92).route(route).arrival(arrival).departure(departure).airline(airline)
-				.build();
-
-		return flight;
 	}
 
 }
