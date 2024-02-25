@@ -27,6 +27,8 @@ import org.springframework.http.HttpStatus;
 
 import com.losolved.catalog.dto.FlightDTO;
 import com.losolved.catalog.dto.ResponseDTO;
+
+import com.losolved.catalog.dto.filter.InDateBetweenAndRoute;
 import com.losolved.catalog.model.Address;
 import com.losolved.catalog.model.Airline;
 import com.losolved.catalog.model.Flight;
@@ -118,15 +120,26 @@ public class FlightServiceTest {
 		
 	 
 		Flight flightReturn = MockedCatalog.getMockedFlight();
-		given(flightRepository.findById(ArgumentMatchers.anyLong())).willReturn(Optional.of(flightReturn));
+		LocalDateTime departureInFive = LocalDateTime.now().plusDays(5); 
+		LocalDateTime departureInFour = LocalDateTime.now().plusDays(4); 
 	
+		InDateBetweenAndRoute  searchFilter = new InDateBetweenAndRoute( departureInFour, departureInFive, MockedCatalog.fromCamacariToLondon());
 		
-		flightRepository.findByDepartureBetweenAndRoute(null, null, null); 
+		List<Flight> filteredFlight = allFlights.stream().filter(
+				x -> x.getDeparture().compareTo(searchFilter.starDeparture()) >= 0
+				  && x.getDeparture().compareTo(searchFilter.endDeparture()) <= 0 
+				  && x.getRoute().equals(searchFilter.route())).collect(Collectors.toList());
+		
+		given(flightRepository.findByDepartureBetweenAndRoute(departureInFour, departureInFive, searchFilter.route())
+		).willReturn(filteredFlight);
 		
 		
-		Flight flight = flightService.getFlight(ArgumentMatchers.anyLong());
-		assertEquals(flight.getDeparture(), flightReturn.getDeparture());
-		assertEquals(flight.getArrival(), flightReturn.getArrival());
+		List<Flight>  flights = flightService.getFlight(searchFilter);
+		
+		assertEquals(flights.size(), filteredFlight.size());
+		
+		
+		
 	}
 	
 	

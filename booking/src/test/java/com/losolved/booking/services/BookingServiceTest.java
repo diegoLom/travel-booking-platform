@@ -123,7 +123,7 @@ public class BookingServiceTest {
 	}
 	
 	
-	//TODO: Search how to do a search by other microservice 
+	//TODO: Search how to do a search by o m 
 	public Booking getMockedBooking() {
 		return Booking.builder().accommodationId(2).bookingDate(LocalDateTime.now()).build();
 	}
