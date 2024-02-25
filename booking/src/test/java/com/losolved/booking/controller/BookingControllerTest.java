@@ -20,6 +20,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 import com.losolved.booking.dto.BookingDTO;
 import com.losolved.booking.dto.ResponseDTO;
+import com.losolved.booking.errorhandling.NoSuchBookingException;
 import com.losolved.booking.model.Booking;
 import com.losolved.booking.services.BookingService;
 
@@ -96,7 +97,7 @@ public class BookingControllerTest {
 	@Test
 	public void givenABookingReviewNotFound() throws Exception {
 	
-		given(bookingService.reviewBooking(ArgumentMatchers.any())).willReturn(ResponseDTO.builder().code(404).message("Booking not found").build());
+		given(bookingService.reviewBooking(ArgumentMatchers.any())).willThrow(new NoSuchBookingException());
 		
 		final LocalDateTime bookingDateTime = LocalDateTime.now().plusDays(2);
 		BookingDTO bodyDTO = BookingDTO.builder().id(1l).accommodationId(1).bookingDate(bookingDateTime).build();
@@ -123,10 +124,10 @@ public class BookingControllerTest {
 
 	}
 	
-//	@Test
+	@Test
 	public void givenAnUnBookingNotFound() throws Exception {
 	
-		given(bookingService.undoBooking(ArgumentMatchers.any())).willReturn(ResponseDTO.builder().code(404).message("Booking not found").build());
+		given(bookingService.undoBooking(ArgumentMatchers.any())).willThrow( new NoSuchBookingException());
 		
 		final LocalDateTime bookingDateTime = LocalDateTime.now().plusDays(2);
 		BookingDTO bodyDTO = BookingDTO.builder().id(1l).accommodationId(1).bookingDate(bookingDateTime).build();

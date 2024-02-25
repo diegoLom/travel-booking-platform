@@ -64,10 +64,7 @@ public class BookingServiceTest {
 		given(bookingRepository.save(booking)).willThrow(OptimisticLockingFailureException.class);
 		
 		BookingDTO bookingDTO = bookingService.getBookingMapper().convertEntityToDTO(booking);
-		ResponseDTO responseDTO = bookingService.reviewBooking(bookingDTO);
-		
-		assertEquals(responseDTO.getCode(), HttpStatus.NOT_FOUND.value());
-		assertEquals(responseDTO.getMessage(), "Booking not Found");
+		assertThrows(NoSuchBookingException.class,() -> bookingService.reviewBooking(bookingDTO));
 		
 	}
 
@@ -89,7 +86,7 @@ public class BookingServiceTest {
 	@Test
 	public void testFailureRetrieveook() {
 		given(bookingRepository.findById(ArgumentMatchers.anyLong())).willReturn(Optional.empty());
-		assertThrows(NoSuchBookingException.class, () -> bookingService.reviewBooking(BookingDTO.builder().id(3l).build()));
+		assertThrows(NoSuchBookingException.class, () -> bookingService.getBooking(ArgumentMatchers.anyLong()));
 
 		
 	}

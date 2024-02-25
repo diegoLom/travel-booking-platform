@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.losolved.booking.dto.BookingDTO;
 import com.losolved.booking.dto.BookingMapper;
 import com.losolved.booking.dto.ResponseDTO;
+import com.losolved.booking.errorhandling.NoSuchBookingException;
 import com.losolved.booking.model.Booking;
 import com.losolved.booking.repositories.BookingRepository;
 
@@ -26,8 +27,8 @@ public class BookingService implements IBookingService {
 
 	@Override
 	public Booking getBooking(Long bookingId) { 
-		Optional<Booking> oBooking = bookingRepository.findById(bookingId);
-		return oBooking.isPresent() ? oBooking.get() : Booking.builder().build() ;
+		Booking booking = bookingRepository.findById(bookingId).orElseThrow(() -> new NoSuchBookingException() );
+		return booking ;
 	}
 
 	@Override
@@ -47,7 +48,8 @@ public class BookingService implements IBookingService {
 		try {
 			Booking reviewBooked = bookingRepository.save(booking);
 		}catch(OptimisticLockingFailureException optLockException) {
-			responseDTO = ResponseDTO.builder().message("Booking not Found").code(HttpStatus.NOT_FOUND.value()).build();
+			//responseDTO = ResponseDTO.builder().message("Booking not Found").code(HttpStatus.NOT_FOUND.value()).build();
+			throw new NoSuchBookingException();
 		}
 		
 		return responseDTO;
@@ -61,7 +63,8 @@ public class BookingService implements IBookingService {
 		try {
 			bookingRepository.delete(booking);
 		}catch(OptimisticLockingFailureException optLockException) {
-			responseDTO = ResponseDTO.builder().message("Booking not Found").code(HttpStatus.NOT_FOUND.value()).build();
+			//responseDTO = ResponseDTO.builder().message("Booking not Found").code(HttpStatus.NOT_FOUND.value()).build();
+			throw new NoSuchBookingException();
 		}
 		
 		return responseDTO;
