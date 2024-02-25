@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -23,7 +24,7 @@ public class BookingTest {
 	
 	@Test
     public void testBookingAccommodation() {
-    	assertEquals(0, booking.getAccommodationId());
+    	assertNull(booking.getAccommodationId());
     	
     	final Integer accommodationId = 3;
     	
@@ -33,7 +34,7 @@ public class BookingTest {
 	
 	@Test
     public void testBookingFlight() {
-    	assertEquals(0, booking.getFlightId());
+    	assertNull(booking.getFlightId());
     	
     	final Integer flightId = 3;
     	
@@ -43,7 +44,7 @@ public class BookingTest {
 	
 	@Test
     public void testBookingGuest() {
-    	assertEquals(0, booking.getGuest());
+    	assertNull(booking.getGuest());
     	
     	final Integer guestNumber = 3;
     	
@@ -71,5 +72,16 @@ public class BookingTest {
         double totalAmount = 100.00;
         booking.setTotalAmount(totalAmount);
         assertEquals(totalAmount, booking.getTotalAmount());
+    }
+    
+    @Test
+    public void testBookingDate_End() {
+    //TODO: Look at date modeling 
+    	  assertEquals(null, booking.getBookingEndDate());
+
+          // Test setter and getter
+          LocalDateTime bookingDate = LocalDateTime.now();
+          booking.setBookingEndDate(bookingDate);
+          assertEquals(bookingDate, booking.getBookingEndDate());
     }
 }

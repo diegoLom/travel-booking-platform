@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+@Data  //TODO: It's possible use Record too 
 @Builder
 @NoArgsConstructor @AllArgsConstructor
 public class AccommodationDTO {
