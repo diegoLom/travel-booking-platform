@@ -31,7 +31,7 @@ public class FlightMapperTest {
 		LocalDateTime departure = LocalDateTime.now().plusDays(5);
 		LocalDateTime arrival = LocalDateTime.now().plusDays(8);
 
-		FlightDTO flightDTO = FlightDTO.builder().number(3).departure(departure).arrival(arrival)
+		FlightDTO flightDTO = FlightDTO.builder().id(3l).number(3).departure(departure).arrival(arrival)
 				.routeDepartureCity("Camaçari").routeDepartureState("Bahia")
 				.routeDepartureStreet("Rua Décima do Parque").routeDepartureZipCode("42802323")
 				.routeArrivalCity("Salvador").routeArrivalState("Bahia").routeArrivalStreet("Rio Vermelho")
@@ -58,9 +58,10 @@ public class FlightMapperTest {
 		Route route = Route.builder().arrival(addressArrival).departure(addressDeparture).build();
 		Airline airline = Airline.builder().companyDetails("LINHAS AERES").companyName("GOL").build();
 
-		Flight flight = Flight.builder().number(92).route(route).arrival(arrival).departure(departure).airline(airline)
+		Flight flight = Flight.builder().id(3l).number(92).route(route).arrival(arrival).departure(departure).airline(airline)
 				.build();
 
+		
 		FlightDTO flightDTO = flightMapper.convertEntityToDTO(flight);
 
 		assertionOfTheConvertion(flightDTO, flight);
@@ -69,6 +70,8 @@ public class FlightMapperTest {
 
 	public void assertionOfTheConvertion(FlightDTO flightDTO, Flight flight) {
 
+		assertEquals(flight.getId(), flightDTO.getId());
+		
 		assertEquals(flight.getNumber(), flightDTO.getNumber());
 		assertEquals(flight.getDeparture(), flightDTO.getDeparture());
 		assertEquals(flight.getArrival(), flightDTO.getArrival());

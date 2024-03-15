@@ -63,24 +63,19 @@ public class FlightServiceTest {
 		 ResponseDTO responseDTO = flightService.arrange(flightDTO);
 		 
 		 assertEquals(responseDTO.getCode(), HttpStatus.CREATED.value());
-		 assertEquals(responseDTO.getMessage(), "Flight schedule");
+		 assertEquals(responseDTO.getMessage(), "Flight set up");
 	}
 	
 	@Test
 	public void testFailureUpdateFlight() {
-		Flight flight = MockedCatalog.getMockedFlight();
-		flight.setId(1l);
+		Flight flight = Flight.builder().id(3l).build();
 		given(flightRepository.save(flight)).willThrow(OptimisticLockingFailureException.class);
 		
 		FlightDTO flightDTO = flightService.getFlightMapper().convertEntityToDTO(flight);
-		ResponseDTO responseDTO = flightService.update(flightDTO);
-		
-		assertEquals(responseDTO.getCode(), HttpStatus.NOT_FOUND.value());
-		assertEquals(responseDTO.getMessage(), "Flight not Found");
+		assertThrows(NoSuchFlightException.class,() -> flightService.update(flightDTO));
 		
 	}
-
-	
+		
 	@Test
 	public void testSuccessUpdateFlight() {
 		Flight flight = MockedCatalog.getMockedFlight();
@@ -98,9 +93,7 @@ public class FlightServiceTest {
 	@Test
 	public void testFailureRetrieveook() {
 		given(flightRepository.findById(ArgumentMatchers.anyLong())).willReturn(Optional.empty());
-		assertThrows(NoSuchFlightException.class, () -> flightService.update(FlightDTO.builder().flightId(3l).build()));
-
-		
+		assertThrows(NoSuchFlightException.class, () -> flightService.getFlight(ArgumentMatchers.anyLong()));
 	}
 	
 	@Test
@@ -115,46 +108,34 @@ public class FlightServiceTest {
 	
 	@Test
 	public void testRetrieveByDepartureBetweenAndRoute() {
-		
-		List<Flight> allFlights = MockedCatalog.getMockedFlights();
-		
-	 
 		Flight flightReturn = MockedCatalog.getMockedFlight();
 		LocalDateTime departureInFive = LocalDateTime.now().plusDays(5); 
 		LocalDateTime departureInFour = LocalDateTime.now().plusDays(4); 
 	
 		InDateBetweenAndRoute  searchFilter = new InDateBetweenAndRoute( departureInFour, departureInFive, MockedCatalog.fromCamacariToLondon());
-		
-		List<Flight> filteredFlight = allFlights.stream().filter(
-				x -> x.getDeparture().compareTo(searchFilter.starDeparture()) >= 0
-				  && x.getDeparture().compareTo(searchFilter.endDeparture()) <= 0 
-				  && x.getRoute().equals(searchFilter.route())).collect(Collectors.toList());
+		List<Flight> filteredFlight = MockedCatalog.getFlightFiltered();
 		
 		given(flightRepository.findByDepartureBetweenAndRoute(departureInFour, departureInFive, searchFilter.route())
 		).willReturn(filteredFlight);
 		
-		
 		List<Flight>  flights = flightService.getFlight(searchFilter);
 		
 		assertEquals(flights.size(), filteredFlight.size());
-		
-		
-		
 	}
 	
 	
 	@Test
 	public void testFailureCancel() {
 		doThrow(OptimisticLockingFailureException.class).when(flightRepository).delete(ArgumentMatchers.any());
-		assertThrows(NoSuchFlightException.class, () -> flightService.cancel(FlightDTO.builder().flightId(3l).build()));
+		assertThrows(NoSuchFlightException.class, () -> flightService.cancel(FlightDTO.builder().id(3l).build()));
 	}
 	//TODO: Search how to do a search by  o m
 
 	
 	@Test
 	public void testSuccessCancel() {
-		Flight flight = MockedCatalog.getMockedFlight();
-		flight.setId(1l);
+		Flight flight = Flight.builder().id(3l).build();
+		
 		FlightDTO flightDTO = flightService.getFlightMapper().convertEntityToDTO(flight);
 		ResponseDTO responseDTO = flightService.cancel(flightDTO);
 		

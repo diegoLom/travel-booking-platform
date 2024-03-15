@@ -16,7 +16,14 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(value = NoSuchFlightException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public @ResponseBody ResponseDTO handleException(NoSuchFlightException ex) {
+	public @ResponseBody ResponseDTO handleFlightException(NoSuchFlightException ex) {
+		return ResponseDTO.builder().code(HttpStatus.NOT_FOUND.value()).message(ex.getMessage()).build();
+	}
+	
+	
+	@ExceptionHandler(value = NoSuchAccommodationException.class)
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	public @ResponseBody ResponseDTO handleAccommodationException(NoSuchAccommodationException ex) {
 		return ResponseDTO.builder().code(HttpStatus.NOT_FOUND.value()).message(ex.getMessage()).build();
 	}
 

@@ -12,14 +12,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor
 public class FlightDTO {
 	
-	private Long flightId;
+	private Long id;
 	private Integer number;
 	private LocalDateTime departure; 
 	private LocalDateTime arrival;
+	private Long airlineId;
+	private Long routeId;
+    
+	private Long routeDepartureId;
     private String routeDepartureStreet; 
     private String routeDepartureCity;
     private String routeDepartureState;
     private String routeDepartureZipCode;
+	private Long routeArrivalId;
     private String routeArrivalStreet;
     private String routeArrivalCity;
     private String routeArrivalState;

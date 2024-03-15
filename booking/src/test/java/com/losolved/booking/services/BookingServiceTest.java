@@ -87,8 +87,6 @@ public class BookingServiceTest {
 	public void testFailureRetrieveook() {
 		given(bookingRepository.findById(ArgumentMatchers.anyLong())).willReturn(Optional.empty());
 		assertThrows(NoSuchBookingException.class, () -> bookingService.getBooking(ArgumentMatchers.anyLong()));
-
-		
 	}
 	
 	@Test

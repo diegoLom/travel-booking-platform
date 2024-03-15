@@ -39,12 +39,15 @@ public class BookingService implements IBookingService {
 		ResponseDTO responseDTO = ResponseDTO.builder().message("Booking schedule").code(HttpStatus.CREATED.value()).build();
 		return responseDTO;
 	}
-
+	
 	@Override
 	public ResponseDTO reviewBooking(BookingDTO bookingDTO) {
 		ResponseDTO responseDTO = ResponseDTO.builder().message("Booking reviewd").code(HttpStatus.OK.value()).build();
 		
-		Booking booking = bookingMapper.convertDTOToEntity(bookingDTO);
+		Booking oldBooking = getBooking(bookingDTO.getId());
+		Booking booking = getBookingMapper().convertDTOToEntity(bookingDTO);
+		booking.setId(oldBooking.getId());
+		
 		try {
 			Booking reviewBooked = bookingRepository.save(booking);
 		}catch(OptimisticLockingFailureException optLockException) {
@@ -54,12 +57,16 @@ public class BookingService implements IBookingService {
 		
 		return responseDTO;
 	}
+	
+	//TODO: Add @Version OptimisticLockingFailureException  
+	
+	//TODO: thrid libraries problems when 
 
 	@Override
 	public ResponseDTO undoBooking(BookingDTO bookingDTO) {
 		ResponseDTO responseDTO = ResponseDTO.builder().message("Booking canceled").code(HttpStatus.OK.value()).build();
 		
-		Booking booking = bookingMapper.convertDTOToEntity(bookingDTO);
+		Booking booking = getBooking(bookingDTO.getId());
 		try {
 			bookingRepository.delete(booking);
 		}catch(OptimisticLockingFailureException optLockException) {

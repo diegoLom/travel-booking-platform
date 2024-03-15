@@ -11,7 +11,7 @@ public class TestCatalog {
 
 	public static void main(String[] args) {
 			
-	 List<Flight> flights = MockedCatalog.getMockedFlights();
+	 List<Flight> flights = MockedCatalog.getFlights();
 	 
 	List result = flights.stream().map( x -> x.getDeparture()
 ).filter(x -> x.isAfter(LocalDateTime.now().plusDays(4))).collect(Collectors.toList());

@@ -22,7 +22,7 @@ public class Flight extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long id; //change dto and rename it for id like accommodation
 	
 	private Integer number;
 	
