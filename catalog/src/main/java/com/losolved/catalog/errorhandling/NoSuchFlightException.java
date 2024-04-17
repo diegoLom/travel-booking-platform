@@ -3,10 +3,18 @@ package com.losolved.catalog.errorhandling;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
 public class NoSuchFlightException extends RuntimeException {
 	
-	private String message;
+	
+	
+	public NoSuchFlightException() {
+		super("Flight not found");
+		
+	}
+	
+	public NoSuchFlightException(String message) {
+		super(message);
+	
+	}
 
 }

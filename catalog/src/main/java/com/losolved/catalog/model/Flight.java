@@ -22,7 +22,7 @@ public class Flight extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long id; //change dto and rename it for id like accommodation
 	
 	private Integer number;
 	
@@ -31,11 +31,11 @@ public class Flight extends BaseEntity {
 	private LocalDateTime arrival; 
 	
 	@ManyToOne(optional=false) 
-    @JoinColumn(name="arrival_id", nullable=false, updatable=false)
+    @JoinColumn(name="routeId", nullable=false, updatable=false)
 	private Route route;
 	
 	@ManyToOne(optional=false) 
-    @JoinColumn(name="airline_id", nullable=false, updatable=false)
+    @JoinColumn(name="airlineId", nullable=false, updatable=false)
 	private Airline airline;
 	
 

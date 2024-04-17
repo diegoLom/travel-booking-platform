@@ -21,7 +21,7 @@ import com.losolved.booking.services.BookingService;
 @RestController
 @RequestMapping("/book")
 public class BookingController {
-	
+		
 	@Autowired
 	private BookingService bookingService;
 	

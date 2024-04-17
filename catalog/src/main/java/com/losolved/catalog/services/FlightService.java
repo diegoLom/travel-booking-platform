@@ -9,11 +9,12 @@ import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.losolved.booking.model.Booking;
+
 import com.losolved.catalog.dto.FlightDTO;
 import com.losolved.catalog.dto.ResponseDTO;
 import com.losolved.catalog.dto.filter.InDateBetweenAndRoute;
 import com.losolved.catalog.dto.mapper.FlightMapper;
+import com.losolved.catalog.errorhandling.NoSuchFlightException;
 import com.losolved.catalog.model.Flight;
 import com.losolved.catalog.model.Route;
 import com.losolved.catalog.repositories.FlightRepository;
@@ -30,15 +31,20 @@ public class FlightService  implements IFlightService {
 	@Autowired
 	private FlightRepository flightRepository;
 
+	/// TODO: Develop a findAddress to get addressId
+	
 	@Override
 	public Flight getFlight(Long flightId) {
-		Optional<Flight> oFlight = flightRepository.findById(flightId);
-		return oFlight.isPresent() ? oFlight.get() : Flight.builder().build();
+		Flight flight = flightRepository.findById(flightId).orElseThrow(() -> new NoSuchFlightException());
+		return flight;
 	}
 
 	@Override
 	public List<Flight> getFlight(InDateBetweenAndRoute arg0) {
 		List<Flight> flights = flightRepository.findByDepartureBetweenAndRoute(arg0.starDeparture(), arg0.endDeparture(), arg0.route());
+		if(flights.isEmpty())
+			throw new NoSuchFlightException("Flight not found");
+		
 		return flights;
 	}
 
@@ -47,20 +53,22 @@ public class FlightService  implements IFlightService {
 		Flight flight = flightMapper.convertDTOToEntity(flightDTO);
 		
 		flightRepository.save(flight);
-		ResponseDTO responseDTO = ResponseDTO.builder().message("Flight schedule").code(HttpStatus.CREATED.value()).build();
+		ResponseDTO responseDTO = ResponseDTO.builder().message("Flight set up").code(HttpStatus.CREATED.value()).build();
 		return responseDTO;
 	}
 
 	@Override
 	public ResponseDTO update(FlightDTO flightDTO) {
 		ResponseDTO responseDTO = ResponseDTO.builder().message("Flight reviewd").code(HttpStatus.OK.value()).build();
-		Flight flight = flightMapper.convertDTOToEntity(flightDTO);
+		
+		Flight flight = getFlight(flightDTO.getId());
+		
 		try {
 			Flight updatedFlight = flightRepository.save(flight);
 		}catch(OptimisticLockingFailureException optLockException) {
-			responseDTO = ResponseDTO.builder().message("Flight not Found").code(HttpStatus.NOT_FOUND.value()).build();
+			throw new NoSuchFlightException("Flight not found");
 		}
-		
+		 
 		return responseDTO;
 	}
 
@@ -68,17 +76,15 @@ public class FlightService  implements IFlightService {
 	public ResponseDTO cancel(FlightDTO flightDTO) {
 		ResponseDTO responseDTO = ResponseDTO.builder().message("Flight canceled").code(HttpStatus.OK.value()).build();
 		
-		Flight booking = flightMapper.convertDTOToEntity(flightDTO);
+		Flight flight = getFlight(flightDTO.getId());
 		try {
-			flightRepository.delete(booking);
+			flightRepository.delete(flight);
 		}catch(OptimisticLockingFailureException optLockException) {
-			responseDTO = ResponseDTO.builder().message("Flight not Found").code(HttpStatus.NOT_FOUND.value()).build();
+			throw new NoSuchFlightException("Flight not found");
 		}
 		
 		return responseDTO;
 
-		
-		return null;
 	}
 
 }

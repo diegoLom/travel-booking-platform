@@ -7,16 +7,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
-@EnableJpaAuditing(auditorAwareRef="auditAwareImpl")
 public class CatalogApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CatalogApplication.class, args);
 	}
 	
-	@Bean
-	public ModelMapper modelMapper() {
-	    return new ModelMapper();
-	}
 
 }
