@@ -60,6 +60,8 @@
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>8.0.33</version>
 		</dependency>
+		
+
 
 	</dependencies>
 
@@ -71,6 +73,10 @@
 				<configuration>
 					<image>
 						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
+						<name>losolved/catalog-service:1.0</name>
+						<env>
+						 <BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
+						 </env>
 					</image>
 					<excludes>
 						<exclude>
@@ -82,5 +88,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
