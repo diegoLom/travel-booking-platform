@@ -1,8 +1,7 @@
 package com.losolved.user.services;
 
 
-import com.losolved.user.exceptions.EmailInvalidException;
-import com.losolved.user.exceptions.PasswordInvalidException;
+
 import com.losolved.user.model.User;
 import com.losolved.user.repositories.UserRepository;
 import net.bytebuddy.matcher.StringMatcher;
@@ -12,13 +11,16 @@ import org.mockito.ArgumentMatchers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import com.losolved.user.exceptions.DuplicateUserNameException;
-import javax.persistence.PersistenceException;
+
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.BDDMockito.*;
+
+import com.losolved.user.exceptions.DuplicateUserNameException;
+import com.losolved.user.exceptions.EmailInvalidException;
+import com.losolved.user.exceptions.PasswordInvalidException;
 
 
 

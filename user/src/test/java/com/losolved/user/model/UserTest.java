@@ -10,10 +10,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.losolved.user.exceptions.EmailInvalidException;
-import com.losolved.user.exceptions.PasswordInvalidException;
+
 import com.losolved.user.patterns.RegularExpression;
 import com.losolved.user.patterns.ValidationPattern;
+
+
 
 
 /**
