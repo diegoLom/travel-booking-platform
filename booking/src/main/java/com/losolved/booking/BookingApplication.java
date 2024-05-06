@@ -12,7 +12,6 @@ import com.losolved.booking.configuration.DataSourceProperties;
 
 
 @SpringBootApplication
-@EnableConfigurationProperties(value = {DataSourceProperties.class})
 public class BookingApplication {
 
 	public static void main(String[] args) {

@@ -1,27 +1,16 @@
 package com.losolved.user.model;
 
-
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-
-import com.losolved.user.exceptions.EmailInvalidException;
-import com.losolved.user.exceptions.PasswordInvalidException;
-import com.losolved.user.patterns.RegularExpression;
-import com.losolved.user.patterns.ValidationPattern;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
+
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 //Generates getters/setter for all fields , constructor, equals and toString for non-transient fields 

@@ -9,6 +9,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
+@EnableConfigurationProperties(value = {DataSourceProperties.class})
 public class DatabaseConfig {
 
     private final DataSourceProperties dataSourceProperties;
