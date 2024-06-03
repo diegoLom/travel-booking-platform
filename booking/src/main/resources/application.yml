@@ -13,3 +13,14 @@ management:
     web:
       exposure:
         include: "*"
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    com.losolved.booking: DEBUG
+  file:
+    name: logs/spring-boot-application.log
+  pattern:
+    console: "%d{dd/MM/yyyy HH:mm:ss} - %msg%n"
+    file: "%d{dd/MM/yyyy HH:mm:ss} - %msg%n"

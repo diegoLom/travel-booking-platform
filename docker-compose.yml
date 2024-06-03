@@ -1,0 +1,137 @@
+services:
+  userdb:
+    container_name: userdb
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    environment:
+      MYSQL_DATABASE: userdb
+    extends: 
+      file: common-config.yml
+      service: microservice-db-config
+  
+  bookingdb:
+    container_name: bookingdb
+    ports:
+      - "3308:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    environment:
+      MYSQL_DATABASE: bookingdb
+    extends: 
+      file: common-config.yml
+      service: microservice-db-config
+  
+  catalogdb:
+    container_name: catalogdb
+    ports:
+      - "3310:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    environment:
+      MYSQL_DATABASE: catalogdb
+    extends: 
+      file: common-config.yml
+      service: microservice-db-config
+  
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    healthcheck:
+      test: "rabbitmq-diagnostics -q ping"
+      start_period: 30s
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    extends: 
+      file: common-config.yml
+      service: network-deploy-service
+  
+  configserver:
+    container_name: configserver-ms
+    image: losolved/configserver:v1
+    ports:
+      - "8071:8071"
+    healthcheck:
+      test: "exit 0"
+      interval: 30s
+      timeout: 10s
+      retries: 1
+    environment:
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=guest
+      - SPRING_RABBITMQ_PASSWORD=guest
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    extends:
+      file: common-config.yml
+      service: microservice-base-config
+
+  user:
+    image: "losolved/user:v1"
+    container_name: user-ms
+    ports:
+      - "8080:8080"
+    depends_on:
+      userdb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+    environment:
+      - SPRING_APPLICATION_NAME=user
+      - SPRING_PROFILES_ACTIVE=dev
+  
+  booking:
+    image: "losolved/booking:v1"
+    container_name: booking-ms
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      bookingdb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+    environment:
+      - SPRING_APPLICATION_NAME=booking
+      - SPRING_PROFILES_ACTIVE=dev
+
+  catalog:
+    image: "losolved/catalog:v1"
+    container_name: catalog-ms
+    ports:
+      - "8082:8082"
+    depends_on:
+      catalogdb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+    environment:
+      - SPRING_APPLICATION_NAME=catalog
+      - SPRING_PROFILES_ACTIVE=dev      
+
+networks:
+  losolved:
+    driver: "bridge"
