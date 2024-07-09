@@ -3791,3 +3791,479 @@ Consider the following:
 09/07/2024 18:07:26 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
 09/07/2024 18:07:26 - Restarting Consumer@355e2973: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
 09/07/2024 18:07:26 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:07:31 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:07:31 - Restarting Consumer@719795c6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:07:31 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:07:36 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:07:36 - Restarting Consumer@328faaeb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:07:36 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:07:41 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:07:41 - Restarting Consumer@772df29e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:07:41 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:07:46 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:07:46 - Restarting Consumer@7c731e8f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:07:46 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:07:51 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:07:51 - Restarting Consumer@7b53b0c6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:07:51 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:07:53 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:07:53 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559002772
+09/07/2024 18:07:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:07:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:07:53 - Response 200 OK
+09/07/2024 18:07:53 - Response 200 OK
+09/07/2024 18:07:53 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:07:56 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:07:56 - Restarting Consumer@298fec8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:07:56 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:02 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:02 - Restarting Consumer@7e93d3ad: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:02 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:07 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:07 - Restarting Consumer@51330c69: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:07 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:12 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:12 - Restarting Consumer@7ebc6335: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:12 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:17 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:17 - Restarting Consumer@5fc64ea7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:17 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:21 - Resolving eureka endpoints via configuration
+09/07/2024 18:08:22 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:22 - Restarting Consumer@1a9c817d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:22 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:23 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559002772
+09/07/2024 18:08:23 - Accept=[application/json, application/*+json]
+09/07/2024 18:08:23 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:08:23 - Accept=[application/json, application/*+json]
+09/07/2024 18:08:23 - Response 200 OK
+09/07/2024 18:08:23 - Response 200 OK
+09/07/2024 18:08:23 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:08:27 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:27 - Restarting Consumer@4483c867: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:27 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:32 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:32 - Restarting Consumer@6afcfc5f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:32 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:38 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:38 - Restarting Consumer@ccfe47b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:38 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:43 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:43 - Restarting Consumer@20f57132: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:43 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:48 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:48 - Restarting Consumer@58faf473: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:48 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:53 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559002772
+09/07/2024 18:08:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:08:53 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:08:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:08:53 - Response 200 OK
+09/07/2024 18:08:53 - Response 200 OK
+09/07/2024 18:08:53 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:08:53 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:53 - Restarting Consumer@45f6ce3a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:53 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:08:58 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:08:58 - Restarting Consumer@13c13c31: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:08:58 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:03 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:03 - Restarting Consumer@6e64943d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:03 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:08 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:08 - Restarting Consumer@32ba4fa9: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:08 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:13 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:13 - Restarting Consumer@49dfd89a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:13 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:18 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:18 - Restarting Consumer@731f837c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:18 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:23 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559002772
+09/07/2024 18:09:23 - Accept=[application/json, application/*+json]
+09/07/2024 18:09:23 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:09:23 - Accept=[application/json, application/*+json]
+09/07/2024 18:09:23 - Response 200 OK
+09/07/2024 18:09:23 - Response 200 OK
+09/07/2024 18:09:23 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:09:24 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:24 - Restarting Consumer@46bdf54c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:24 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:29 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:29 - Restarting Consumer@45f22361: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:29 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:34 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:34 - Restarting Consumer@1727aaa8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:34 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:39 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:39 - Restarting Consumer@5fe52d58: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:39 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:44 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:44 - Restarting Consumer@15b3b048: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:44 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:49 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:49 - Restarting Consumer@6ab81c9b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:49 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:53 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559002772
+09/07/2024 18:09:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:09:53 - Response 200 OK
+09/07/2024 18:09:53 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:09:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:09:53 - Response 200 OK
+09/07/2024 18:09:53 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:09:54 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:54 - Restarting Consumer@15e7a82a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:54 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:09:59 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:09:59 - Restarting Consumer@760ef265: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:09:59 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:05 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:05 - Restarting Consumer@25284b5c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:05 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:10 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:10 - Restarting Consumer@5661c287: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:10 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:15 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:15 - Restarting Consumer@7f12b905: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:15 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:20 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:20 - Restarting Consumer@1af1357d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:20 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:23 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559002772
+09/07/2024 18:10:23 - Accept=[application/json, application/*+json]
+09/07/2024 18:10:23 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:10:23 - Accept=[application/json, application/*+json]
+09/07/2024 18:10:23 - Response 200 OK
+09/07/2024 18:10:23 - Response 200 OK
+09/07/2024 18:10:23 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:10:25 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:25 - Restarting Consumer@17e93bcb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:25 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:30 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:30 - Restarting Consumer@476bf28c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:30 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:35 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:35 - Restarting Consumer@21510c2d: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:35 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:40 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:40 - Restarting Consumer@4447e8e5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:40 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:45 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:45 - Restarting Consumer@f69e49a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:45 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:51 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:51 - Restarting Consumer@35b8f24f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:51 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:53 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559002772
+09/07/2024 18:10:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:10:53 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:10:53 - Accept=[application/json, application/*+json]
+09/07/2024 18:10:53 - Response 200 OK
+09/07/2024 18:10:53 - Response 200 OK
+09/07/2024 18:10:53 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:10:56 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:10:56 - Restarting Consumer@6b7ad9f5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:10:56 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:10:57 - Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+09/07/2024 18:10:57 - Unregistering application BOOKING with eureka with status DOWN
+09/07/2024 18:10:57 - Saw local status change event StatusChangeEvent [timestamp=1720559457591, current=DOWN, previous=UP]
+09/07/2024 18:10:57 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+09/07/2024 18:10:57 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+09/07/2024 18:10:57 - Accept=[application/json, application/*+json]
+09/07/2024 18:10:57 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.3, status = DOWN, ipAddr = 192.168.0.3, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@435593cd] as "application/json"
+09/07/2024 18:10:57 - Waiting for workers to finish.
+09/07/2024 18:10:57 - Successfully waited for workers to finish.
+09/07/2024 18:10:57 - stopped bean 'inbound.springCloudBus.anonymous.5TuIUg0MSmSyXb7wqHhx0A'
+09/07/2024 18:10:57 - Response 204 NO_CONTENT
+09/07/2024 18:10:57 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+09/07/2024 18:10:57 - Channel 'booking.rabbit-1194181137.springCloudBusInput.errors' has 1 subscriber(s).
+09/07/2024 18:10:57 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+09/07/2024 18:10:57 - Channel 'booking.errorChannel' has 0 subscriber(s).
+09/07/2024 18:10:57 - stopped bean '_org.springframework.integration.errorLogger'
+09/07/2024 18:10:57 - Closing JPA EntityManagerFactory for persistence unit 'default'
+09/07/2024 18:10:57 - Shutting down DiscoveryClient ...
+09/07/2024 18:11:00 - Unregistering ...
+09/07/2024 18:11:00 - HTTP DELETE http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081
+09/07/2024 18:11:00 - Accept=[application/json, application/*+json]
+09/07/2024 18:11:00 - Response 200 OK
+09/07/2024 18:11:00 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - deregister  status: 200
+09/07/2024 18:11:01 - Completed shut down of DiscoveryClient
+09/07/2024 18:11:05 - Starting BookingApplication using Java 17.0.8.1 with PID 15992 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+09/07/2024 18:11:05 - Running with Spring Boot v3.2.3, Spring v6.1.4
+09/07/2024 18:11:05 - The following 1 profile is active: "dev"
+09/07/2024 18:11:05 - Fetching config from server at : http://localhost:8071/
+09/07/2024 18:11:05 - Located environment: name=booking, profiles=[default], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+09/07/2024 18:11:05 - Fetching config from server at : http://localhost:8071/
+09/07/2024 18:11:05 - Located environment: name=booking, profiles=[dev], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+09/07/2024 18:11:06 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09/07/2024 18:11:07 - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+09/07/2024 18:11:07 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+09/07/2024 18:11:07 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+09/07/2024 18:11:07 - BeanFactory id=988f223c-5daf-3610-bca4-d16d12d86803
+09/07/2024 18:11:07 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+09/07/2024 18:11:07 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+09/07/2024 18:11:07 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+09/07/2024 18:11:07 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+09/07/2024 18:11:07 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+09/07/2024 18:11:08 - Tomcat initialized with port 8081 (http)
+09/07/2024 18:11:08 - Starting service [Tomcat]
+09/07/2024 18:11:08 - Starting Servlet engine: [Apache Tomcat/10.1.19]
+09/07/2024 18:11:08 - Initializing Spring embedded WebApplicationContext
+09/07/2024 18:11:08 - Root WebApplicationContext: initialization completed in 3145 ms
+09/07/2024 18:11:08 - Filter 'webMvcObservationFilter' configured for use
+09/07/2024 18:11:08 - jdbc:mysql://localhost:3308/bookingdb
+09/07/2024 18:11:08 - root
+09/07/2024 18:11:08 - Lo2011158
+09/07/2024 18:11:08 - com.mysql.jdbc.Driver
+09/07/2024 18:11:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+09/07/2024 18:11:08 - HHH000026: Second-level cache disabled
+09/07/2024 18:11:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+09/07/2024 18:11:09 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+09/07/2024 18:11:09 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+09/07/2024 18:11:09 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+09/07/2024 18:11:10 - 6 mappings in 'requestMappingHandlerMapping'
+09/07/2024 18:11:10 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+09/07/2024 18:11:10 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+09/07/2024 18:11:10 - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+09/07/2024 18:11:12 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
+09/07/2024 18:11:12 - LiveReload server is running on port 35729
+09/07/2024 18:11:13 - Eureka HTTP Client uses RestTemplate.
+09/07/2024 18:11:13 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+09/07/2024 18:11:13 - Exposing 23 endpoint(s) beneath base path '/actuator'
+09/07/2024 18:11:13 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+09/07/2024 18:11:13 - Channel 'booking.errorChannel' has 1 subscriber(s).
+09/07/2024 18:11:13 - started bean '_org.springframework.integration.errorLogger'
+09/07/2024 18:11:13 - Setting initial instance status as: STARTING
+09/07/2024 18:11:13 - Initializing Eureka in region us-east-1
+09/07/2024 18:11:13 - Resolving eureka endpoints via configuration
+09/07/2024 18:11:13 - Disable delta property : false
+09/07/2024 18:11:13 - Single vip registry refresh property : null
+09/07/2024 18:11:13 - Force full registry fetch : false
+09/07/2024 18:11:13 - Application is null : false
+09/07/2024 18:11:13 - Registered Applications size is zero : true
+09/07/2024 18:11:13 - Application version is -1: true
+09/07/2024 18:11:13 - Getting all instance registry info from the eureka server
+09/07/2024 18:11:13 - HTTP GET http://localhost:8070/eureka/apps/
+09/07/2024 18:11:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:11:13 - Response 200 OK
+09/07/2024 18:11:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:11:13 - The response status is 200
+09/07/2024 18:11:13 - Starting heartbeat executor: renew interval is: 30
+09/07/2024 18:11:13 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+09/07/2024 18:11:13 - Discovery Client initialized at timestamp 1720559473537 with initial instances count: 1
+09/07/2024 18:11:13 - Registering application BOOKING with eureka with status UP
+09/07/2024 18:11:13 - Saw local status change event StatusChangeEvent [timestamp=1720559473549, current=UP, previous=STARTING]
+09/07/2024 18:11:13 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+09/07/2024 18:11:13 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+09/07/2024 18:11:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:11:13 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.3, status = UP, ipAddr = 192.168.0.3, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@56177163] as "application/json"
+09/07/2024 18:11:13 - Tomcat started on port 8081 (http) with context path ''
+09/07/2024 18:11:13 - Updating port to 8081
+09/07/2024 18:11:13 - Response 204 NO_CONTENT
+09/07/2024 18:11:13 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+09/07/2024 18:11:14 - Creating binder: rabbit
+09/07/2024 18:11:14 - Constructing binder child context for rabbit
+09/07/2024 18:11:14 - Caching the binder: rabbit
+09/07/2024 18:11:14 - declaring queue for inbound: springCloudBus.anonymous.jjQrZ_YWTgqyD7fQvv5vkA, bound to: springCloudBus
+09/07/2024 18:11:14 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:14 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:14 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:14 - Channel 'rabbit-235511575.springCloudBusInput.errors' has 1 subscriber(s).
+09/07/2024 18:11:14 - Channel 'rabbit-235511575.springCloudBusInput.errors' has 2 subscriber(s).
+09/07/2024 18:11:14 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:14 - Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:14 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:14 - started bean 'inbound.springCloudBus.anonymous.jjQrZ_YWTgqyD7fQvv5vkA'
+09/07/2024 18:11:14 - Started BookingApplication in 13.768 seconds (process running for 515.187)
+09/07/2024 18:11:14 - Condition evaluation unchanged
+09/07/2024 18:11:20 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:20 - Restarting Consumer@152584bc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:20 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:25 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:25 - Restarting Consumer@17fff1da: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:25 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:30 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:30 - Restarting Consumer@7d91d4e5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:30 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:35 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:35 - Restarting Consumer@4b3441e5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:35 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:40 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:40 - Restarting Consumer@44f335c8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:40 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559473549
+09/07/2024 18:11:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:11:43 - Accept=[application/json, application/*+json]
+09/07/2024 18:11:43 - Accept=[application/json, application/*+json]
+09/07/2024 18:11:43 - Response 200 OK
+09/07/2024 18:11:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:11:43 - Response 200 OK
+09/07/2024 18:11:45 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:45 - Restarting Consumer@2a8b4e43: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:45 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:50 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:50 - Restarting Consumer@26e80760: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:50 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:11:55 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:11:55 - Restarting Consumer@63b1f201: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:11:55 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:01 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:01 - Restarting Consumer@6a5051d2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:01 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:06 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:06 - Restarting Consumer@49e651c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:06 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:11 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:11 - Restarting Consumer@7a2ffc20: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:11 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:12:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559473549
+09/07/2024 18:12:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:12:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:12:13 - Response 200 OK
+09/07/2024 18:12:13 - Response 200 OK
+09/07/2024 18:12:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:12:16 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:16 - Restarting Consumer@377e440: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:16 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:21 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:21 - Restarting Consumer@23e6dd53: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:21 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:26 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:26 - Restarting Consumer@7bb3157: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:26 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:31 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:31 - Restarting Consumer@4cd77755: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:31 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:36 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:36 - Restarting Consumer@2f7944c6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:36 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:42 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:42 - Restarting Consumer@5e10f469: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:42 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559473549
+09/07/2024 18:12:43 - Accept=[application/json, application/*+json]
+09/07/2024 18:12:43 - Response 200 OK
+09/07/2024 18:12:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:12:43 - Accept=[application/json, application/*+json]
+09/07/2024 18:12:43 - Response 200 OK
+09/07/2024 18:12:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:12:47 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:47 - Restarting Consumer@23b59042: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:47 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:52 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:52 - Restarting Consumer@6fbdf84c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:52 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:12:57 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:12:57 - Restarting Consumer@43349a0b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:12:57 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:02 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:02 - Restarting Consumer@63a6e68: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:02 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:07 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:07 - Restarting Consumer@1cbc87a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:07 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:12 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:12 - Restarting Consumer@448c6b1f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:12 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559473549
+09/07/2024 18:13:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:13:13 - Response 200 OK
+09/07/2024 18:13:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:13:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:13:13 - Response 200 OK
+09/07/2024 18:13:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:13:18 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:18 - Restarting Consumer@3c7196ec: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:18 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:23 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:23 - Restarting Consumer@4c4d35f2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:23 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:28 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:28 - Restarting Consumer@667bfc17: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:28 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:33 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:33 - Restarting Consumer@37a16a58: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:33 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:38 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:38 - Restarting Consumer@1cfe5010: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:38 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:43 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:43 - Restarting Consumer@673b1e10: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559473549
+09/07/2024 18:13:43 - Accept=[application/json, application/*+json]
+09/07/2024 18:13:43 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:13:43 - Accept=[application/json, application/*+json]
+09/07/2024 18:13:43 - Response 200 OK
+09/07/2024 18:13:43 - Response 200 OK
+09/07/2024 18:13:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:13:48 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:48 - Restarting Consumer@695e2ad2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:48 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:53 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:53 - Restarting Consumer@4cddd822: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:53 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:13:59 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:13:59 - Restarting Consumer@2fd819fa: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:13:59 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:14:04 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:14:04 - Restarting Consumer@78eeb83c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:14:04 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:14:09 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:14:09 - Restarting Consumer@5a09c7fb: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:14:09 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:14:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+09/07/2024 18:14:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1720559473549
+09/07/2024 18:14:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:14:13 - Accept=[application/json, application/*+json]
+09/07/2024 18:14:13 - Response 200 OK
+09/07/2024 18:14:13 - Response 200 OK
+09/07/2024 18:14:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+09/07/2024 18:14:14 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:14:14 - Restarting Consumer@67ffd56: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:14:14 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:14:19 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+09/07/2024 18:14:19 - Restarting Consumer@3dec6fdf: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+09/07/2024 18:14:19 - Attempting to connect to: [localhost:5672]
+09/07/2024 18:14:23 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+09/07/2024 18:14:23 - Unregistering application BOOKING with eureka with status DOWN
+09/07/2024 18:14:23 - Saw local status change event StatusChangeEvent [timestamp=1720559663617, current=DOWN, previous=UP]
+09/07/2024 18:14:23 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+09/07/2024 18:14:23 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+09/07/2024 18:14:23 - Waiting for workers to finish.
+09/07/2024 18:14:23 - Successfully waited for workers to finish.
+09/07/2024 18:14:23 - stopped bean 'inbound.springCloudBus.anonymous.jjQrZ_YWTgqyD7fQvv5vkA'
+09/07/2024 18:14:23 - Accept=[application/json, application/*+json]
+09/07/2024 18:14:23 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.3, status = DOWN, ipAddr = 192.168.0.3, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@56177163] as "application/json"
+09/07/2024 18:14:23 - Channel 'booking.rabbit-235511575.springCloudBusInput.errors' has 1 subscriber(s).
+09/07/2024 18:14:23 - Response 204 NO_CONTENT
+09/07/2024 18:14:23 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+09/07/2024 18:14:23 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+09/07/2024 18:14:23 - Channel 'booking.errorChannel' has 0 subscriber(s).
+09/07/2024 18:14:23 - stopped bean '_org.springframework.integration.errorLogger'
+09/07/2024 18:14:23 - Closing JPA EntityManagerFactory for persistence unit 'default'
+09/07/2024 18:14:23 - Shutting down DiscoveryClient ...
+09/07/2024 18:14:26 - Unregistering ...
+09/07/2024 18:14:26 - HTTP DELETE http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081
+09/07/2024 18:14:26 - Accept=[application/json, application/*+json]
+09/07/2024 18:14:26 - Response 200 OK
+09/07/2024 18:14:26 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - deregister  status: 200
+09/07/2024 18:14:26 - Completed shut down of DiscoveryClient
+09/07/2024 18:14:30 - Starting BookingApplication using Java 17.0.8.1 with PID 15992 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+09/07/2024 18:14:30 - Running with Spring Boot v3.2.3, Spring v6.1.4
+09/07/2024 18:14:30 - The following 1 profile is active: "dev"
+09/07/2024 18:14:30 - Fetching config from server at : http://localhost:8071/
+09/07/2024 18:14:30 - Located environment: name=booking, profiles=[default], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+09/07/2024 18:14:30 - Fetching config from server at : http://localhost:8071/
+09/07/2024 18:14:30 - Located environment: name=booking, profiles=[dev], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+09/07/2024 18:14:31 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+09/07/2024 18:14:31 - Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+09/07/2024 18:14:32 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+09/07/2024 18:14:32 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+09/07/2024 18:14:32 - BeanFactory id=988f223c-5daf-3610-bca4-d16d12d86803
+09/07/2024 18:14:32 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+09/07/2024 18:14:32 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+09/07/2024 18:14:32 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+09/07/2024 18:14:32 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+09/07/2024 18:14:32 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
