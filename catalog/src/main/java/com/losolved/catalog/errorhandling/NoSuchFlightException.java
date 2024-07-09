@@ -1,7 +1,5 @@
 package com.losolved.catalog.errorhandling;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 public class NoSuchFlightException extends RuntimeException {
 	

@@ -1,7 +1,6 @@
 package com.losolved.booking.errorhandling;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+
 
 public class NoSuchBookingException extends RuntimeException {
 	
