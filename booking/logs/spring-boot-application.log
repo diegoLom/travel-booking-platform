@@ -4769,3 +4769,307 @@ Consider the following:
 09/07/2024 18:23:17 - Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
 09/07/2024 18:23:17 - Restarting Consumer@4f45cca5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
 09/07/2024 18:23:17 - Attempting to connect to: [localhost:5672]
+16/07/2024 20:51:38 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/california/repo/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/D:/california/repo/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+16/07/2024 20:51:38 - Starting AuditAwareTest using Java 17.0.8.1 with PID 7620 (started by dsantana in D:\sources\california\travel-booking-platform\booking)
+16/07/2024 20:51:38 - Running with Spring Boot v3.2.3, Spring v6.1.4
+16/07/2024 20:51:38 - The following 1 profile is active: "dev"
+16/07/2024 20:51:38 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:51:38 - Located environment: name=booking, profiles=[default], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:51:38 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:51:38 - Located environment: name=booking, profiles=[dev], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:51:38 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2d4608a6
+16/07/2024 20:51:41 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16/07/2024 20:51:41 - Finished Spring Data repository scanning in 282 ms. Found 1 JPA repository interface.
+16/07/2024 20:51:42 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+16/07/2024 20:51:42 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+16/07/2024 20:51:42 - BeanFactory id=a9d24de6-a37d-3f9f-887f-09eda81b66d7
+16/07/2024 20:51:43 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+16/07/2024 20:51:43 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+16/07/2024 20:51:43 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+16/07/2024 20:51:43 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+16/07/2024 20:51:43 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+16/07/2024 20:51:43 - jdbc:mysql://localhost:3308/bookingdb
+16/07/2024 20:51:43 - root
+16/07/2024 20:51:43 - Lo2011158
+16/07/2024 20:51:43 - com.mysql.jdbc.Driver
+16/07/2024 20:51:44 - HHH000204: Processing PersistenceUnitInfo [name: default]
+16/07/2024 20:51:44 - HHH000412: Hibernate ORM core version 6.4.4.Final
+16/07/2024 20:51:44 - HHH000026: Second-level cache disabled
+16/07/2024 20:51:44 - No LoadTimeWeaver setup: ignoring JPA class transformer
+16/07/2024 20:51:46 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16/07/2024 20:51:46 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16/07/2024 20:51:48 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16/07/2024 20:51:48 - 6 mappings in 'requestMappingHandlerMapping'
+16/07/2024 20:51:48 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+16/07/2024 20:51:48 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+16/07/2024 20:51:48 - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+16/07/2024 20:51:51 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
+16/07/2024 20:51:52 - Eureka HTTP Client uses RestTemplate.
+16/07/2024 20:51:52 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+16/07/2024 20:51:52 - Exposing 23 endpoint(s) beneath base path '/actuator'
+16/07/2024 20:51:53 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+16/07/2024 20:51:53 - Channel 'booking.errorChannel' has 1 subscriber(s).
+16/07/2024 20:51:53 - started bean '_org.springframework.integration.errorLogger'
+16/07/2024 20:51:53 - Setting initial instance status as: STARTING
+16/07/2024 20:51:53 - Initializing Eureka in region us-east-1
+16/07/2024 20:51:53 - Resolving eureka endpoints via configuration
+16/07/2024 20:51:53 - Disable delta property : false
+16/07/2024 20:51:53 - Single vip registry refresh property : null
+16/07/2024 20:51:53 - Force full registry fetch : false
+16/07/2024 20:51:53 - Application is null : false
+16/07/2024 20:51:53 - Registered Applications size is zero : true
+16/07/2024 20:51:53 - Application version is -1: true
+16/07/2024 20:51:53 - Getting all instance registry info from the eureka server
+16/07/2024 20:51:53 - HTTP GET http://localhost:8070/eureka/apps/
+16/07/2024 20:51:53 - Accept=[application/json, application/*+json]
+16/07/2024 20:51:53 - Response 200 OK
+16/07/2024 20:51:53 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+16/07/2024 20:51:53 - The response status is 200
+16/07/2024 20:51:53 - Starting heartbeat executor: renew interval is: 30
+16/07/2024 20:51:53 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+16/07/2024 20:51:53 - Discovery Client initialized at timestamp 1721173913909 with initial instances count: 0
+16/07/2024 20:51:53 - Registering application BOOKING with eureka with status UP
+16/07/2024 20:51:53 - Saw local status change event StatusChangeEvent [timestamp=1721173913919, current=UP, previous=STARTING]
+16/07/2024 20:51:53 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+16/07/2024 20:51:53 - Creating binder: rabbit
+16/07/2024 20:51:53 - Constructing binder child context for rabbit
+16/07/2024 20:51:53 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+16/07/2024 20:51:53 - Accept=[application/json, application/*+json]
+16/07/2024 20:51:53 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.3, status = UP, ipAddr = 192.168.0.3, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@7d24bd80] as "application/json"
+16/07/2024 20:51:54 - Caching the binder: rabbit
+16/07/2024 20:51:54 - Response 204 NO_CONTENT
+16/07/2024 20:51:54 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+16/07/2024 20:51:54 - declaring queue for inbound: springCloudBus.anonymous.FS4nedxWT36ZkQbeh0y8VA, bound to: springCloudBus
+16/07/2024 20:51:54 - Attempting to connect to: [localhost:5672]
+16/07/2024 20:51:54 - Created new connection: rabbitConnectionFactory#2779acb2:0/SimpleConnection@23ea17e [delegate=amqp://guest@127.0.0.1:5672/, localPort=61790]
+16/07/2024 20:51:54 - Channel 'rabbit-950500891.springCloudBusInput.errors' has 1 subscriber(s).
+16/07/2024 20:51:54 - Channel 'rabbit-950500891.springCloudBusInput.errors' has 2 subscriber(s).
+16/07/2024 20:51:54 - started bean 'inbound.springCloudBus.anonymous.FS4nedxWT36ZkQbeh0y8VA'
+16/07/2024 20:51:54 - Started AuditAwareTest in 19.565 seconds (process running for 23.461)
+16/07/2024 20:51:56 - Restart disabled due to context in which it is running
+16/07/2024 20:51:59 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/california/repo/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/D:/california/repo/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+16/07/2024 20:51:59 - Starting BookingApplicationTests using Java 17.0.8.1 with PID 7620 (started by dsantana in D:\sources\california\travel-booking-platform\booking)
+16/07/2024 20:51:59 - Running with Spring Boot v3.2.3, Spring v6.1.4
+16/07/2024 20:51:59 - The following 1 profile is active: "dev"
+16/07/2024 20:51:59 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:51:59 - Located environment: name=booking, profiles=[default], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:51:59 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:51:59 - Located environment: name=booking, profiles=[dev], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:51:59 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@434ad1f8
+16/07/2024 20:51:59 - Started BookingApplicationTests in 2.399 seconds (process running for 28.239)
+16/07/2024 20:51:59 - Could not detect default configuration classes for test class [com.losolved.booking.controller.BookingControllerTest]: BookingControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16/07/2024 20:51:59 - Found @SpringBootConfiguration com.losolved.booking.BookingApplication for test class com.losolved.booking.controller.BookingControllerTest
+16/07/2024 20:51:59 - Restart disabled due to context in which it is running
+16/07/2024 20:52:01 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/california/repo/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/D:/california/repo/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+16/07/2024 20:52:01 - Starting BookingControllerTest using Java 17.0.8.1 with PID 7620 (started by dsantana in D:\sources\california\travel-booking-platform\booking)
+16/07/2024 20:52:01 - Running with Spring Boot v3.2.3, Spring v6.1.4
+16/07/2024 20:52:01 - The following 1 profile is active: "dev"
+16/07/2024 20:52:01 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:52:01 - Located environment: name=booking, profiles=[default], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:52:01 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:52:01 - Located environment: name=booking, profiles=[dev], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:52:01 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1234d9f6
+16/07/2024 20:52:02 - 6 mappings in 'requestMappingHandlerMapping'
+16/07/2024 20:52:02 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+16/07/2024 20:52:02 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+16/07/2024 20:52:02 - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+16/07/2024 20:52:02 - Initializing Spring TestDispatcherServlet ''
+16/07/2024 20:52:02 - Initializing Servlet ''
+16/07/2024 20:52:02 - Completed initialization in 3 ms
+16/07/2024 20:52:03 - Started BookingControllerTest in 3.687 seconds (process running for 32.022)
+16/07/2024 20:52:03 - Mapped to com.losolved.booking.controller.BookingController#undoBook(BookingDTO)
+16/07/2024 20:52:03 - Read "application/json;charset=UTF-8" to [BookingDTO(id=1, accommodationId=1, flightId=null, guest=null, bookingDate=2024-07-18T20:52:03.20049 (truncated)...]
+16/07/2024 20:52:03 - Using @ExceptionHandler com.losolved.booking.errorhandling.GlobalExceptionHandler#handleException(NoSuchBookingException)
+16/07/2024 20:52:03 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+16/07/2024 20:52:03 - Writing [ResponseDTO(message=Booking not found, code=404)]
+16/07/2024 20:52:03 - Resolved [com.losolved.booking.errorhandling.NoSuchBookingException: Booking not found]
+16/07/2024 20:52:03 - Mapped to com.losolved.booking.controller.BookingController#getBooking(Long)
+16/07/2024 20:52:03 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+16/07/2024 20:52:03 - Writing [Booking(id=1, accommodationId=1, flightId=null, guest=null, bookingDate=2024-07-18T20:52:03.49475790 (truncated)...]
+16/07/2024 20:52:03 - Mapped to com.losolved.booking.controller.BookingController#reviewBook(BookingDTO)
+16/07/2024 20:52:03 - Read "application/json;charset=UTF-8" to [BookingDTO(id=1, accommodationId=1, flightId=null, guest=null, bookingDate=2024-07-18T20:52:03.55659 (truncated)...]
+16/07/2024 20:52:03 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+16/07/2024 20:52:03 - Writing [ResponseDTO(message=Booking reviewd, code=200)]
+16/07/2024 20:52:03 - Mapped to com.losolved.booking.controller.BookingController#reviewBook(BookingDTO)
+16/07/2024 20:52:03 - Read "application/json;charset=UTF-8" to [BookingDTO(id=1, accommodationId=1, flightId=null, guest=null, bookingDate=2024-07-18T20:52:03.57566 (truncated)...]
+16/07/2024 20:52:03 - Using @ExceptionHandler com.losolved.booking.errorhandling.GlobalExceptionHandler#handleException(NoSuchBookingException)
+16/07/2024 20:52:03 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+16/07/2024 20:52:03 - Writing [ResponseDTO(message=Booking not found, code=404)]
+16/07/2024 20:52:03 - Resolved [com.losolved.booking.errorhandling.NoSuchBookingException: Booking not found]
+16/07/2024 20:52:03 - Mapped to com.losolved.booking.controller.BookingController#book(BookingDTO)
+16/07/2024 20:52:03 - Read "application/json;charset=UTF-8" to [BookingDTO(id=1, accommodationId=1, flightId=null, guest=null, bookingDate=2024-07-18T20:52:03.59533 (truncated)...]
+16/07/2024 20:52:03 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+16/07/2024 20:52:03 - Writing [ResponseDTO(message=Booking schedule, code=201)]
+16/07/2024 20:52:03 - Mapped to com.losolved.booking.controller.BookingController#undoBook(BookingDTO)
+16/07/2024 20:52:03 - Read "application/json;charset=UTF-8" to [BookingDTO(id=1, accommodationId=1, flightId=null, guest=null, bookingDate=2024-07-18T20:52:03.61197 (truncated)...]
+16/07/2024 20:52:03 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+16/07/2024 20:52:03 - Writing [ResponseDTO(message=Booking canceled, code=200)]
+16/07/2024 20:52:03 - Could not detect default configuration classes for test class [com.losolved.booking.dto.BookingDTOTest]: BookingDTOTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16/07/2024 20:52:03 - Found @SpringBootConfiguration com.losolved.booking.BookingApplication for test class com.losolved.booking.dto.BookingDTOTest
+16/07/2024 20:52:03 - Could not detect default configuration classes for test class [com.losolved.booking.dto.BookingMapperTest]: BookingMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16/07/2024 20:52:03 - Found @SpringBootConfiguration com.losolved.booking.BookingApplication for test class com.losolved.booking.dto.BookingMapperTest
+16/07/2024 20:52:03 - Could not detect default configuration classes for test class [com.losolved.booking.model.BaseEntityTest]: BaseEntityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16/07/2024 20:52:03 - Found @SpringBootConfiguration com.losolved.booking.BookingApplication for test class com.losolved.booking.model.BaseEntityTest
+16/07/2024 20:52:03 - Could not detect default configuration classes for test class [com.losolved.booking.model.BookingTest]: BookingTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16/07/2024 20:52:03 - Found @SpringBootConfiguration com.losolved.booking.BookingApplication for test class com.losolved.booking.model.BookingTest
+16/07/2024 20:52:04 - Could not detect default configuration classes for test class [com.losolved.booking.services.BookingServiceTest]: BookingServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16/07/2024 20:52:04 - Found @SpringBootConfiguration com.losolved.booking.BookingApplication for test class com.losolved.booking.services.BookingServiceTest
+16/07/2024 20:52:04 - Restart disabled due to context in which it is running
+16/07/2024 20:52:06 - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/D:/california/repo/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
+	jar:file:/D:/california/repo/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+16/07/2024 20:52:06 - Starting BookingServiceTest using Java 17.0.8.1 with PID 7620 (started by dsantana in D:\sources\california\travel-booking-platform\booking)
+16/07/2024 20:52:06 - Running with Spring Boot v3.2.3, Spring v6.1.4
+16/07/2024 20:52:06 - The following 1 profile is active: "dev"
+16/07/2024 20:52:06 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:52:06 - Located environment: name=booking, profiles=[default], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:52:06 - Fetching config from server at : http://localhost:8071/
+16/07/2024 20:52:06 - Located environment: name=booking, profiles=[dev], label=null, version=2eeeb51d7c031639b15e95257afb9f054d87d2d7, state=null
+16/07/2024 20:52:06 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3d26e7ba
+16/07/2024 20:52:07 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16/07/2024 20:52:07 - Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+16/07/2024 20:52:07 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+16/07/2024 20:52:07 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+16/07/2024 20:52:07 - BeanFactory id=a9d24de6-a37d-3f9f-887f-09eda81b66d7
+16/07/2024 20:52:08 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+16/07/2024 20:52:08 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+16/07/2024 20:52:08 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+16/07/2024 20:52:08 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+16/07/2024 20:52:08 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+16/07/2024 20:52:08 - jdbc:mysql://localhost:3308/bookingdb
+16/07/2024 20:52:08 - root
+16/07/2024 20:52:08 - Lo2011158
+16/07/2024 20:52:08 - com.mysql.jdbc.Driver
+16/07/2024 20:52:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+16/07/2024 20:52:08 - HHH000026: Second-level cache disabled
+16/07/2024 20:52:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+16/07/2024 20:52:08 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+16/07/2024 20:52:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+16/07/2024 20:52:09 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16/07/2024 20:52:09 - 6 mappings in 'requestMappingHandlerMapping'
+16/07/2024 20:52:09 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+16/07/2024 20:52:09 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+16/07/2024 20:52:09 - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+16/07/2024 20:52:11 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
+16/07/2024 20:52:12 - Eureka HTTP Client uses RestTemplate.
+16/07/2024 20:52:12 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+16/07/2024 20:52:12 - Exposing 23 endpoint(s) beneath base path '/actuator'
+16/07/2024 20:52:12 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+16/07/2024 20:52:12 - Channel 'booking.errorChannel' has 1 subscriber(s).
+16/07/2024 20:52:12 - started bean '_org.springframework.integration.errorLogger'
+16/07/2024 20:52:12 - Setting initial instance status as: STARTING
+16/07/2024 20:52:12 - Initializing Eureka in region us-east-1
+16/07/2024 20:52:12 - Resolving eureka endpoints via configuration
+16/07/2024 20:52:12 - Disable delta property : false
+16/07/2024 20:52:12 - Single vip registry refresh property : null
+16/07/2024 20:52:12 - Force full registry fetch : false
+16/07/2024 20:52:12 - Application is null : false
+16/07/2024 20:52:12 - Registered Applications size is zero : true
+16/07/2024 20:52:12 - Application version is -1: true
+16/07/2024 20:52:12 - Getting all instance registry info from the eureka server
+16/07/2024 20:52:12 - HTTP GET http://localhost:8070/eureka/apps/
+16/07/2024 20:52:12 - Accept=[application/json, application/*+json]
+16/07/2024 20:52:12 - Response 200 OK
+16/07/2024 20:52:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+16/07/2024 20:52:12 - The response status is 200
+16/07/2024 20:52:12 - Starting heartbeat executor: renew interval is: 30
+16/07/2024 20:52:12 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+16/07/2024 20:52:12 - Discovery Client initialized at timestamp 1721173932736 with initial instances count: 1
+16/07/2024 20:52:12 - Registering application BOOKING with eureka with status UP
+16/07/2024 20:52:12 - Saw local status change event StatusChangeEvent [timestamp=1721173932745, current=UP, previous=STARTING]
+16/07/2024 20:52:12 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+16/07/2024 20:52:12 - Creating binder: rabbit
+16/07/2024 20:52:12 - Constructing binder child context for rabbit
+16/07/2024 20:52:12 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+16/07/2024 20:52:12 - Accept=[application/json, application/*+json]
+16/07/2024 20:52:12 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.3, status = UP, ipAddr = 192.168.0.3, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@44c639d4] as "application/json"
+16/07/2024 20:52:12 - Response 204 NO_CONTENT
+16/07/2024 20:52:12 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+16/07/2024 20:52:12 - Caching the binder: rabbit
+16/07/2024 20:52:12 - declaring queue for inbound: springCloudBus.anonymous.jcZbNfbERwu-t0vEGoqpSQ, bound to: springCloudBus
+16/07/2024 20:52:12 - Attempting to connect to: [localhost:5672]
+16/07/2024 20:52:12 - Created new connection: rabbitConnectionFactory#5f87e067:0/SimpleConnection@1d0b10fd [delegate=amqp://guest@127.0.0.1:5672/, localPort=61817]
+16/07/2024 20:52:12 - Channel 'rabbit-1092646857.springCloudBusInput.errors' has 1 subscriber(s).
+16/07/2024 20:52:12 - Channel 'rabbit-1092646857.springCloudBusInput.errors' has 2 subscriber(s).
+16/07/2024 20:52:12 - started bean 'inbound.springCloudBus.anonymous.jcZbNfbERwu-t0vEGoqpSQ'
+16/07/2024 20:52:13 - Started BookingServiceTest in 8.905 seconds (process running for 41.929)
+16/07/2024 20:52:13 - Closing org.springframework.web.context.support.GenericWebApplicationContext@2d4608a6, started on Tue Jul 16 20:51:38 BRT 2024
+16/07/2024 20:52:13 - Unregistering application BOOKING with eureka with status DOWN
+16/07/2024 20:52:13 - Saw local status change event StatusChangeEvent [timestamp=1721173933273, current=DOWN, previous=UP]
+16/07/2024 20:52:13 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+16/07/2024 20:52:13 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+16/07/2024 20:52:13 - Accept=[application/json, application/*+json]
+16/07/2024 20:52:13 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.3, status = DOWN, ipAddr = 192.168.0.3, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@7d24bd80] as "application/json"
+16/07/2024 20:52:13 - Response 204 NO_CONTENT
+16/07/2024 20:52:13 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+16/07/2024 20:52:13 - Waiting for workers to finish.
+16/07/2024 20:52:13 - Successfully waited for workers to finish.
+16/07/2024 20:52:13 - stopped bean 'inbound.springCloudBus.anonymous.FS4nedxWT36ZkQbeh0y8VA'
+16/07/2024 20:52:13 - Channel 'booking.rabbit-950500891.springCloudBusInput.errors' has 1 subscriber(s).
+16/07/2024 20:52:13 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+16/07/2024 20:52:13 - Channel 'booking.errorChannel' has 0 subscriber(s).
+16/07/2024 20:52:13 - stopped bean '_org.springframework.integration.errorLogger'
+16/07/2024 20:52:13 - Closing JPA EntityManagerFactory for persistence unit 'default'
+16/07/2024 20:52:13 - Shutting down DiscoveryClient ...
+16/07/2024 20:52:16 - Unregistering ...
+16/07/2024 20:52:16 - HTTP DELETE http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081
+16/07/2024 20:52:16 - Accept=[application/json, application/*+json]
+16/07/2024 20:52:16 - Response 200 OK
+16/07/2024 20:52:16 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - deregister  status: 200
+16/07/2024 20:52:16 - Completed shut down of DiscoveryClient
+16/07/2024 20:52:16 - Closing org.springframework.web.context.support.GenericWebApplicationContext@434ad1f8, started on Tue Jul 16 20:51:59 BRT 2024
+16/07/2024 20:52:16 - Closing org.springframework.web.context.support.GenericWebApplicationContext@1234d9f6, started on Tue Jul 16 20:52:01 BRT 2024
+16/07/2024 20:52:16 - Closing org.springframework.web.context.support.GenericWebApplicationContext@3d26e7ba, started on Tue Jul 16 20:52:06 BRT 2024
+16/07/2024 20:52:16 - Unregistering application BOOKING with eureka with status DOWN
+16/07/2024 20:52:16 - Saw local status change event StatusChangeEvent [timestamp=1721173936763, current=DOWN, previous=UP]
+16/07/2024 20:52:16 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+16/07/2024 20:52:16 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+16/07/2024 20:52:16 - Accept=[application/json, application/*+json]
+16/07/2024 20:52:16 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.3, status = DOWN, ipAddr = 192.168.0.3, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@44c639d4] as "application/json"
+16/07/2024 20:52:16 - Waiting for workers to finish.
+16/07/2024 20:52:16 - Response 204 NO_CONTENT
+16/07/2024 20:52:16 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+16/07/2024 20:52:17 - Successfully waited for workers to finish.
+16/07/2024 20:52:17 - stopped bean 'inbound.springCloudBus.anonymous.jcZbNfbERwu-t0vEGoqpSQ'
+16/07/2024 20:52:17 - Channel 'booking.rabbit-1092646857.springCloudBusInput.errors' has 1 subscriber(s).
+16/07/2024 20:52:17 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+16/07/2024 20:52:17 - Channel 'booking.errorChannel' has 0 subscriber(s).
+16/07/2024 20:52:17 - stopped bean '_org.springframework.integration.errorLogger'
+16/07/2024 20:52:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+16/07/2024 20:52:17 - Shutting down DiscoveryClient ...
+16/07/2024 20:52:20 - Unregistering ...
+16/07/2024 20:52:20 - HTTP DELETE http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081
+16/07/2024 20:52:20 - Accept=[application/json, application/*+json]
+16/07/2024 20:52:20 - Response 200 OK
+16/07/2024 20:52:20 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - deregister  status: 200
+16/07/2024 20:52:20 - Completed shut down of DiscoveryClient
