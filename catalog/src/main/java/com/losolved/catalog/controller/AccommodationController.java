@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
 public class AccommodationController {
 	
 	//TODO: Make available search filter endpoint
+	//TODO: Check naming conventions, but the filter as optional. 
 	
 	@Autowired
     private AccommodationService accommodationService;
@@ -37,8 +38,9 @@ public class AccommodationController {
         return ResponseEntity.ok(accommodation);
     }
     
+    
     @GetMapping
-    public ResponseEntity<List<Accommodation>> getAccommodation(@RequestBody InLocationAndPriceBetween filter) {
+    public ResponseEntity<List<Accommodation>> getAccommodation(@RequestBody  InLocationAndPriceBetween filter) {
     	List<Accommodation> accommodations = accommodationService.getAccommodation(filter);
         return ResponseEntity.ok(accommodations);
     }

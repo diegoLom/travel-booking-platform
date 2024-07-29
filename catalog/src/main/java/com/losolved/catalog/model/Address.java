@@ -1,5 +1,6 @@
 package com.losolved.catalog.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +23,8 @@ public class Address extends BaseEntity  {
     private String street;
     private String city;
     private String state;
+    
+    @Column(name = "zipcode")
     private String zipCode;
 
     // Constructors, getters, setters

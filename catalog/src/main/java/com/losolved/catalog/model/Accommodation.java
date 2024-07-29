@@ -34,6 +34,8 @@ public class Accommodation extends BaseEntity {
 	private Double price; 
 	
 	private String detail;
+	
+	//TODO: Improving Data modeling / Add inventory classes 
 
 	
 
