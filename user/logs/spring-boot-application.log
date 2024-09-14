@@ -1,0 +1,814 @@
+08/08/2024 21:55:53 - Starting UserApplication using Java 17.0.8.1 with PID 162820 (D:\sources\california\travel-booking-platform\user\target\classes started by dsantana in D:\sources\california\travel-booking-platform\user)
+08/08/2024 21:55:53 - The following 1 profile is active: "dev"
+08/08/2024 21:55:53 - Fetching config from server at : http://localhost:8071/
+08/08/2024 21:55:53 - Located environment: name=user, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 21:55:53 - Fetching config from server at : http://localhost:8071/
+08/08/2024 21:55:53 - Located environment: name=user, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 21:55:55 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08/08/2024 21:55:56 - Finished Spring Data repository scanning in 331 ms. Found 1 JPA repository interface.
+08/08/2024 21:55:56 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+08/08/2024 21:55:56 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+08/08/2024 21:55:56 - BeanFactory id=2f543149-1f37-3faa-b017-49ee492ae44f
+08/08/2024 21:55:57 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 21:55:57 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 21:55:57 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 21:55:57 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 21:55:57 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 21:55:58 - Tomcat initialized with port 8080 (http)
+08/08/2024 21:55:58 - Starting service [Tomcat]
+08/08/2024 21:55:58 - Starting Servlet engine: [Apache Tomcat/10.1.19]
+08/08/2024 21:55:58 - Initializing Spring embedded WebApplicationContext
+08/08/2024 21:55:58 - Root WebApplicationContext: initialization completed in 5167 ms
+08/08/2024 21:55:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+08/08/2024 21:55:59 - HHH000412: Hibernate ORM core version 6.4.4.Final
+08/08/2024 21:55:59 - HHH000026: Second-level cache disabled
+08/08/2024 21:55:59 - No LoadTimeWeaver setup: ignoring JPA class transformer
+08/08/2024 21:56:03 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08/08/2024 21:56:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 21:56:04 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08/08/2024 21:56:04 - 9 mappings in 'requestMappingHandlerMapping'
+08/08/2024 21:56:04 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+08/08/2024 21:56:04 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+08/08/2024 21:56:04 - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+08/08/2024 21:56:07 - Eureka HTTP Client uses RestTemplate.
+08/08/2024 21:56:08 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08/08/2024 21:56:08 - Channel 'user.springCloudBusInput' has 1 subscriber(s).
+08/08/2024 21:56:08 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 21:56:08 - Channel 'user.errorChannel' has 1 subscriber(s).
+08/08/2024 21:56:08 - started bean '_org.springframework.integration.errorLogger'
+08/08/2024 21:56:08 - Setting initial instance status as: STARTING
+08/08/2024 21:56:09 - Initializing Eureka in region us-east-1
+08/08/2024 21:56:09 - Resolving eureka endpoints via configuration
+08/08/2024 21:56:09 - Disable delta property : false
+08/08/2024 21:56:09 - Single vip registry refresh property : null
+08/08/2024 21:56:09 - Force full registry fetch : false
+08/08/2024 21:56:09 - Application is null : false
+08/08/2024 21:56:09 - Registered Applications size is zero : true
+08/08/2024 21:56:09 - Application version is -1: true
+08/08/2024 21:56:09 - Getting all instance registry info from the eureka server
+08/08/2024 21:56:09 - HTTP GET http://localhost:8070/eureka/apps/
+08/08/2024 21:56:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:09 - Response 200 OK
+08/08/2024 21:56:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:56:09 - The response status is 200
+08/08/2024 21:56:09 - Starting heartbeat executor: renew interval is: 30
+08/08/2024 21:56:09 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08/08/2024 21:56:09 - Discovery Client initialized at timestamp 1723164969768 with initial instances count: 1
+08/08/2024 21:56:09 - Registering application USER with eureka with status UP
+08/08/2024 21:56:09 - Saw local status change event StatusChangeEvent [timestamp=1723164969776, current=UP, previous=STARTING]
+08/08/2024 21:56:09 - DiscoveryClient_USER/LTAK285336.mercador.local:user:8080: registering service...
+08/08/2024 21:56:09 - HTTP POST http://localhost:8070/eureka/apps/USER
+08/08/2024 21:56:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:09 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:user:8080, appName = USER, hostName = 192.168.0.9, status = UP, ipAddr = 192.168.0.9, port = 8080, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@219c32e3] as "application/json"
+08/08/2024 21:56:09 - Response 204 NO_CONTENT
+08/08/2024 21:56:09 - DiscoveryClient_USER/LTAK285336.mercador.local:user:8080 - registration status: 204
+08/08/2024 21:56:09 - Tomcat started on port 8080 (http) with context path ''
+08/08/2024 21:56:09 - Updating port to 8080
+08/08/2024 21:56:11 - Creating binder: rabbit
+08/08/2024 21:56:11 - Constructing binder child context for rabbit
+08/08/2024 21:56:11 - Caching the binder: rabbit
+08/08/2024 21:56:11 - declaring queue for inbound: springCloudBus.anonymous.M6_JlUvPSIOzXUJSiby_yw, bound to: springCloudBus
+08/08/2024 21:56:11 - Attempting to connect to: [localhost:5672]
+08/08/2024 21:56:11 - Created new connection: rabbitConnectionFactory#67599bae:0/SimpleConnection@2e0e1acf [delegate=amqp://guest@127.0.0.1:5672/, localPort=56014]
+08/08/2024 21:56:11 - Channel 'rabbit-893350828.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 21:56:11 - Channel 'rabbit-893350828.springCloudBusInput.errors' has 2 subscriber(s).
+08/08/2024 21:56:11 - started bean 'inbound.springCloudBus.anonymous.M6_JlUvPSIOzXUJSiby_yw'
+08/08/2024 21:56:11 - Started UserApplication in 23.546 seconds (process running for 25.484)
+08/08/2024 21:56:39 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:56:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:39 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 21:56:39 - Response 200 OK
+08/08/2024 21:56:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:56:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:39 - Response 200 OK
+08/08/2024 21:57:09 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:57:09 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 21:57:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:09 - Response 200 OK
+08/08/2024 21:57:09 - Response 200 OK
+08/08/2024 21:57:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:57:39 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:57:39 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 21:57:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:39 - Response 200 OK
+08/08/2024 21:57:39 - Response 200 OK
+08/08/2024 21:57:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:58:09 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 21:58:09 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:58:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:09 - Response 200 OK
+08/08/2024 21:58:09 - Response 200 OK
+08/08/2024 21:58:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:58:39 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 21:58:39 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:58:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:39 - Response 200 OK
+08/08/2024 21:58:39 - Response 200 OK
+08/08/2024 21:58:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:59:09 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:59:09 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 21:59:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:09 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:09 - Response 200 OK
+08/08/2024 21:59:09 - Response 200 OK
+08/08/2024 21:59:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:59:39 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:59:39 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 21:59:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:39 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:40 - Response 200 OK
+08/08/2024 21:59:40 - Response 200 OK
+08/08/2024 21:59:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:00:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:00:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:00:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:10 - Response 200 OK
+08/08/2024 22:00:10 - Response 200 OK
+08/08/2024 22:00:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:00:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:00:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:00:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:40 - Response 200 OK
+08/08/2024 22:00:40 - Response 200 OK
+08/08/2024 22:00:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:01:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:01:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:01:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:01:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:10 - Response 200 OK
+08/08/2024 22:01:10 - Response 200 OK
+08/08/2024 22:01:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:01:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:01:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:01:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:40 - Response 200 OK
+08/08/2024 22:01:40 - Response 200 OK
+08/08/2024 22:01:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:02:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:02:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:02:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:10 - Response 200 OK
+08/08/2024 22:02:10 - Response 200 OK
+08/08/2024 22:02:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:02:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:02:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:02:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:40 - Response 200 OK
+08/08/2024 22:02:40 - Response 200 OK
+08/08/2024 22:02:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:03:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:03:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:03:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:10 - Response 200 OK
+08/08/2024 22:03:10 - Response 200 OK
+08/08/2024 22:03:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:03:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:03:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:03:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:40 - Response 200 OK
+08/08/2024 22:03:40 - Response 200 OK
+08/08/2024 22:03:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:04:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:04:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:04:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:10 - Response 200 OK
+08/08/2024 22:04:10 - Response 200 OK
+08/08/2024 22:04:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:04:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:04:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:04:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:40 - Response 200 OK
+08/08/2024 22:04:40 - Response 200 OK
+08/08/2024 22:04:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:05:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:05:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:05:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:10 - Response 200 OK
+08/08/2024 22:05:10 - Response 200 OK
+08/08/2024 22:05:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:05:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:05:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:05:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:40 - Response 200 OK
+08/08/2024 22:05:40 - Response 200 OK
+08/08/2024 22:05:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:06:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:06:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:06:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:10 - Response 200 OK
+08/08/2024 22:06:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:06:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:10 - Response 200 OK
+08/08/2024 22:06:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:06:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:06:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:40 - Response 200 OK
+08/08/2024 22:06:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:06:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:40 - Response 200 OK
+08/08/2024 22:06:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:07:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:07:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:10 - Response 200 OK
+08/08/2024 22:07:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:07:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:10 - Response 200 OK
+08/08/2024 22:07:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:07:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:07:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:07:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:40 - Response 200 OK
+08/08/2024 22:07:40 - Response 200 OK
+08/08/2024 22:07:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:08:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:08:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:08:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:10 - Response 200 OK
+08/08/2024 22:08:10 - Response 200 OK
+08/08/2024 22:08:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:08:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:08:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:08:40 - Response 200 OK
+08/08/2024 22:08:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:08:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:40 - Response 200 OK
+08/08/2024 22:09:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:09:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:09:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:10 - Response 200 OK
+08/08/2024 22:09:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:09:10 - Response 200 OK
+08/08/2024 22:09:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:09:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:09:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:40 - Response 200 OK
+08/08/2024 22:09:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:09:40 - Response 200 OK
+08/08/2024 22:10:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:10:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:10:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:10 - Response 200 OK
+08/08/2024 22:10:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:10:10 - Response 200 OK
+08/08/2024 22:10:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:10:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:10:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:40 - Response 200 OK
+08/08/2024 22:10:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:10:40 - Response 200 OK
+08/08/2024 22:11:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:11:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:11:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:11:10 - Response 200 OK
+08/08/2024 22:11:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:10 - Response 200 OK
+08/08/2024 22:11:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:11:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:11:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:11:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:40 - Response 200 OK
+08/08/2024 22:11:40 - Response 200 OK
+08/08/2024 22:11:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:12:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:12:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:12:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:10 - Response 200 OK
+08/08/2024 22:12:10 - Response 200 OK
+08/08/2024 22:12:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:12:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:12:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:12:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:40 - Response 200 OK
+08/08/2024 22:12:40 - Response 200 OK
+08/08/2024 22:12:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:13:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:13:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:13:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:10 - Response 200 OK
+08/08/2024 22:13:10 - Response 200 OK
+08/08/2024 22:13:10 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:13:40 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:13:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:40 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:13:40 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:40 - Response 200 OK
+08/08/2024 22:13:40 - Response 200 OK
+08/08/2024 22:13:40 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:14:10 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:14:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:10 - Response 200 OK
+08/08/2024 22:14:10 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:14:10 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:11 - Response 200 OK
+08/08/2024 22:14:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:14:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:14:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:14:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:41 - Response 200 OK
+08/08/2024 22:14:41 - Response 200 OK
+08/08/2024 22:14:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:15:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:15:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:15:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:11 - Response 200 OK
+08/08/2024 22:15:11 - Response 200 OK
+08/08/2024 22:15:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:15:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:15:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:15:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:41 - Response 200 OK
+08/08/2024 22:15:41 - Response 200 OK
+08/08/2024 22:15:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:16:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:16:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:16:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:16:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:11 - Response 200 OK
+08/08/2024 22:16:11 - Response 200 OK
+08/08/2024 22:16:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:16:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:16:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:41 - Response 200 OK
+08/08/2024 22:16:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:16:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:41 - Response 200 OK
+08/08/2024 22:16:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:17:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:17:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:11 - Response 200 OK
+08/08/2024 22:17:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:17:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:11 - Response 200 OK
+08/08/2024 22:17:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:17:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:17:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:41 - Response 200 OK
+08/08/2024 22:17:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:17:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:41 - Response 200 OK
+08/08/2024 22:17:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:18:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:18:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:11 - Response 200 OK
+08/08/2024 22:18:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:18:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:11 - Response 200 OK
+08/08/2024 22:18:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:18:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:18:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:41 - Response 200 OK
+08/08/2024 22:18:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:18:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:41 - Response 200 OK
+08/08/2024 22:18:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:19:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:19:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:19:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:11 - Response 200 OK
+08/08/2024 22:19:11 - Response 200 OK
+08/08/2024 22:19:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:19:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:19:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:41 - Response 200 OK
+08/08/2024 22:19:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:19:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:41 - Response 200 OK
+08/08/2024 22:19:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:20:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:20:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:20:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:11 - Response 200 OK
+08/08/2024 22:20:11 - Response 200 OK
+08/08/2024 22:20:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:20:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:20:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:20:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:41 - Response 200 OK
+08/08/2024 22:20:41 - Response 200 OK
+08/08/2024 22:20:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:21:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:21:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:21:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:21:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:11 - Response 200 OK
+08/08/2024 22:21:11 - Response 200 OK
+08/08/2024 22:21:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:21:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:21:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:21:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:41 - Response 200 OK
+08/08/2024 22:21:41 - Response 200 OK
+08/08/2024 22:21:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:22:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:22:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:22:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:11 - Response 200 OK
+08/08/2024 22:22:11 - Response 200 OK
+08/08/2024 22:22:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:22:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:22:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:22:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:41 - Response 200 OK
+08/08/2024 22:22:41 - Response 200 OK
+08/08/2024 22:22:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:23:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:23:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:23:11 - Response 200 OK
+08/08/2024 22:23:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:23:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:23:11 - Response 200 OK
+08/08/2024 22:23:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:23:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:23:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:23:41 - Response 200 OK
+08/08/2024 22:23:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:23:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:23:41 - Response 200 OK
+08/08/2024 22:23:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:24:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:24:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:24:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:24:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:24:11 - Response 200 OK
+08/08/2024 22:24:11 - Response 200 OK
+08/08/2024 22:24:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:24:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:24:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:24:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:24:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:24:41 - Response 200 OK
+08/08/2024 22:24:41 - Response 200 OK
+08/08/2024 22:24:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:25:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:25:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:25:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:25:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:25:11 - Response 200 OK
+08/08/2024 22:25:11 - Response 200 OK
+08/08/2024 22:25:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:25:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:25:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:25:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:25:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:25:41 - Response 200 OK
+08/08/2024 22:25:41 - Response 200 OK
+08/08/2024 22:25:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:26:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:26:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:26:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:26:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:26:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:26:11 - Response 200 OK
+08/08/2024 22:26:11 - Response 200 OK
+08/08/2024 22:26:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:26:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:26:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:26:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:26:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:26:41 - Response 200 OK
+08/08/2024 22:26:41 - Response 200 OK
+08/08/2024 22:26:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:27:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:27:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:27:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:27:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:27:11 - Response 200 OK
+08/08/2024 22:27:11 - Response 200 OK
+08/08/2024 22:27:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:27:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:27:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:27:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:27:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:27:41 - Response 200 OK
+08/08/2024 22:27:41 - Response 200 OK
+08/08/2024 22:27:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:28:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:28:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:28:11 - Response 200 OK
+08/08/2024 22:28:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:28:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:28:11 - Response 200 OK
+08/08/2024 22:28:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:28:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:28:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:28:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:28:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:28:41 - Response 200 OK
+08/08/2024 22:28:41 - Response 200 OK
+08/08/2024 22:28:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:29:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:29:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:29:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:29:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:29:11 - Response 200 OK
+08/08/2024 22:29:11 - Response 200 OK
+08/08/2024 22:29:11 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:29:41 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:29:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:29:41 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:29:41 - Accept=[application/json, application/*+json]
+08/08/2024 22:29:41 - Response 200 OK
+08/08/2024 22:29:41 - Response 200 OK
+08/08/2024 22:29:41 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:30:11 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:30:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:11 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:30:11 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:11 - Response 200 OK
+08/08/2024 22:30:12 - Response 200 OK
+08/08/2024 22:30:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:30:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:30:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:30:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:42 - Response 200 OK
+08/08/2024 22:30:42 - Response 200 OK
+08/08/2024 22:30:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:31:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:31:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:31:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:31:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:12 - Response 200 OK
+08/08/2024 22:31:12 - Response 200 OK
+08/08/2024 22:31:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:31:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:31:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:31:42 - Response 200 OK
+08/08/2024 22:31:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:31:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:42 - Response 200 OK
+08/08/2024 22:32:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:32:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:12 - Response 200 OK
+08/08/2024 22:32:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:32:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:32:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:12 - Response 200 OK
+08/08/2024 22:32:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:32:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:42 - Response 200 OK
+08/08/2024 22:32:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:32:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:32:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:42 - Response 200 OK
+08/08/2024 22:33:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:33:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:12 - Response 200 OK
+08/08/2024 22:33:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:33:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:33:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:12 - Response 200 OK
+08/08/2024 22:33:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:33:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:33:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:42 - Response 200 OK
+08/08/2024 22:33:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:33:42 - Response 200 OK
+08/08/2024 22:34:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:34:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:34:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:12 - Response 200 OK
+08/08/2024 22:34:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:34:12 - Response 200 OK
+08/08/2024 22:34:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:34:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:34:42 - Response 200 OK
+08/08/2024 22:34:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:42 - Response 200 OK
+08/08/2024 22:34:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:35:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:35:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:12 - Response 200 OK
+08/08/2024 22:35:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:35:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:12 - Response 200 OK
+08/08/2024 22:35:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:35:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:35:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:42 - Response 200 OK
+08/08/2024 22:35:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:35:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:42 - Response 200 OK
+08/08/2024 22:35:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:36:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:36:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:36:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:36:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:12 - Response 200 OK
+08/08/2024 22:36:12 - Response 200 OK
+08/08/2024 22:36:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:36:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:36:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:36:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:42 - Response 200 OK
+08/08/2024 22:36:42 - Response 200 OK
+08/08/2024 22:36:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:37:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:37:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:12 - Response 200 OK
+08/08/2024 22:37:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:37:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:12 - Response 200 OK
+08/08/2024 22:37:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:37:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:37:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:42 - Response 200 OK
+08/08/2024 22:37:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:37:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:42 - Response 200 OK
+08/08/2024 22:37:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:38:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:38:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:38:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:12 - Response 200 OK
+08/08/2024 22:38:12 - Response 200 OK
+08/08/2024 22:38:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:38:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:38:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:38:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:42 - Response 200 OK
+08/08/2024 22:38:42 - Response 200 OK
+08/08/2024 22:38:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:39:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:39:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:39:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:12 - Response 200 OK
+08/08/2024 22:39:12 - Response 200 OK
+08/08/2024 22:39:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:39:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:39:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:39:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:42 - Response 200 OK
+08/08/2024 22:39:42 - Response 200 OK
+08/08/2024 22:39:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:40:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:40:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:40:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:12 - Response 200 OK
+08/08/2024 22:40:12 - Response 200 OK
+08/08/2024 22:40:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:40:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:40:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:40:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:42 - Response 200 OK
+08/08/2024 22:40:42 - Response 200 OK
+08/08/2024 22:40:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:41:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:41:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:41:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:41:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:12 - Response 200 OK
+08/08/2024 22:41:12 - Response 200 OK
+08/08/2024 22:41:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:41:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:41:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:42 - Response 200 OK
+08/08/2024 22:41:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:41:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:42 - Response 200 OK
+08/08/2024 22:41:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:42:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:42:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:42:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:12 - Response 200 OK
+08/08/2024 22:42:12 - Response 200 OK
+08/08/2024 22:42:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:42:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:42:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:42:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:42 - Response 200 OK
+08/08/2024 22:42:42 - Response 200 OK
+08/08/2024 22:42:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:43:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:43:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:43:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:12 - Response 200 OK
+08/08/2024 22:43:12 - Response 200 OK
+08/08/2024 22:43:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:43:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:43:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:43:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:42 - Response 200 OK
+08/08/2024 22:43:42 - Response 200 OK
+08/08/2024 22:43:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:44:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:44:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:44:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:12 - Response 200 OK
+08/08/2024 22:44:12 - Response 200 OK
+08/08/2024 22:44:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:44:42 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:44:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:42 - Response 200 OK
+08/08/2024 22:44:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:44:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:42 - Response 200 OK
+08/08/2024 22:44:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:45:12 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:45:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:12 - Response 200 OK
+08/08/2024 22:45:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:45:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:13 - Response 200 OK
+08/08/2024 22:45:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:45:43 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:45:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:45:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:43 - Response 200 OK
+08/08/2024 22:45:43 - Response 200 OK
+08/08/2024 22:45:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:46:09 - Resolving eureka endpoints via configuration
+08/08/2024 22:46:13 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:46:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:13 - Response 200 OK
+08/08/2024 22:46:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:46:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:13 - Response 200 OK
+08/08/2024 22:46:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:46:43 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:46:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:46:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:43 - Response 200 OK
+08/08/2024 22:46:43 - Response 200 OK
+08/08/2024 22:46:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:47:13 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:47:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:47:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:13 - Response 200 OK
+08/08/2024 22:47:13 - Response 200 OK
+08/08/2024 22:47:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:47:43 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:47:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:47:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:43 - Response 200 OK
+08/08/2024 22:47:43 - Response 200 OK
+08/08/2024 22:47:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:48:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:48:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:48:13 - HTTP PUT http://localhost:8070/eureka/apps/USER/LTAK285336.mercador.local:user:8080?status=UP&lastDirtyTimestamp=1723164969775
+08/08/2024 22:48:13 - Response 200 OK
+08/08/2024 22:48:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:48:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:48:13 - Response 200 OK

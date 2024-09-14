@@ -33,9 +33,21 @@ public class FlightService  implements IFlightService {
 
 	/// TODO: Develop a findAddress to get addressId
 	
+	
+	public FlightDTO getFlightDTO(Long flightId) {
+		Flight flight = getFlight(flightId);
+		FlightDTO flightDTO = flightMapper.convertEntityToDTO(flight);
+		
+		return flightDTO;
+	}
+	
+	
 	@Override
 	public Flight getFlight(Long flightId) {
 		Flight flight = flightRepository.findById(flightId).orElseThrow(() -> new NoSuchFlightException());
+		FlightDTO flightDTO = flightMapper.convertEntityToDTO(flight);
+		
+		
 		return flight;
 	}
 

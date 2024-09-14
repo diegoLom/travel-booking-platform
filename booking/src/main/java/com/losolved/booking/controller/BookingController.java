@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.losolved.booking.dto.BookingDTO;
+import com.losolved.booking.dto.BookingFlightDTO;
 import com.losolved.booking.dto.ResponseDTO;
 import com.losolved.booking.model.Booking;
 import com.losolved.booking.services.BookingService;
@@ -21,6 +22,8 @@ import com.losolved.booking.services.BookingService;
 @RestController
 @RequestMapping("/book")
 public class BookingController {
+	
+	//TODO: Do with the accommodation 
 		
 	@Autowired
 	private BookingService bookingService;
@@ -29,6 +32,14 @@ public class BookingController {
 	public ResponseEntity<Booking> getBooking(@PathVariable Long id){
 		Booking booking = bookingService.getBooking(id);
 		return new ResponseEntity<>(booking, HttpStatus.OK);
+	}
+	
+	//TODO: Make with accommodation too 
+	//TODO:   Adding Logger WITH correlation Id
+	@GetMapping("/fetchFlightBooked/{id}")
+	public ResponseEntity<BookingFlightDTO> fetchBooking(@PathVariable Long id){
+		BookingFlightDTO bookingFlight = bookingService.getBookingWithFlight(id);
+		return new ResponseEntity<>(bookingFlight, HttpStatus.OK);
 	}
 	
 	@PostMapping

@@ -1,655 +1,1224 @@
-20/07/2024 09:12:35 - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/california/repo/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
-	jar:file:/D:/california/repo/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-20/07/2024 09:12:35 - Starting AuditAwareTest using Java 17.0.10 with PID 24808 (started by dsantana in D:\sources\california\travel-booking-platform\booking)
-20/07/2024 09:12:35 - Running with Spring Boot v3.2.3, Spring v6.1.4
-20/07/2024 09:12:35 - The following 1 profile is active: "dev"
-20/07/2024 09:12:35 - Fetching config from server at : http://localhost:8071/
-20/07/2024 09:12:35 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 09:12:35 - Could not locate PropertySource ([ConfigServerConfigDataResource@7808f638 uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information
-20/07/2024 09:12:35 - Fetching config from server at : http://localhost:8071/
-20/07/2024 09:12:35 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/dev": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 09:12:35 - Could not locate PropertySource ([ConfigServerConfigDataResource@3b9632d1 uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'dev']): I/O error on GET request for "http://localhost:8071/booking/dev": Connection refused: no further information
-20/07/2024 09:12:35 - Fetching config from server at : http://localhost:8071/
-20/07/2024 09:12:35 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 09:12:35 - Could not locate PropertySource ([ConfigServerConfigDataResource@4e6f2bb5 uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information
-20/07/2024 09:12:35 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@56afdf9a
-20/07/2024 09:12:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-20/07/2024 09:12:40 - Finished Spring Data repository scanning in 530 ms. Found 1 JPA repository interface.
-20/07/2024 09:12:41 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-20/07/2024 09:12:41 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-20/07/2024 09:12:42 - BeanFactory id=a9d24de6-a37d-3f9f-887f-09eda81b66d7
-20/07/2024 09:12:43 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-20/07/2024 09:12:43 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 09:12:43 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-20/07/2024 09:12:43 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 09:12:43 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 09:12:43 - null
-20/07/2024 09:12:43 - null
-20/07/2024 09:12:43 - null
-20/07/2024 09:12:43 - null
-20/07/2024 09:12:43 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-20/07/2024 09:12:44 - 
+08/08/2024 21:54:16 - Starting BookingApplication using Java 17.0.8.1 with PID 153176 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+08/08/2024 21:54:16 - Running with Spring Boot v3.2.3, Spring v6.1.4
+08/08/2024 21:54:16 - The following 1 profile is active: "dev"
+08/08/2024 21:54:16 - Fetching config from server at : http://localhost:8071/
+08/08/2024 21:54:16 - Located environment: name=booking, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 21:54:16 - Fetching config from server at : http://localhost:8071/
+08/08/2024 21:54:16 - Located environment: name=booking, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 21:54:16 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08/08/2024 21:54:16 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08/08/2024 21:54:20 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08/08/2024 21:54:20 - Finished Spring Data repository scanning in 414 ms. Found 1 JPA repository interface.
+08/08/2024 21:54:21 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+08/08/2024 21:54:21 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+08/08/2024 21:54:22 - BeanFactory id=7c2eeedc-50aa-3c1c-b822-23c1bcc0b41f
+08/08/2024 21:54:23 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 21:54:23 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 21:54:23 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 21:54:23 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 21:54:23 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 21:54:24 - Tomcat initialized with port 8081 (http)
+08/08/2024 21:54:24 - Starting service [Tomcat]
+08/08/2024 21:54:24 - Starting Servlet engine: [Apache Tomcat/10.1.19]
+08/08/2024 21:54:24 - Initializing Spring embedded WebApplicationContext
+08/08/2024 21:54:24 - Root WebApplicationContext: initialization completed in 8732 ms
+08/08/2024 21:54:25 - Filter 'webMvcObservationFilter' configured for use
+08/08/2024 21:54:25 - jdbc:mysql://localhost:3308/bookingdb
+08/08/2024 21:54:25 - root
+08/08/2024 21:54:25 - Lo2011158
+08/08/2024 21:54:25 - com.mysql.jdbc.Driver
+08/08/2024 21:54:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+08/08/2024 21:54:26 - HHH000412: Hibernate ORM core version 6.4.4.Final
+08/08/2024 21:54:26 - HHH000026: Second-level cache disabled
+08/08/2024 21:54:27 - No LoadTimeWeaver setup: ignoring JPA class transformer
+08/08/2024 21:54:30 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08/08/2024 21:54:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 21:54:32 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08/08/2024 21:54:32 - 10 mappings in 'requestMappingHandlerMapping'
+08/08/2024 21:54:32 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+08/08/2024 21:54:32 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+08/08/2024 21:54:32 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+08/08/2024 21:54:36 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
+08/08/2024 21:54:38 - LiveReload server is running on port 35729
+08/08/2024 21:54:39 - Eureka HTTP Client uses RestTemplate.
+08/08/2024 21:54:39 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08/08/2024 21:54:40 - Exposing 23 endpoint(s) beneath base path '/actuator'
+08/08/2024 21:54:40 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 21:54:40 - Channel 'booking.errorChannel' has 1 subscriber(s).
+08/08/2024 21:54:40 - started bean '_org.springframework.integration.errorLogger'
+08/08/2024 21:54:40 - Setting initial instance status as: STARTING
+08/08/2024 21:54:40 - Initializing Eureka in region us-east-1
+08/08/2024 21:54:40 - Resolving eureka endpoints via configuration
+08/08/2024 21:54:40 - Disable delta property : false
+08/08/2024 21:54:40 - Single vip registry refresh property : null
+08/08/2024 21:54:40 - Force full registry fetch : false
+08/08/2024 21:54:40 - Application is null : false
+08/08/2024 21:54:40 - Registered Applications size is zero : true
+08/08/2024 21:54:40 - Application version is -1: true
+08/08/2024 21:54:40 - Getting all instance registry info from the eureka server
+08/08/2024 21:54:41 - HTTP GET http://localhost:8070/eureka/apps/
+08/08/2024 21:54:41 - Accept=[application/json, application/*+json]
+08/08/2024 21:54:42 - Response 200 OK
+08/08/2024 21:54:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:54:42 - The response status is 200
+08/08/2024 21:54:42 - Starting heartbeat executor: renew interval is: 30
+08/08/2024 21:54:42 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08/08/2024 21:54:42 - Discovery Client initialized at timestamp 1723164882304 with initial instances count: 0
+08/08/2024 21:54:42 - Registering application BOOKING with eureka with status UP
+08/08/2024 21:54:42 - Saw local status change event StatusChangeEvent [timestamp=1723164882333, current=UP, previous=STARTING]
+08/08/2024 21:54:42 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+08/08/2024 21:54:42 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+08/08/2024 21:54:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:54:42 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.9, status = UP, ipAddr = 192.168.0.9, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2d9b9974] as "application/json"
+08/08/2024 21:54:42 - Tomcat started on port 8081 (http) with context path ''
+08/08/2024 21:54:42 - Updating port to 8081
+08/08/2024 21:54:42 - Response 204 NO_CONTENT
+08/08/2024 21:54:42 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+08/08/2024 21:54:43 - Creating binder: rabbit
+08/08/2024 21:54:43 - Constructing binder child context for rabbit
+08/08/2024 21:54:43 - Caching the binder: rabbit
+08/08/2024 21:54:43 - declaring queue for inbound: springCloudBus.anonymous.x0iWnaCvS_qWjLabEjjUKQ, bound to: springCloudBus
+08/08/2024 21:54:43 - Attempting to connect to: [localhost:5672]
+08/08/2024 21:54:44 - Created new connection: rabbitConnectionFactory#4a3bcc47:0/SimpleConnection@8b0e769 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55931]
+08/08/2024 21:54:44 - Channel 'rabbit-737715862.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 21:54:44 - Channel 'rabbit-737715862.springCloudBusInput.errors' has 2 subscriber(s).
+08/08/2024 21:54:44 - started bean 'inbound.springCloudBus.anonymous.x0iWnaCvS_qWjLabEjjUKQ'
+08/08/2024 21:54:44 - Started BookingApplication in 32.973 seconds (process running for 34.854)
+08/08/2024 21:55:12 - Disable delta property : false
+08/08/2024 21:55:12 - Single vip registry refresh property : null
+08/08/2024 21:55:12 - Force full registry fetch : false
+08/08/2024 21:55:12 - Application is null : false
+08/08/2024 21:55:12 - Registered Applications size is zero : true
+08/08/2024 21:55:12 - Application version is -1: false
+08/08/2024 21:55:12 - Getting all instance registry info from the eureka server
+08/08/2024 21:55:12 - HTTP GET http://localhost:8070/eureka/apps/
+08/08/2024 21:55:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:55:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:55:12 - Response 200 OK
+08/08/2024 21:55:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:55:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:55:12 - The response status is 200
+08/08/2024 21:55:12 - Response 200 OK
+08/08/2024 21:55:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:55:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:55:42 - Response 200 OK
+08/08/2024 21:55:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:55:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:55:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:55:42 - Response 200 OK
+08/08/2024 21:56:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:56:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:12 - Response 200 OK
+08/08/2024 21:56:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:56:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:56:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:12 - Response 200 OK
+08/08/2024 21:56:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:56:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:42 - Response 200 OK
+08/08/2024 21:56:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:56:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:56:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:56:42 - Response 200 OK
+08/08/2024 21:57:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:57:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:12 - Response 200 OK
+08/08/2024 21:57:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:57:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:57:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:12 - Response 200 OK
+08/08/2024 21:57:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:57:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:42 - Response 200 OK
+08/08/2024 21:57:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:57:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:57:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:57:42 - Response 200 OK
+08/08/2024 21:58:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:58:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:12 - Response 200 OK
+08/08/2024 21:58:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:58:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:58:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:12 - Response 200 OK
+08/08/2024 21:58:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:58:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:58:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:58:42 - Response 200 OK
+08/08/2024 21:58:42 - Response 200 OK
+08/08/2024 21:58:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:59:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:59:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:59:12 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:12 - Response 200 OK
+08/08/2024 21:59:12 - Response 200 OK
+08/08/2024 21:59:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 21:59:40 - Resolving eureka endpoints via configuration
+08/08/2024 21:59:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 21:59:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 21:59:42 - Accept=[application/json, application/*+json]
+08/08/2024 21:59:42 - Response 200 OK
+08/08/2024 21:59:42 - Response 200 OK
+08/08/2024 21:59:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:00:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:00:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:00:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:12 - Response 200 OK
+08/08/2024 22:00:12 - Response 200 OK
+08/08/2024 22:00:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:00:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:00:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:00:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:00:42 - Response 200 OK
+08/08/2024 22:00:42 - Response 200 OK
+08/08/2024 22:00:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:01:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:01:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:01:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:12 - Response 200 OK
+08/08/2024 22:01:12 - Response 200 OK
+08/08/2024 22:01:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:01:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:01:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:01:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:01:42 - Response 200 OK
+08/08/2024 22:01:42 - Response 200 OK
+08/08/2024 22:01:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:02:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:02:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:02:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:12 - Response 200 OK
+08/08/2024 22:02:12 - Response 200 OK
+08/08/2024 22:02:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:02:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:02:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:42 - Response 200 OK
+08/08/2024 22:02:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:02:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:02:42 - Response 200 OK
+08/08/2024 22:02:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:03:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:03:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:12 - Response 200 OK
+08/08/2024 22:03:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:03:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:12 - Response 200 OK
+08/08/2024 22:03:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:03:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:03:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:03:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:03:42 - Response 200 OK
+08/08/2024 22:03:42 - Response 200 OK
+08/08/2024 22:03:42 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:04:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:04:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:12 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:04:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:12 - Response 200 OK
+08/08/2024 22:04:12 - Response 200 OK
+08/08/2024 22:04:12 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:04:40 - Resolving eureka endpoints via configuration
+08/08/2024 22:04:42 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:04:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:42 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:04:42 - Accept=[application/json, application/*+json]
+08/08/2024 22:04:42 - Response 200 OK
+08/08/2024 22:04:42 - Response 200 OK
+08/08/2024 22:04:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:05:12 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:05:12 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:05:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:13 - Response 200 OK
+08/08/2024 22:05:13 - Response 200 OK
+08/08/2024 22:05:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:05:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:05:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:05:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:05:43 - Response 200 OK
+08/08/2024 22:05:43 - Response 200 OK
+08/08/2024 22:05:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:06:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:06:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:06:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:13 - Response 200 OK
+08/08/2024 22:06:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:06:13 - Response 200 OK
+08/08/2024 22:06:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:06:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:43 - Response 200 OK
+08/08/2024 22:06:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:06:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:06:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:06:43 - Response 200 OK
+08/08/2024 22:07:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:07:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:13 - Response 200 OK
+08/08/2024 22:07:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:07:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:07:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:13 - Response 200 OK
+08/08/2024 22:07:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:07:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:07:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:07:43 - Response 200 OK
+08/08/2024 22:07:43 - Response 200 OK
+08/08/2024 22:07:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:08:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:08:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:08:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:13 - Response 200 OK
+08/08/2024 22:08:13 - Response 200 OK
+08/08/2024 22:08:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:08:24 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08/08/2024 22:08:24 - Initializing Servlet 'dispatcherServlet'
+08/08/2024 22:08:24 - Detected StandardServletMultipartResolver
+08/08/2024 22:08:24 - Detected AcceptHeaderLocaleResolver
+08/08/2024 22:08:24 - Detected FixedThemeResolver
+08/08/2024 22:08:24 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4f2b7666
+08/08/2024 22:08:24 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2558eb0c
+08/08/2024 22:08:24 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+08/08/2024 22:08:24 - Completed initialization in 5 ms
+08/08/2024 22:08:24 - GET "/swagger-ui/index.html", parameters={}
+08/08/2024 22:08:24 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+08/08/2024 22:08:24 - Completed 200 OK
+08/08/2024 22:08:25 - GET "/swagger-ui/swagger-ui.css", parameters={}
+08/08/2024 22:08:25 - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+08/08/2024 22:08:25 - GET "/swagger-ui/index.css", parameters={}
+08/08/2024 22:08:25 - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+08/08/2024 22:08:25 - GET "/swagger-ui/swagger-initializer.js", parameters={}
+08/08/2024 22:08:25 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+08/08/2024 22:08:25 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+08/08/2024 22:08:25 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+08/08/2024 22:08:25 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+08/08/2024 22:08:25 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+08/08/2024 22:08:25 - Completed 200 OK
+08/08/2024 22:08:25 - Completed 200 OK
+08/08/2024 22:08:25 - Completed 200 OK
+08/08/2024 22:08:25 - Completed 200 OK
+08/08/2024 22:08:25 - Completed 200 OK
+08/08/2024 22:08:25 - GET "/v3/api-docs/swagger-config", parameters={}
+08/08/2024 22:08:25 - GET "/swagger-ui/favicon-32x32.png", parameters={}
+08/08/2024 22:08:25 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+08/08/2024 22:08:25 - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+08/08/2024 22:08:25 - Completed 200 OK
+08/08/2024 22:08:25 - Using 'application/json', given [*/*] and supported [application/json]
+08/08/2024 22:08:25 - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8081/swagger-ui/oauth2-re (truncated)...]
+08/08/2024 22:08:25 - Completed 200 OK
+08/08/2024 22:08:25 - GET "/v3/api-docs", parameters={}
+08/08/2024 22:08:25 - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+08/08/2024 22:08:27 - Init duration for springdoc-openapi is: 1327 ms
+08/08/2024 22:08:27 - Using 'application/json', given [application/json, */*] and supported [application/json]
+08/08/2024 22:08:27 - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+08/08/2024 22:08:27 - Completed 200 OK
+08/08/2024 22:08:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:08:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:08:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:08:43 - Response 200 OK
+08/08/2024 22:08:43 - Response 200 OK
+08/08/2024 22:08:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:09:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:09:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:09:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:13 - Response 200 OK
+08/08/2024 22:09:13 - Response 200 OK
+08/08/2024 22:09:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:09:41 - Resolving eureka endpoints via configuration
+08/08/2024 22:09:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:09:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:09:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:09:43 - Response 200 OK
+08/08/2024 22:09:43 - Response 200 OK
+08/08/2024 22:09:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:10:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:10:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:10:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:13 - Response 200 OK
+08/08/2024 22:10:13 - Response 200 OK
+08/08/2024 22:10:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:10:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:10:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:10:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:10:43 - Response 200 OK
+08/08/2024 22:10:43 - Response 200 OK
+08/08/2024 22:10:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:11:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:11:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:11:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:13 - Response 200 OK
+08/08/2024 22:11:13 - Response 200 OK
+08/08/2024 22:11:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:11:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:11:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:11:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:11:43 - Response 200 OK
+08/08/2024 22:11:43 - Response 200 OK
+08/08/2024 22:11:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:12:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:12:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:12:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:13 - Response 200 OK
+08/08/2024 22:12:13 - Response 200 OK
+08/08/2024 22:12:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:12:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:12:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:43 - Response 200 OK
+08/08/2024 22:12:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:12:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:12:43 - Response 200 OK
+08/08/2024 22:12:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:13:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:13:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:13 - Response 200 OK
+08/08/2024 22:13:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:13:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:13 - Response 200 OK
+08/08/2024 22:13:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:13:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:13:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:43 - Response 200 OK
+08/08/2024 22:13:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:13:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:13:43 - Response 200 OK
+08/08/2024 22:13:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:14:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:14:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:13 - Response 200 OK
+08/08/2024 22:14:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:14:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:13 - Response 200 OK
+08/08/2024 22:14:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:14:41 - Resolving eureka endpoints via configuration
+08/08/2024 22:14:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:14:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:43 - Response 200 OK
+08/08/2024 22:14:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:14:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:14:43 - Response 200 OK
+08/08/2024 22:14:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:15:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:15:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:13 - Response 200 OK
+08/08/2024 22:15:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:15:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:13 - Response 200 OK
+08/08/2024 22:15:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:15:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:15:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:43 - Response 200 OK
+08/08/2024 22:15:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:15:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:15:43 - Response 200 OK
+08/08/2024 22:15:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:16:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:16:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:13 - Response 200 OK
+08/08/2024 22:16:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:16:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:13 - Response 200 OK
+08/08/2024 22:16:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:16:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:16:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:43 - Response 200 OK
+08/08/2024 22:16:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:16:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:16:43 - Response 200 OK
+08/08/2024 22:16:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:17:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:17:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:13 - Response 200 OK
+08/08/2024 22:17:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:17:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:13 - Response 200 OK
+08/08/2024 22:17:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:17:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:17:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:43 - Response 200 OK
+08/08/2024 22:17:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:17:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:17:43 - Response 200 OK
+08/08/2024 22:17:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:18:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:18:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:13 - Response 200 OK
+08/08/2024 22:18:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:18:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:13 - Response 200 OK
+08/08/2024 22:18:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:18:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:18:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:43 - Response 200 OK
+08/08/2024 22:18:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:18:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:18:43 - Response 200 OK
+08/08/2024 22:18:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:19:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:19:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:13 - Response 200 OK
+08/08/2024 22:19:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:19:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:13 - Response 200 OK
+08/08/2024 22:19:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:19:41 - Resolving eureka endpoints via configuration
+08/08/2024 22:19:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:19:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:43 - Response 200 OK
+08/08/2024 22:19:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:19:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:19:43 - Response 200 OK
+08/08/2024 22:19:43 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:20:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:20:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:13 - Response 200 OK
+08/08/2024 22:20:13 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:20:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:13 - Response 200 OK
+08/08/2024 22:20:13 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:20:43 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:20:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:43 - Response 200 OK
+08/08/2024 22:20:43 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:20:43 - Accept=[application/json, application/*+json]
+08/08/2024 22:20:44 - Response 200 OK
+08/08/2024 22:20:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:21:13 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:21:13 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:14 - Response 200 OK
+08/08/2024 22:21:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:21:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:14 - Response 200 OK
+08/08/2024 22:21:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:21:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:21:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:21:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:21:44 - Response 200 OK
+08/08/2024 22:21:44 - Response 200 OK
+08/08/2024 22:21:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:22:14 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:22:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:22:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:14 - Response 200 OK
+08/08/2024 22:22:14 - Response 200 OK
+08/08/2024 22:22:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:22:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723164882332
+08/08/2024 22:22:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:44 - Response 200 OK
+08/08/2024 22:22:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:22:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:44 - Response 200 OK
+08/08/2024 22:22:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:22:56 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+08/08/2024 22:22:56 - Unregistering application BOOKING with eureka with status DOWN
+08/08/2024 22:22:56 - Saw local status change event StatusChangeEvent [timestamp=1723166576995, current=DOWN, previous=UP]
+08/08/2024 22:22:56 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+08/08/2024 22:22:56 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+08/08/2024 22:22:56 - Accept=[application/json, application/*+json]
+08/08/2024 22:22:57 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.9, status = DOWN, ipAddr = 192.168.0.9, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2d9b9974] as "application/json"
+08/08/2024 22:22:57 - Response 204 NO_CONTENT
+08/08/2024 22:22:57 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+08/08/2024 22:22:57 - Waiting for workers to finish.
+08/08/2024 22:22:57 - Successfully waited for workers to finish.
+08/08/2024 22:22:57 - stopped bean 'inbound.springCloudBus.anonymous.x0iWnaCvS_qWjLabEjjUKQ'
+08/08/2024 22:22:57 - Channel 'booking.rabbit-737715862.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 22:22:58 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 22:22:58 - Channel 'booking.errorChannel' has 0 subscriber(s).
+08/08/2024 22:22:58 - stopped bean '_org.springframework.integration.errorLogger'
+08/08/2024 22:22:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 22:22:58 - Shutting down DiscoveryClient ...
+08/08/2024 22:23:01 - Unregistering ...
+08/08/2024 22:23:01 - HTTP DELETE http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081
+08/08/2024 22:23:01 - Accept=[application/json, application/*+json]
+08/08/2024 22:23:01 - Response 200 OK
+08/08/2024 22:23:01 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - deregister  status: 200
+08/08/2024 22:23:01 - Completed shut down of DiscoveryClient
+08/08/2024 22:23:04 - Starting BookingApplication using Java 17.0.8.1 with PID 153176 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+08/08/2024 22:23:04 - Running with Spring Boot v3.2.3, Spring v6.1.4
+08/08/2024 22:23:04 - The following 1 profile is active: "dev"
+08/08/2024 22:23:04 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:23:04 - Located environment: name=booking, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:23:04 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:23:04 - Located environment: name=booking, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:23:05 - Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: @FeignClient can only be specified on an interface
+08/08/2024 22:23:05 - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-20/07/2024 09:12:44 - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$before$2(ClassBasedTestDescriptor.java:204)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:203)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:85)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:148)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
-	... 92 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:647)
-	... 106 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Property 'driverClassName' must not be empty
-	at org.springframework.util.Assert.hasText(Assert.java:240)
-	at org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:125)
-	at com.losolved.booking.configuration.DatabaseConfig.dataSource(DatabaseConfig.java:40)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$0.CGLIB$dataSource$0(<generated>)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$0.dataSource(<generated>)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
-	... 107 common frames omitted
-20/07/2024 09:12:44 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.losolved.booking.audit.AuditAwareTest@56fa0ef]
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@3d2eb7fa testClass = com.losolved.booking.audit.AuditAwareTest, locations = [], classes = [com.losolved.booking.BookingApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@21129f1f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@68d279ec, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@488d1cd7, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@7fbdb894, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@79dc5318, org.springframework.boot.test.context.SpringBootTestAnnotation@7c61a2f6], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
-	at java.base/java.util.Optional.orElseGet(Optional.java:364)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$before$2(ClassBasedTestDescriptor.java:204)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:203)
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:85)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:148)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
-	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
-	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
-	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
-	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
-	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
-	... 66 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
-	... 92 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:647)
-	... 106 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Property 'driverClassName' must not be empty
-	at org.springframework.util.Assert.hasText(Assert.java:240)
-	at org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:125)
-	at com.losolved.booking.configuration.DatabaseConfig.dataSource(DatabaseConfig.java:40)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$0.CGLIB$dataSource$0(<generated>)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$0.dataSource(<generated>)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
-	... 107 common frames omitted
-20/07/2024 09:12:44 - Restart disabled due to context in which it is running
-20/07/2024 09:12:45 - 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/D:/california/repo/org/json/json/20240303/json-20240303.jar!/org/json/JSONObject.class
-	jar:file:/D:/california/repo/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-20/07/2024 09:12:45 - Starting BookingApplicationTests using Java 17.0.10 with PID 24808 (started by dsantana in D:\sources\california\travel-booking-platform\booking)
-20/07/2024 09:12:45 - Running with Spring Boot v3.2.3, Spring v6.1.4
-20/07/2024 09:12:45 - The following 1 profile is active: "dev"
-20/07/2024 09:12:45 - Fetching config from server at : http://localhost:8071/
-20/07/2024 09:12:45 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 09:12:45 - Could not locate PropertySource ([ConfigServerConfigDataResource@2c978637 uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information
-20/07/2024 09:12:45 - Fetching config from server at : http://localhost:8071/
-20/07/2024 09:12:45 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/dev": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 09:12:45 - Could not locate PropertySource ([ConfigServerConfigDataResource@5e2718b3 uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'dev']): I/O error on GET request for "http://localhost:8071/booking/dev": Connection refused: no further information
-20/07/2024 09:12:45 - Fetching config from server at : http://localhost:8071/
-20/07/2024 09:12:45 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 09:12:45 - Could not locate PropertySource ([ConfigServerConfigDataResource@440461ef uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information
-20/07/2024 09:12:45 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6c225adb
-20/07/2024 09:12:46 - Started BookingApplicationTests in 1.657 seconds (process running for 17.252)
-20/07/2024 09:12:47 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6c225adb, started on Sat Jul 20 09:12:45 BRT 2024
-20/07/2024 20:08:59 - Starting BookingApplication using Java 17.0.8.1 with PID 25888 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
-20/07/2024 20:08:59 - Running with Spring Boot v3.2.3, Spring v6.1.4
-20/07/2024 20:08:59 - The following 1 profile is active: "dev"
-20/07/2024 20:08:59 - Fetching config from server at : http://localhost:8071/
-20/07/2024 20:08:59 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 20:08:59 - Could not locate PropertySource ([ConfigServerConfigDataResource@42ad8ccd uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information
-20/07/2024 20:08:59 - Fetching config from server at : http://localhost:8071/
-20/07/2024 20:08:59 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/dev": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 20:08:59 - Could not locate PropertySource ([ConfigServerConfigDataResource@63aaf8f3 uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'dev']): I/O error on GET request for "http://localhost:8071/booking/dev": Connection refused: no further information
-20/07/2024 20:08:59 - Fetching config from server at : http://localhost:8071/
-20/07/2024 20:08:59 - Exception on Url - http://localhost:8071/:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information. Will be trying the next url if available
-20/07/2024 20:08:59 - Could not locate PropertySource ([ConfigServerConfigDataResource@12c9c810 uris = array<String>['http://localhost:8071/'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8071/booking/default": Connection refused: no further information
-20/07/2024 20:08:59 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-20/07/2024 20:08:59 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-20/07/2024 20:09:04 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-20/07/2024 20:09:05 - Finished Spring Data repository scanning in 579 ms. Found 1 JPA repository interface.
-20/07/2024 20:09:06 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-20/07/2024 20:09:06 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-20/07/2024 20:09:07 - BeanFactory id=988f223c-5daf-3610-bca4-d16d12d86803
-20/07/2024 20:09:08 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-20/07/2024 20:09:08 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 20:09:08 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-20/07/2024 20:09:08 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 20:09:08 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 20:09:10 - Tomcat initialized with port 8081 (http)
-20/07/2024 20:09:10 - Starting service [Tomcat]
-20/07/2024 20:09:10 - Starting Servlet engine: [Apache Tomcat/10.1.19]
-20/07/2024 20:09:10 - Initializing Spring embedded WebApplicationContext
-20/07/2024 20:09:10 - Root WebApplicationContext: initialization completed in 11780 ms
-20/07/2024 20:09:11 - Filter 'webMvcObservationFilter' configured for use
-20/07/2024 20:09:11 - null
-20/07/2024 20:09:11 - null
-20/07/2024 20:09:11 - null
-20/07/2024 20:09:11 - null
-20/07/2024 20:09:11 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-20/07/2024 20:09:11 - Stopping service [Tomcat]
-20/07/2024 20:09:11 - 
+08/08/2024 22:23:05 - Application run failed
+java.lang.IllegalArgumentException: @FeignClient can only be specified on an interface
+	at org.springframework.util.Assert.isTrue(Assert.java:111) ~[spring-core-6.1.4.jar:6.1.4]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:192) ~[spring-cloud-openfeign-core-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:151) ~[spring-cloud-openfeign-core-4.1.2.jar:4.1.2]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.losolved.booking.BookingApplication.main(BookingApplication.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.3.jar:3.2.3]
+08/08/2024 22:23:09 - Starting BookingApplication using Java 17.0.8.1 with PID 153176 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+08/08/2024 22:23:09 - Running with Spring Boot v3.2.3, Spring v6.1.4
+08/08/2024 22:23:09 - The following 1 profile is active: "dev"
+08/08/2024 22:23:09 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:23:09 - Located environment: name=booking, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:23:09 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:23:09 - Located environment: name=booking, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:23:10 - Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: @FeignClient can only be specified on an interface
+08/08/2024 22:23:10 - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-20/07/2024 20:09:12 - Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1231)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:949)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.losolved.booking.BookingApplication.main(BookingApplication.java:18)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/losolved/booking/configuration/DatabaseConfig.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
-	... 26 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSource' threw exception with message: Property 'driverClassName' must not be empty
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:647)
-	... 40 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Property 'driverClassName' must not be empty
-	at org.springframework.util.Assert.hasText(Assert.java:240)
-	at org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:125)
-	at com.losolved.booking.configuration.DatabaseConfig.dataSource(DatabaseConfig.java:40)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$0.CGLIB$dataSource$0(<generated>)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
-	at com.losolved.booking.configuration.DatabaseConfig$$SpringCGLIB$$0.dataSource(<generated>)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
-	... 41 common frames omitted
-20/07/2024 20:13:02 - Starting BookingApplication using Java 17.0.8.1 with PID 32996 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
-20/07/2024 20:13:02 - Running with Spring Boot v3.2.3, Spring v6.1.4
-20/07/2024 20:13:02 - The following 1 profile is active: "dev"
-20/07/2024 20:13:02 - Fetching config from server at : http://localhost:8071/
-20/07/2024 20:13:02 - Located environment: name=booking, profiles=[default], label=null, version=313a96bdbc307758edc6ce0a8292ea4ea6d1d443, state=null
-20/07/2024 20:13:02 - Fetching config from server at : http://localhost:8071/
-20/07/2024 20:13:02 - Located environment: name=booking, profiles=[dev], label=null, version=313a96bdbc307758edc6ce0a8292ea4ea6d1d443, state=null
-20/07/2024 20:13:02 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-20/07/2024 20:13:02 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-20/07/2024 20:13:07 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-20/07/2024 20:13:07 - Finished Spring Data repository scanning in 539 ms. Found 1 JPA repository interface.
-20/07/2024 20:13:08 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-20/07/2024 20:13:08 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-20/07/2024 20:13:09 - BeanFactory id=988f223c-5daf-3610-bca4-d16d12d86803
-20/07/2024 20:13:10 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-20/07/2024 20:13:10 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 20:13:10 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-20/07/2024 20:13:10 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 20:13:10 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-20/07/2024 20:13:12 - Tomcat initialized with port 8081 (http)
-20/07/2024 20:13:12 - Starting service [Tomcat]
-20/07/2024 20:13:12 - Starting Servlet engine: [Apache Tomcat/10.1.19]
-20/07/2024 20:13:12 - Initializing Spring embedded WebApplicationContext
-20/07/2024 20:13:12 - Root WebApplicationContext: initialization completed in 10233 ms
-20/07/2024 20:13:13 - Filter 'webMvcObservationFilter' configured for use
-20/07/2024 20:13:13 - jdbc:mysql://localhost:3308/bookingdb
-20/07/2024 20:13:13 - root
-20/07/2024 20:13:13 - Lo2011158
-20/07/2024 20:13:13 - com.mysql.jdbc.Driver
-20/07/2024 20:13:15 - HHH000204: Processing PersistenceUnitInfo [name: default]
-20/07/2024 20:13:15 - HHH000412: Hibernate ORM core version 6.4.4.Final
-20/07/2024 20:13:16 - HHH000026: Second-level cache disabled
-20/07/2024 20:13:16 - No LoadTimeWeaver setup: ignoring JPA class transformer
-20/07/2024 20:13:22 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-20/07/2024 20:13:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
-20/07/2024 20:13:24 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-20/07/2024 20:13:25 - 6 mappings in 'requestMappingHandlerMapping'
-20/07/2024 20:13:25 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-20/07/2024 20:13:26 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-20/07/2024 20:13:26 - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-20/07/2024 20:13:32 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
-20/07/2024 20:13:34 - LiveReload server is running on port 35729
-20/07/2024 20:13:35 - Eureka HTTP Client uses RestTemplate.
-20/07/2024 20:13:35 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-20/07/2024 20:13:36 - Exposing 23 endpoint(s) beneath base path '/actuator'
-20/07/2024 20:13:36 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-20/07/2024 20:13:36 - Channel 'booking.errorChannel' has 1 subscriber(s).
-20/07/2024 20:13:36 - started bean '_org.springframework.integration.errorLogger'
-20/07/2024 20:13:36 - Setting initial instance status as: STARTING
-20/07/2024 20:13:36 - Initializing Eureka in region us-east-1
-20/07/2024 20:13:36 - Resolving eureka endpoints via configuration
-20/07/2024 20:13:37 - Disable delta property : false
-20/07/2024 20:13:37 - Single vip registry refresh property : null
-20/07/2024 20:13:37 - Force full registry fetch : false
-20/07/2024 20:13:37 - Application is null : false
-20/07/2024 20:13:37 - Registered Applications size is zero : true
-20/07/2024 20:13:37 - Application version is -1: true
-20/07/2024 20:13:37 - Getting all instance registry info from the eureka server
-20/07/2024 20:13:37 - HTTP GET http://localhost:8070/eureka/apps/
-20/07/2024 20:13:37 - Accept=[application/json, application/*+json]
-20/07/2024 20:13:38 - Response 200 OK
-20/07/2024 20:13:38 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:13:38 - The response status is 200
-20/07/2024 20:13:38 - Starting heartbeat executor: renew interval is: 30
-20/07/2024 20:13:38 - InstanceInfoReplicator onDemand update allowed rate per min is 4
-20/07/2024 20:13:38 - Discovery Client initialized at timestamp 1721517218938 with initial instances count: 0
-20/07/2024 20:13:38 - Registering application BOOKING with eureka with status UP
-20/07/2024 20:13:38 - Saw local status change event StatusChangeEvent [timestamp=1721517218967, current=UP, previous=STARTING]
-20/07/2024 20:13:38 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
-20/07/2024 20:13:38 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
-20/07/2024 20:13:38 - Accept=[application/json, application/*+json]
-20/07/2024 20:13:39 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.13, status = UP, ipAddr = 192.168.0.13, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@6bcfa094] as "application/json"
-20/07/2024 20:13:39 - Tomcat started on port 8081 (http) with context path ''
-20/07/2024 20:13:39 - Updating port to 8081
-20/07/2024 20:13:39 - Response 204 NO_CONTENT
-20/07/2024 20:13:39 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
-20/07/2024 20:13:41 - Creating binder: rabbit
-20/07/2024 20:13:41 - Constructing binder child context for rabbit
-20/07/2024 20:13:42 - Caching the binder: rabbit
-20/07/2024 20:13:42 - declaring queue for inbound: springCloudBus.anonymous.j3VknEuwRZO5U5TBP6s0HA, bound to: springCloudBus
-20/07/2024 20:13:42 - Attempting to connect to: [localhost:5672]
-20/07/2024 20:13:42 - Created new connection: rabbitConnectionFactory#29ae2d10:0/SimpleConnection@44c14274 [delegate=amqp://guest@127.0.0.1:5672/, localPort=59882]
-20/07/2024 20:13:42 - Channel 'rabbit-1011139786.springCloudBusInput.errors' has 1 subscriber(s).
-20/07/2024 20:13:42 - Channel 'rabbit-1011139786.springCloudBusInput.errors' has 2 subscriber(s).
-20/07/2024 20:13:42 - started bean 'inbound.springCloudBus.anonymous.j3VknEuwRZO5U5TBP6s0HA'
-20/07/2024 20:13:42 - Started BookingApplication in 46.971 seconds (process running for 49.849)
-20/07/2024 20:14:08 - Disable delta property : false
-20/07/2024 20:14:08 - Single vip registry refresh property : null
-20/07/2024 20:14:08 - Force full registry fetch : false
-20/07/2024 20:14:08 - Application is null : false
-20/07/2024 20:14:08 - Registered Applications size is zero : true
-20/07/2024 20:14:08 - Application version is -1: false
-20/07/2024 20:14:08 - Getting all instance registry info from the eureka server
-20/07/2024 20:14:08 - HTTP GET http://localhost:8070/eureka/apps/
-20/07/2024 20:14:08 - Accept=[application/json, application/*+json]
-20/07/2024 20:14:09 - Response 200 OK
-20/07/2024 20:14:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:14:09 - The response status is 200
-20/07/2024 20:14:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:14:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:14:09 - Response 200 OK
-20/07/2024 20:14:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:14:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:14:39 - Response 200 OK
-20/07/2024 20:14:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:14:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:14:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:14:39 - Response 200 OK
-20/07/2024 20:15:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:15:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:15:09 - Response 200 OK
-20/07/2024 20:15:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:15:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:15:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:15:09 - Response 200 OK
-20/07/2024 20:15:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:15:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:15:39 - Response 200 OK
-20/07/2024 20:15:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:15:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:15:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:15:39 - Response 200 OK
-20/07/2024 20:16:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:16:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:16:09 - Response 200 OK
-20/07/2024 20:16:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:16:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:16:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:16:09 - Response 200 OK
-20/07/2024 20:16:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:16:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:16:39 - Response 200 OK
-20/07/2024 20:16:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:16:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:16:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:16:39 - Response 200 OK
-20/07/2024 20:17:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:17:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:17:09 - Response 200 OK
-20/07/2024 20:17:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:17:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:17:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:17:09 - Response 200 OK
-20/07/2024 20:17:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:17:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:17:39 - Response 200 OK
-20/07/2024 20:17:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:17:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:17:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:17:39 - Response 200 OK
-20/07/2024 20:18:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:18:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:18:09 - Response 200 OK
-20/07/2024 20:18:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:18:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:18:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:18:09 - Response 200 OK
-20/07/2024 20:18:37 - Resolving eureka endpoints via configuration
-20/07/2024 20:18:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:18:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:18:39 - Response 200 OK
-20/07/2024 20:18:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:18:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:18:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:18:39 - Response 200 OK
-20/07/2024 20:19:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:19:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:19:09 - Response 200 OK
-20/07/2024 20:19:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:19:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:19:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:19:09 - Response 200 OK
-20/07/2024 20:19:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:19:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:19:39 - Response 200 OK
-20/07/2024 20:19:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:19:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:19:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:19:39 - Response 200 OK
-20/07/2024 20:20:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:20:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:20:09 - Response 200 OK
-20/07/2024 20:20:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:20:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:20:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:20:09 - Response 200 OK
-20/07/2024 20:20:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:20:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:20:39 - Response 200 OK
-20/07/2024 20:20:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:20:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:20:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:20:39 - Response 200 OK
-20/07/2024 20:21:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:21:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:21:09 - Response 200 OK
-20/07/2024 20:21:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:21:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:21:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:21:09 - Response 200 OK
-20/07/2024 20:21:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:21:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:21:39 - Response 200 OK
-20/07/2024 20:21:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:21:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:21:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:21:39 - Response 200 OK
-20/07/2024 20:22:09 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:22:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:22:09 - Response 200 OK
-20/07/2024 20:22:09 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:22:09 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:22:09 - Accept=[application/json, application/*+json]
-20/07/2024 20:22:09 - Response 200 OK
-20/07/2024 20:22:39 - HTTP GET http://localhost:8070/eureka/apps/delta
-20/07/2024 20:22:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:22:39 - Response 200 OK
-20/07/2024 20:22:39 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-20/07/2024 20:22:39 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1721517218965
-20/07/2024 20:22:39 - Accept=[application/json, application/*+json]
-20/07/2024 20:22:39 - Response 200 OK
+08/08/2024 22:23:10 - Application run failed
+java.lang.IllegalArgumentException: @FeignClient can only be specified on an interface
+	at org.springframework.util.Assert.isTrue(Assert.java:111) ~[spring-core-6.1.4.jar:6.1.4]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:192) ~[spring-cloud-openfeign-core-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:151) ~[spring-cloud-openfeign-core-4.1.2.jar:4.1.2]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.losolved.booking.BookingApplication.main(BookingApplication.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.3.jar:3.2.3]
+08/08/2024 22:28:54 - Starting BookingApplication using Java 17.0.8.1 with PID 153176 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+08/08/2024 22:28:54 - Running with Spring Boot v3.2.3, Spring v6.1.4
+08/08/2024 22:28:54 - The following 1 profile is active: "dev"
+08/08/2024 22:28:54 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:28:54 - Located environment: name=booking, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:28:54 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:28:54 - Located environment: name=booking, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:28:55 - Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: @FeignClient can only be specified on an interface
+08/08/2024 22:28:55 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+08/08/2024 22:28:55 - Application run failed
+java.lang.IllegalArgumentException: @FeignClient can only be specified on an interface
+	at org.springframework.util.Assert.isTrue(Assert.java:111) ~[spring-core-6.1.4.jar:6.1.4]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:192) ~[spring-cloud-openfeign-core-4.1.2.jar:4.1.2]
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:151) ~[spring-cloud-openfeign-core-4.1.2.jar:4.1.2]
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:376) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:375) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:428) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.losolved.booking.BookingApplication.main(BookingApplication.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.3.jar:3.2.3]
+08/08/2024 22:29:36 - Starting BookingApplication using Java 17.0.8.1 with PID 153176 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+08/08/2024 22:29:36 - Running with Spring Boot v3.2.3, Spring v6.1.4
+08/08/2024 22:29:36 - The following 1 profile is active: "dev"
+08/08/2024 22:29:36 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:29:36 - Located environment: name=booking, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:29:36 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:29:36 - Located environment: name=booking, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:29:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08/08/2024 22:29:37 - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+08/08/2024 22:29:37 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+08/08/2024 22:29:37 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+08/08/2024 22:29:38 - BeanFactory id=e2956ec6-7fcd-3e96-8074-bef8eb1dd929
+08/08/2024 22:29:38 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 22:29:38 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:29:38 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 22:29:38 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:29:38 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:29:38 - Tomcat initialized with port 8081 (http)
+08/08/2024 22:29:38 - Starting service [Tomcat]
+08/08/2024 22:29:38 - Starting Servlet engine: [Apache Tomcat/10.1.19]
+08/08/2024 22:29:38 - Initializing Spring embedded WebApplicationContext
+08/08/2024 22:29:38 - Root WebApplicationContext: initialization completed in 2290 ms
+08/08/2024 22:29:38 - Filter 'webMvcObservationFilter' configured for use
+08/08/2024 22:29:38 - jdbc:mysql://localhost:3308/bookingdb
+08/08/2024 22:29:38 - root
+08/08/2024 22:29:38 - Lo2011158
+08/08/2024 22:29:38 - com.mysql.jdbc.Driver
+08/08/2024 22:29:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+08/08/2024 22:29:39 - HHH000026: Second-level cache disabled
+08/08/2024 22:29:39 - No LoadTimeWeaver setup: ignoring JPA class transformer
+08/08/2024 22:29:39 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08/08/2024 22:29:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 22:29:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08/08/2024 22:29:40 - 10 mappings in 'requestMappingHandlerMapping'
+08/08/2024 22:29:40 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+08/08/2024 22:29:40 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+08/08/2024 22:29:40 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+08/08/2024 22:29:42 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
+08/08/2024 22:29:43 - LiveReload server is running on port 35729
+08/08/2024 22:29:43 - Eureka HTTP Client uses RestTemplate.
+08/08/2024 22:29:43 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08/08/2024 22:29:43 - Exposing 23 endpoint(s) beneath base path '/actuator'
+08/08/2024 22:29:44 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 22:29:44 - Channel 'booking.errorChannel' has 1 subscriber(s).
+08/08/2024 22:29:44 - started bean '_org.springframework.integration.errorLogger'
+08/08/2024 22:29:44 - Setting initial instance status as: STARTING
+08/08/2024 22:29:44 - Initializing Eureka in region us-east-1
+08/08/2024 22:29:44 - Resolving eureka endpoints via configuration
+08/08/2024 22:29:44 - Disable delta property : false
+08/08/2024 22:29:44 - Single vip registry refresh property : null
+08/08/2024 22:29:44 - Force full registry fetch : false
+08/08/2024 22:29:44 - Application is null : false
+08/08/2024 22:29:44 - Registered Applications size is zero : true
+08/08/2024 22:29:44 - Application version is -1: true
+08/08/2024 22:29:44 - Getting all instance registry info from the eureka server
+08/08/2024 22:29:44 - HTTP GET http://localhost:8070/eureka/apps/
+08/08/2024 22:29:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:29:44 - Response 200 OK
+08/08/2024 22:29:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:29:44 - The response status is 200
+08/08/2024 22:29:44 - Starting heartbeat executor: renew interval is: 30
+08/08/2024 22:29:44 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08/08/2024 22:29:44 - Discovery Client initialized at timestamp 1723166984234 with initial instances count: 2
+08/08/2024 22:29:44 - Registering application BOOKING with eureka with status UP
+08/08/2024 22:29:44 - Saw local status change event StatusChangeEvent [timestamp=1723166984241, current=UP, previous=STARTING]
+08/08/2024 22:29:44 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+08/08/2024 22:29:44 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+08/08/2024 22:29:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:29:44 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.9, status = UP, ipAddr = 192.168.0.9, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@4c667a8d] as "application/json"
+08/08/2024 22:29:44 - Response 204 NO_CONTENT
+08/08/2024 22:29:44 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+08/08/2024 22:29:44 - Tomcat started on port 8081 (http) with context path ''
+08/08/2024 22:29:44 - Updating port to 8081
+08/08/2024 22:29:45 - Creating binder: rabbit
+08/08/2024 22:29:45 - Constructing binder child context for rabbit
+08/08/2024 22:29:45 - Caching the binder: rabbit
+08/08/2024 22:29:45 - declaring queue for inbound: springCloudBus.anonymous.qtAtH8MyQdGiWh5G259jFA, bound to: springCloudBus
+08/08/2024 22:29:45 - Attempting to connect to: [localhost:5672]
+08/08/2024 22:29:45 - Created new connection: rabbitConnectionFactory#7ab0f37a:0/SimpleConnection@6c1bac42 [delegate=amqp://guest@127.0.0.1:5672/, localPort=57864]
+08/08/2024 22:29:45 - Channel 'rabbit-1305345784.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 22:29:45 - Channel 'rabbit-1305345784.springCloudBusInput.errors' has 2 subscriber(s).
+08/08/2024 22:29:45 - started bean 'inbound.springCloudBus.anonymous.qtAtH8MyQdGiWh5G259jFA'
+08/08/2024 22:29:45 - Started BookingApplication in 11.717 seconds (process running for 2135.956)
+08/08/2024 22:29:45 - Condition evaluation unchanged
+08/08/2024 22:30:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:30:14 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:30:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:14 - Response 200 OK
+08/08/2024 22:30:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:30:14 - Response 200 OK
+08/08/2024 22:30:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:30:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:30:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:30:44 - Response 200 OK
+08/08/2024 22:30:44 - Response 200 OK
+08/08/2024 22:30:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:31:14 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:31:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:31:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:14 - Response 200 OK
+08/08/2024 22:31:14 - Response 200 OK
+08/08/2024 22:31:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:31:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:31:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:31:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:31:44 - Response 200 OK
+08/08/2024 22:31:44 - Response 200 OK
+08/08/2024 22:31:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:32:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:32:14 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:32:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:14 - Response 200 OK
+08/08/2024 22:32:14 - Response 200 OK
+08/08/2024 22:32:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:32:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:32:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:32:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:32:44 - Response 200 OK
+08/08/2024 22:32:44 - Response 200 OK
+08/08/2024 22:32:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:33:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:33:14 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:33:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:14 - Response 200 OK
+08/08/2024 22:33:14 - Response 200 OK
+08/08/2024 22:33:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:33:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:33:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:33:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:33:44 - Response 200 OK
+08/08/2024 22:33:44 - Response 200 OK
+08/08/2024 22:33:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:34:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:34:14 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:34:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:14 - Response 200 OK
+08/08/2024 22:34:14 - Response 200 OK
+08/08/2024 22:34:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:34:44 - Resolving eureka endpoints via configuration
+08/08/2024 22:34:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:34:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:34:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:34:44 - Response 200 OK
+08/08/2024 22:34:44 - Response 200 OK
+08/08/2024 22:34:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:35:14 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:35:14 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:35:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:14 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:14 - Response 200 OK
+08/08/2024 22:35:14 - Response 200 OK
+08/08/2024 22:35:14 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:35:44 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:35:44 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723166984241
+08/08/2024 22:35:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:44 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:44 - Response 200 OK
+08/08/2024 22:35:44 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:35:44 - Response 200 OK
+08/08/2024 22:35:53 - Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+08/08/2024 22:35:53 - Unregistering application BOOKING with eureka with status DOWN
+08/08/2024 22:35:53 - Saw local status change event StatusChangeEvent [timestamp=1723167353871, current=DOWN, previous=UP]
+08/08/2024 22:35:53 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+08/08/2024 22:35:53 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+08/08/2024 22:35:53 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:53 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.9, status = DOWN, ipAddr = 192.168.0.9, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@4c667a8d] as "application/json"
+08/08/2024 22:35:53 - Response 204 NO_CONTENT
+08/08/2024 22:35:53 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+08/08/2024 22:35:53 - Waiting for workers to finish.
+08/08/2024 22:35:54 - Successfully waited for workers to finish.
+08/08/2024 22:35:54 - stopped bean 'inbound.springCloudBus.anonymous.qtAtH8MyQdGiWh5G259jFA'
+08/08/2024 22:35:54 - Channel 'booking.rabbit-1305345784.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 22:35:54 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 22:35:54 - Channel 'booking.errorChannel' has 0 subscriber(s).
+08/08/2024 22:35:54 - stopped bean '_org.springframework.integration.errorLogger'
+08/08/2024 22:35:54 - Closing JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 22:35:54 - Shutting down DiscoveryClient ...
+08/08/2024 22:35:57 - Unregistering ...
+08/08/2024 22:35:57 - HTTP DELETE http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081
+08/08/2024 22:35:57 - Accept=[application/json, application/*+json]
+08/08/2024 22:35:57 - Response 200 OK
+08/08/2024 22:35:57 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - deregister  status: 200
+08/08/2024 22:35:57 - Completed shut down of DiscoveryClient
+08/08/2024 22:36:01 - Starting BookingApplication using Java 17.0.8.1 with PID 153176 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+08/08/2024 22:36:01 - Running with Spring Boot v3.2.3, Spring v6.1.4
+08/08/2024 22:36:01 - The following 1 profile is active: "dev"
+08/08/2024 22:36:01 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:36:01 - Located environment: name=booking, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:36:01 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:36:01 - Located environment: name=booking, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:36:02 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08/08/2024 22:36:02 - Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+08/08/2024 22:36:02 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+08/08/2024 22:36:02 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+08/08/2024 22:36:02 - BeanFactory id=e2956ec6-7fcd-3e96-8074-bef8eb1dd929
+08/08/2024 22:36:02 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 22:36:02 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:36:02 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 22:36:02 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:36:02 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:36:02 - Tomcat initialized with port 8081 (http)
+08/08/2024 22:36:02 - Starting service [Tomcat]
+08/08/2024 22:36:02 - Starting Servlet engine: [Apache Tomcat/10.1.19]
+08/08/2024 22:36:02 - Initializing Spring embedded WebApplicationContext
+08/08/2024 22:36:02 - Root WebApplicationContext: initialization completed in 1578 ms
+08/08/2024 22:36:02 - Filter 'webMvcObservationFilter' configured for use
+08/08/2024 22:36:02 - jdbc:mysql://localhost:3308/bookingdb
+08/08/2024 22:36:02 - root
+08/08/2024 22:36:02 - Lo2011158
+08/08/2024 22:36:02 - com.mysql.jdbc.Driver
+08/08/2024 22:36:03 - HHH000204: Processing PersistenceUnitInfo [name: default]
+08/08/2024 22:36:03 - HHH000026: Second-level cache disabled
+08/08/2024 22:36:03 - No LoadTimeWeaver setup: ignoring JPA class transformer
+08/08/2024 22:36:03 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08/08/2024 22:36:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 22:36:03 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08/08/2024 22:36:03 - 10 mappings in 'requestMappingHandlerMapping'
+08/08/2024 22:36:03 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+08/08/2024 22:36:04 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+08/08/2024 22:36:04 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+08/08/2024 22:36:06 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
+08/08/2024 22:36:06 - LiveReload server is running on port 35729
+08/08/2024 22:36:07 - Eureka HTTP Client uses RestTemplate.
+08/08/2024 22:36:07 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08/08/2024 22:36:07 - Exposing 23 endpoint(s) beneath base path '/actuator'
+08/08/2024 22:36:07 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 22:36:07 - Channel 'booking.errorChannel' has 1 subscriber(s).
+08/08/2024 22:36:07 - started bean '_org.springframework.integration.errorLogger'
+08/08/2024 22:36:07 - Setting initial instance status as: STARTING
+08/08/2024 22:36:07 - Initializing Eureka in region us-east-1
+08/08/2024 22:36:07 - Resolving eureka endpoints via configuration
+08/08/2024 22:36:07 - Disable delta property : false
+08/08/2024 22:36:07 - Single vip registry refresh property : null
+08/08/2024 22:36:07 - Force full registry fetch : false
+08/08/2024 22:36:07 - Application is null : false
+08/08/2024 22:36:07 - Registered Applications size is zero : true
+08/08/2024 22:36:07 - Application version is -1: true
+08/08/2024 22:36:07 - Getting all instance registry info from the eureka server
+08/08/2024 22:36:07 - HTTP GET http://localhost:8070/eureka/apps/
+08/08/2024 22:36:07 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:07 - Response 200 OK
+08/08/2024 22:36:07 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:36:07 - The response status is 200
+08/08/2024 22:36:07 - Starting heartbeat executor: renew interval is: 30
+08/08/2024 22:36:07 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08/08/2024 22:36:07 - Discovery Client initialized at timestamp 1723167367827 with initial instances count: 2
+08/08/2024 22:36:07 - Registering application BOOKING with eureka with status UP
+08/08/2024 22:36:07 - Saw local status change event StatusChangeEvent [timestamp=1723167367839, current=UP, previous=STARTING]
+08/08/2024 22:36:07 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+08/08/2024 22:36:07 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+08/08/2024 22:36:07 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:07 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.9, status = UP, ipAddr = 192.168.0.9, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@6c78769e] as "application/json"
+08/08/2024 22:36:07 - Response 204 NO_CONTENT
+08/08/2024 22:36:07 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+08/08/2024 22:36:07 - Tomcat started on port 8081 (http) with context path ''
+08/08/2024 22:36:07 - Updating port to 8081
+08/08/2024 22:36:08 - Creating binder: rabbit
+08/08/2024 22:36:08 - Constructing binder child context for rabbit
+08/08/2024 22:36:08 - Caching the binder: rabbit
+08/08/2024 22:36:09 - declaring queue for inbound: springCloudBus.anonymous.phFBDvrYQjOtvZHalPk-eA, bound to: springCloudBus
+08/08/2024 22:36:09 - Attempting to connect to: [localhost:5672]
+08/08/2024 22:36:09 - Created new connection: rabbitConnectionFactory#75859eb2:0/SimpleConnection@4eec8260 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58158]
+08/08/2024 22:36:09 - Channel 'rabbit-1239858804.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 22:36:09 - Channel 'rabbit-1239858804.springCloudBusInput.errors' has 2 subscriber(s).
+08/08/2024 22:36:09 - started bean 'inbound.springCloudBus.anonymous.phFBDvrYQjOtvZHalPk-eA'
+08/08/2024 22:36:09 - Started BookingApplication in 11.02 seconds (process running for 2519.6)
+08/08/2024 22:36:09 - Condition evaluation unchanged
+08/08/2024 22:36:37 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167367839
+08/08/2024 22:36:37 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:36:37 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:37 - Accept=[application/json, application/*+json]
+08/08/2024 22:36:37 - Response 200 OK
+08/08/2024 22:36:37 - Response 200 OK
+08/08/2024 22:36:37 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:37:07 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:37:07 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167367839
+08/08/2024 22:37:07 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:07 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:07 - Response 200 OK
+08/08/2024 22:37:07 - Response 200 OK
+08/08/2024 22:37:07 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:37:21 - Restarting due to 13 class path changes (11 additions, 0 deletions, 2 modifications)
+08/08/2024 22:37:21 - Unregistering application BOOKING with eureka with status DOWN
+08/08/2024 22:37:21 - Saw local status change event StatusChangeEvent [timestamp=1723167441039, current=DOWN, previous=UP]
+08/08/2024 22:37:21 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+08/08/2024 22:37:21 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+08/08/2024 22:37:21 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:21 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.9, status = DOWN, ipAddr = 192.168.0.9, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@6c78769e] as "application/json"
+08/08/2024 22:37:21 - Response 204 NO_CONTENT
+08/08/2024 22:37:21 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+08/08/2024 22:37:21 - Waiting for workers to finish.
+08/08/2024 22:37:21 - Successfully waited for workers to finish.
+08/08/2024 22:37:21 - stopped bean 'inbound.springCloudBus.anonymous.phFBDvrYQjOtvZHalPk-eA'
+08/08/2024 22:37:21 - Channel 'booking.rabbit-1239858804.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 22:37:21 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 22:37:21 - Channel 'booking.errorChannel' has 0 subscriber(s).
+08/08/2024 22:37:21 - stopped bean '_org.springframework.integration.errorLogger'
+08/08/2024 22:37:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 22:37:21 - Shutting down DiscoveryClient ...
+08/08/2024 22:37:24 - Unregistering ...
+08/08/2024 22:37:24 - HTTP DELETE http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081
+08/08/2024 22:37:24 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:24 - Response 200 OK
+08/08/2024 22:37:24 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - deregister  status: 200
+08/08/2024 22:37:25 - Completed shut down of DiscoveryClient
+08/08/2024 22:37:27 - Starting BookingApplication using Java 17.0.8.1 with PID 153176 (D:\sources\california\travel-booking-platform\booking\target\classes started by dsantana in D:\sources\california\travel-booking-platform\booking)
+08/08/2024 22:37:27 - Running with Spring Boot v3.2.3, Spring v6.1.4
+08/08/2024 22:37:27 - The following 1 profile is active: "dev"
+08/08/2024 22:37:27 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:37:27 - Located environment: name=booking, profiles=[default], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:37:27 - Fetching config from server at : http://localhost:8071/
+08/08/2024 22:37:27 - Located environment: name=booking, profiles=[dev], label=null, version=5589e4d3fb3f7a4fee5c5d8304d45c903708378e, state=null
+08/08/2024 22:37:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08/08/2024 22:37:28 - Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+08/08/2024 22:37:29 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+08/08/2024 22:37:29 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+08/08/2024 22:37:29 - BeanFactory id=e2956ec6-7fcd-3e96-8074-bef8eb1dd929
+08/08/2024 22:37:29 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 22:37:29 - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:37:29 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+08/08/2024 22:37:29 - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:37:29 - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+08/08/2024 22:37:29 - Tomcat initialized with port 8081 (http)
+08/08/2024 22:37:29 - Starting service [Tomcat]
+08/08/2024 22:37:29 - Starting Servlet engine: [Apache Tomcat/10.1.19]
+08/08/2024 22:37:29 - Initializing Spring embedded WebApplicationContext
+08/08/2024 22:37:29 - Root WebApplicationContext: initialization completed in 1751 ms
+08/08/2024 22:37:29 - Filter 'webMvcObservationFilter' configured for use
+08/08/2024 22:37:29 - jdbc:mysql://localhost:3308/bookingdb
+08/08/2024 22:37:29 - root
+08/08/2024 22:37:29 - Lo2011158
+08/08/2024 22:37:29 - com.mysql.jdbc.Driver
+08/08/2024 22:37:29 - HHH000204: Processing PersistenceUnitInfo [name: default]
+08/08/2024 22:37:29 - HHH000026: Second-level cache disabled
+08/08/2024 22:37:29 - No LoadTimeWeaver setup: ignoring JPA class transformer
+08/08/2024 22:37:30 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+08/08/2024 22:37:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08/08/2024 22:37:30 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08/08/2024 22:37:30 - 10 mappings in 'requestMappingHandlerMapping'
+08/08/2024 22:37:30 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+08/08/2024 22:37:30 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+08/08/2024 22:37:30 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+08/08/2024 22:37:32 - Channel 'booking.springCloudBusInput' has 1 subscriber(s).
+08/08/2024 22:37:32 - LiveReload server is running on port 35729
+08/08/2024 22:37:33 - Eureka HTTP Client uses RestTemplate.
+08/08/2024 22:37:33 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+08/08/2024 22:37:33 - Exposing 23 endpoint(s) beneath base path '/actuator'
+08/08/2024 22:37:33 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+08/08/2024 22:37:33 - Channel 'booking.errorChannel' has 1 subscriber(s).
+08/08/2024 22:37:33 - started bean '_org.springframework.integration.errorLogger'
+08/08/2024 22:37:33 - Setting initial instance status as: STARTING
+08/08/2024 22:37:33 - Initializing Eureka in region us-east-1
+08/08/2024 22:37:33 - Resolving eureka endpoints via configuration
+08/08/2024 22:37:33 - Disable delta property : false
+08/08/2024 22:37:33 - Single vip registry refresh property : null
+08/08/2024 22:37:33 - Force full registry fetch : false
+08/08/2024 22:37:33 - Application is null : false
+08/08/2024 22:37:33 - Registered Applications size is zero : true
+08/08/2024 22:37:33 - Application version is -1: true
+08/08/2024 22:37:33 - Getting all instance registry info from the eureka server
+08/08/2024 22:37:33 - HTTP GET http://localhost:8070/eureka/apps/
+08/08/2024 22:37:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:33 - Response 200 OK
+08/08/2024 22:37:33 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:37:33 - The response status is 200
+08/08/2024 22:37:33 - Starting heartbeat executor: renew interval is: 30
+08/08/2024 22:37:33 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+08/08/2024 22:37:33 - Discovery Client initialized at timestamp 1723167453740 with initial instances count: 2
+08/08/2024 22:37:33 - Registering application BOOKING with eureka with status UP
+08/08/2024 22:37:33 - Saw local status change event StatusChangeEvent [timestamp=1723167453753, current=UP, previous=STARTING]
+08/08/2024 22:37:33 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081: registering service...
+08/08/2024 22:37:33 - HTTP POST http://localhost:8070/eureka/apps/BOOKING
+08/08/2024 22:37:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:37:33 - Writing [InstanceInfo [instanceId = LTAK285336.mercador.local:booking:8081, appName = BOOKING, hostName = 192.168.0.9, status = UP, ipAddr = 192.168.0.9, port = 8081, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@60ef76d6] as "application/json"
+08/08/2024 22:37:33 - Response 204 NO_CONTENT
+08/08/2024 22:37:33 - DiscoveryClient_BOOKING/LTAK285336.mercador.local:booking:8081 - registration status: 204
+08/08/2024 22:37:33 - Tomcat started on port 8081 (http) with context path ''
+08/08/2024 22:37:33 - Updating port to 8081
+08/08/2024 22:37:34 - Creating binder: rabbit
+08/08/2024 22:37:34 - Constructing binder child context for rabbit
+08/08/2024 22:37:34 - Caching the binder: rabbit
+08/08/2024 22:37:34 - declaring queue for inbound: springCloudBus.anonymous.IkasZznJQHyVNQl7Ctk2NQ, bound to: springCloudBus
+08/08/2024 22:37:34 - Attempting to connect to: [localhost:5672]
+08/08/2024 22:37:34 - Created new connection: rabbitConnectionFactory#19cc971:0/SimpleConnection@6ad767d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58181]
+08/08/2024 22:37:34 - Channel 'rabbit-1304583644.springCloudBusInput.errors' has 1 subscriber(s).
+08/08/2024 22:37:34 - Channel 'rabbit-1304583644.springCloudBusInput.errors' has 2 subscriber(s).
+08/08/2024 22:37:34 - started bean 'inbound.springCloudBus.anonymous.IkasZznJQHyVNQl7Ctk2NQ'
+08/08/2024 22:37:34 - Started BookingApplication in 9.705 seconds (process running for 2605.347)
+08/08/2024 22:37:34 - Condition evaluation unchanged
+08/08/2024 22:38:03 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:38:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:03 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:38:03 - Response 200 OK
+08/08/2024 22:38:03 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:38:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:03 - Response 200 OK
+08/08/2024 22:38:33 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:38:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:33 - Response 200 OK
+08/08/2024 22:38:33 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:38:33 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:38:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:38:33 - Response 200 OK
+08/08/2024 22:39:03 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:39:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:03 - Response 200 OK
+08/08/2024 22:39:03 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:39:03 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:39:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:03 - Response 200 OK
+08/08/2024 22:39:33 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:39:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:33 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:39:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:39:33 - Response 200 OK
+08/08/2024 22:39:33 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:39:33 - Response 200 OK
+08/08/2024 22:40:03 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:40:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:03 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:40:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:03 - Response 200 OK
+08/08/2024 22:40:03 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:40:03 - Response 200 OK
+08/08/2024 22:40:33 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:40:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:33 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:40:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:40:33 - Response 200 OK
+08/08/2024 22:40:33 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:40:33 - Response 200 OK
+08/08/2024 22:41:03 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:41:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:03 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:41:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:03 - Response 200 OK
+08/08/2024 22:41:03 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:41:03 - Response 200 OK
+08/08/2024 22:41:33 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:41:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:33 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:41:33 - Accept=[application/json, application/*+json]
+08/08/2024 22:41:33 - Response 200 OK
+08/08/2024 22:41:33 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:41:33 - Response 200 OK
+08/08/2024 22:42:03 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:42:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:03 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:42:03 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:03 - Response 200 OK
+08/08/2024 22:42:03 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:42:04 - Response 200 OK
+08/08/2024 22:42:33 - Resolving eureka endpoints via configuration
+08/08/2024 22:42:34 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:42:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:34 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:42:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:42:34 - Response 200 OK
+08/08/2024 22:42:34 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:42:34 - Response 200 OK
+08/08/2024 22:43:04 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:43:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:04 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:43:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:04 - Response 200 OK
+08/08/2024 22:43:04 - Response 200 OK
+08/08/2024 22:43:04 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:43:34 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:43:34 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:43:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:43:34 - Response 200 OK
+08/08/2024 22:43:34 - Response 200 OK
+08/08/2024 22:43:34 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:44:04 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:44:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:04 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:44:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:04 - Response 200 OK
+08/08/2024 22:44:04 - Response 200 OK
+08/08/2024 22:44:04 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:44:34 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:44:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:34 - Response 200 OK
+08/08/2024 22:44:34 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:44:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:44:34 - Response 200 OK
+08/08/2024 22:44:34 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:45:04 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:45:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:04 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:45:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:04 - Response 200 OK
+08/08/2024 22:45:04 - Response 200 OK
+08/08/2024 22:45:04 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:45:34 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:45:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:34 - Response 200 OK
+08/08/2024 22:45:34 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:45:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:45:34 - Response 200 OK
+08/08/2024 22:45:34 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:46:04 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:46:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:04 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:46:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:04 - Response 200 OK
+08/08/2024 22:46:04 - Response 200 OK
+08/08/2024 22:46:04 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:46:34 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:46:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:34 - Response 200 OK
+08/08/2024 22:46:34 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:46:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:46:34 - Response 200 OK
+08/08/2024 22:46:34 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:47:04 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:47:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:04 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:47:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:04 - Response 200 OK
+08/08/2024 22:47:04 - Response 200 OK
+08/08/2024 22:47:04 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:47:33 - Resolving eureka endpoints via configuration
+08/08/2024 22:47:34 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:47:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:34 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:47:34 - Accept=[application/json, application/*+json]
+08/08/2024 22:47:34 - Response 200 OK
+08/08/2024 22:47:34 - Response 200 OK
+08/08/2024 22:47:34 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+08/08/2024 22:48:04 - HTTP PUT http://localhost:8070/eureka/apps/BOOKING/LTAK285336.mercador.local:booking:8081?status=UP&lastDirtyTimestamp=1723167453753
+08/08/2024 22:48:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:48:04 - HTTP GET http://localhost:8070/eureka/apps/delta
+08/08/2024 22:48:04 - Accept=[application/json, application/*+json]
+08/08/2024 22:48:04 - Response 200 OK
+08/08/2024 22:48:04 - Response 200 OK
+08/08/2024 22:48:04 - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]

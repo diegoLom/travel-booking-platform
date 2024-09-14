@@ -3,14 +3,18 @@ package com.losolved.booking.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.losolved.booking.dto.BookingDTO;
+import com.losolved.booking.dto.BookingFlightDTO;
 import com.losolved.booking.dto.BookingMapper;
+import com.losolved.booking.dto.FlightDTO;
 import com.losolved.booking.dto.ResponseDTO;
 import com.losolved.booking.errorhandling.NoSuchBookingException;
 import com.losolved.booking.model.Booking;
 import com.losolved.booking.repositories.BookingRepository;
+import com.losolved.booking.services.client.FlightFeignClient;
 
 import lombok.Data;
 
@@ -24,6 +28,24 @@ public class BookingService implements IBookingService {
 	
 	@Autowired
 	private BookingRepository bookingRepository;
+	
+	@Autowired
+	private FlightFeignClient flightFeignClient;
+	
+	
+	public BookingFlightDTO getBookingWithFlight(Long bookingId) { 
+		Booking booking = bookingRepository.findById(bookingId).orElseThrow(() -> new NoSuchBookingException() );
+		ResponseEntity<FlightDTO> flightResponse = flightFeignClient.getFlight(new Long(booking.getFlightId()));
+		
+		
+		BookingDTO bookingDTO = bookingMapper.convertEntityToDTO(booking);
+		FlightDTO flightDTO = flightResponse.getBody();
+		
+		BookingFlightDTO bookingFlightDTO = BookingFlightDTO.builder().bookingDTO(bookingDTO).
+				flightDTO(flightDTO).build();
+		
+		return bookingFlightDTO ;
+	}
 
 	@Override
 	public Booking getBooking(Long bookingId) { 

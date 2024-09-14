@@ -1,13 +1,13 @@
-INSERT INTO address (street, city, state, zipCode) VALUES ('123 Main St', 'New York', 'NY', '10001');
-INSERT INTO address (street, city, state, zipCode) VALUES ('456 Elm St', 'Los Angeles', 'CA', '90001');
-INSERT INTO address (street, city, state, zipCode) VALUES ('789 Oak St', 'Chicago', 'IL', '60601');
-INSERT INTO address (street, city, state, zipCode) VALUES ('101 Pine St', 'San Francisco', 'CA', '94101');
-INSERT INTO address (street, city, state, zipCode) VALUES ('202 Maple St', 'Miami', 'FL', '33101');
-INSERT INTO address (street, city, state, zipCode) VALUES ('303 Cedar St', 'Boston', 'MA', '02101');
-INSERT INTO address (street, city, state, zipCode) VALUES ('404 Walnut St', 'Seattle', 'WA', '98101');
-INSERT INTO address (street, city, state, zipCode) VALUES ('505 Birch St', 'Austin', 'TX', '78701');
-INSERT INTO address (street, city, state, zipCode) VALUES ('606 Spruce St', 'Denver', 'CO', '80201');
-INSERT INTO address (street, city, state, zipCode) VALUES ('707 Oak St', 'Orlando', 'FL', '32801');
+INSERT INTO address (street, city, state, zipcode) VALUES ('123 Main St', 'New York', 'NY', '10001');
+INSERT INTO address (street, city, state, zipcode) VALUES ('456 Elm St', 'Los Angeles', 'CA', '90001');
+INSERT INTO address (street, city, state, zipcode) VALUES ('789 Oak St', 'Chicago', 'IL', '60601');
+INSERT INTO address (street, city, state, zipcode) VALUES ('101 Pine St', 'San Francisco', 'CA', '94101');
+INSERT INTO address (street, city, state, zipcode) VALUES ('202 Maple St', 'Miami', 'FL', '33101');
+INSERT INTO address (street, city, state, zipcode) VALUES ('303 Cedar St', 'Boston', 'MA', '02101');
+INSERT INTO address (street, city, state, zipcode) VALUES ('404 Walnut St', 'Seattle', 'WA', '98101');
+INSERT INTO address (street, city, state, zipcode) VALUES ('505 Birch St', 'Austin', 'TX', '78701');
+INSERT INTO address (street, city, state, zipcode) VALUES ('606 Spruce St', 'Denver', 'CO', '80201');
+INSERT INTO address (street, city, state, zipcode) VALUES ('707 Oak St', 'Orlando', 'FL', '32801');
 
 INSERT INTO accommodation (address_id, number, price, detail) VALUES (1, 101, 150.00, 'Cozy apartment in downtown');
 INSERT INTO accommodation (address_id, number, price, detail) VALUES (2, 205, 200.00, 'Spacious house with a garden');

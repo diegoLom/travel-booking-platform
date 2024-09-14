@@ -31,8 +31,8 @@ public class FlightController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<Flight> getFlight(@PathVariable Long id) {
-    	   Flight flight = flightService.getFlight(id);
+    public ResponseEntity<FlightDTO> getFlight(@PathVariable Long id) {
+    	   FlightDTO flight = flightService.getFlightDTO(id);
         return ResponseEntity.ok(flight);
     }
     
